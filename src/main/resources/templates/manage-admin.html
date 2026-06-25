@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Admin Management')}"></head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar('admin')}"></div>
+    <div th:replace="~{fragments/topbar :: topbar}"></div>
+
+    <main class="main-content">
+        <h1 style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.32px; margin-bottom: var(--space-6);">Admin Management</h1>
+
+        <!-- Dashboard Stats -->
+        <div class="admin-stats" id="adminStats">
+            <div class="admin-stat-card">
+                <div class="stat-label">TODAY'S REVENUE</div>
+                <div class="stat-number" style="color: var(--color-accent-primary);" id="statRevenue">-</div>
+                <div class="stat-change" id="statRevenueChange">-</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-label">ACTIVE BOOKINGS</div>
+                <div class="stat-number" id="statActiveBookings" style="color: var(--color-text-primary);">-</div>
+                <div class="stat-sub" id="statCapacity">-</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-label">OPEN SLOTS</div>
+                <div class="stat-number warm" id="statOpenSlots">-</div>
+                <div class="stat-sub" id="statNextAvailable">-</div>
+            </div>
+        </div>
+
+        <!-- Main Admin Layout -->
+        <div class="admin-layout">
+            <!-- Manage Courts -->
+            <div>
+                <div class="section-header">
+                    <h2>Manage Courts</h2>
+                    <button class="btn-primary" style="padding: 8px 16px; font-size: 14px;" onclick="showAddCourt()">+ Add Court</button>
+                </div>
+                <div class="card" style="padding: 0 var(--space-5);">
+                    <div id="courtsList">
+                        <p style="padding: var(--space-5); color: var(--color-text-secondary);">Loading courts...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Timeline -->
+            <div>
+                <h2 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-1);">Booking Timeline</h2>
+                <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-4);">Schedule - Today</p>
+                <div class="card" style="padding: 0;">
+                    <div style="padding: var(--space-4);">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>TIME</th>
+                                    <th>USER</th>
+                                    <th>COURT</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="timelineBody">
+                                <tr><td colspan="4" style="text-align: center; color: var(--color-text-secondary);">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: center; padding: var(--space-4); border-top: 1px solid var(--color-border-subtle);">
+                        <a href="/my-bookings" style="color: var(--color-text-secondary); font-weight: 700; font-size: 14px; text-decoration: none;">View Full Schedule</a>
+                    </div>
+                </div>
+
+                <!-- System Health -->
+                <div class="card" style="padding: var(--space-5); margin-top: var(--space-5);">
+                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: var(--space-3);">System Health</h3>
+                    <div style="margin-bottom: var(--space-4);">
+                        <div style="display: flex; justify-content: space-between; font-size: 14px;">
+                            <span style="color: var(--color-text-secondary);">Server Uptime</span>
+                            <span style="font-weight: 700;">99.9%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.9%;"></div></div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px;">
+                            <span style="color: var(--color-text-secondary);">API Response</span>
+                            <span style="font-weight: 700;">24ms</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" style="margin-top: var(--space-8);">
+            <div style="font-size: 12px; color: var(--color-text-secondary);">© 2023 SI-BLO Court Management System • V2.4.1 Admin Console</div>
+        </footer>
+    </main>
+
+    <div th:replace="~{fragments/bottomnav :: bottomnav('admin')}"></div>
+
+    <!-- Add Court Modal -->
+    <div id="addCourtModal" style="display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center;">
+        <div class="card" style="width: 500px; padding: var(--space-6);">
+            <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-5);">Add New Court</h3>
+            <form id="addCourtForm" onsubmit="submitAddCourt(event)">
+                <div class="form-group">
+                    <label>Court Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" name="description">
+                </div>
+                <div class="form-group">
+                    <label>Surface Type</label>
+                    <input type="text" name="surfaceType" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                    <div class="form-group">
+                        <label>Price per Hour (IDR)</label>
+                        <input type="number" name="pricePerHour" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Capacity</label>
+                        <input type="number" name="capacity" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: var(--space-4);">
+                    <label>Payment Link URL (optional)</label>
+                    <input type="text" name="paymentLinkUrl" placeholder="https://app.sandbox.midtrans.com/payment-links/...">
+                </div>
+                <div style="display: flex; gap: var(--space-4); margin-top: var(--space-5);">
+                    <button type="submit" class="btn-primary" style="padding: 12px 32px;">Save Court</button>
+                    <button type="button" class="btn-secondary" style="padding: 12px 32px;" onclick="hideAddCourt()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Court Modal -->
+    <div id="editCourtModal" style="display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
+        <div class="card" style="width: 500px; padding: var(--space-6);">
+            <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-5);">Edit Court</h3>
+            <form id="editCourtForm" onsubmit="submitEditCourt(event)">
+                <input type="hidden" name="id" id="editCourtId">
+                <div class="form-group">
+                    <label>Court Name</label>
+                    <input type="text" name="name" id="editName" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" name="description" id="editDescription">
+                </div>
+                <div class="form-group">
+                    <label>Surface Type</label>
+                    <input type="text" name="surfaceType" id="editSurfaceType" required>
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" name="imageUrl" id="editImageUrl" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label>Payment Link URL (optional)</label>
+                    <input type="text" name="paymentLinkUrl" id="editPaymentLinkUrl" placeholder="https://app.sandbox.midtrans.com/payment-links/...">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                    <div class="form-group">
+                        <label>Price per Hour (IDR)</label>
+                        <input type="number" name="pricePerHour" id="editPricePerHour" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Capacity</label>
+                        <input type="number" name="capacity" id="editCapacity" required>
+                    </div>
+                </div>
+                <div style="display: flex; gap: var(--space-4); margin-top: var(--space-5);">
+                    <button type="submit" class="btn-primary" style="padding: 12px 32px;">Update Court</button>
+                    <button type="button" class="btn-secondary" style="padding: 12px 32px;" onclick="hideEditCourt()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Manage Slots Modal -->
+    <div id="slotManagerModal" style="display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
+        <div class="card" style="width: 560px; padding: var(--space-6);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-5);">
+                <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700;">Manage Slots</h3>
+                <button onclick="hideSlotManager()" style="background: none; border: none; color: var(--color-text-secondary); cursor: pointer; font-size: 24px;">&times;</button>
+            </div>
+            <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-4);" id="slotCourtName"></p>
+            <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                <button class="btn-primary" style="padding: 10px 20px; font-size: 14px;" onclick="generateSlots()">Generate Slots (14 days)</button>
+                <button class="btn-secondary" style="padding: 10px 20px; font-size: 14px;" onclick="generateSlotsNextWeek()">Generate Next Week</button>
+            </div>
+            <div id="slotList" style="max-height: 400px; overflow-y: auto;">
+                <p style="color: var(--color-text-secondary);">Loading slots...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const token = localStorage.getItem('token');
+
+    function loadAdminDashboard() {
+        if (!token) {
+            document.getElementById('adminStats').innerHTML = '<p style="color: var(--color-text-secondary);">Please login as admin.</p>';
+            document.getElementById('courtsList').innerHTML = '<p style="color: var(--color-text-secondary);"><a href="/login" style="color: var(--color-accent-primary);">Login here</a></p>';
+            return;
+        }
+
+        // Stats
+        fetch('/api/admin/stats/dashboard', { headers: { 'Authorization': 'Bearer ' + token } })
+            .then(r => r.json())
+            .then(stats => {
+                document.getElementById('statRevenue').textContent = 'Rp' + (stats.todaysRevenue || 0).toLocaleString('id-ID');
+                document.getElementById('statRevenueChange').textContent = stats.revenueChange || '';
+                document.getElementById('statActiveBookings').textContent = stats.activeBookings || 0;
+                document.getElementById('statCapacity').textContent = (stats.capacityPercent || 0) + '% Capacity';
+                document.getElementById('statOpenSlots').textContent = stats.openSlots || 0;
+                document.getElementById('statNextAvailable').textContent = 'Next: ' + (stats.nextAvailableTime || '-');
+            });
+
+        // Courts
+        fetch('/api/admin/courts', { headers: { 'Authorization': 'Bearer ' + token } })
+            .then(r => r.json())
+            .then(courts => {
+                const list = document.getElementById('courtsList');
+                list.innerHTML = courts.map(c => `
+                    <div class="admin-court-row">
+                        <div class="admin-court-thumb" style="background-image: ${c.imageUrl ? `url('${c.imageUrl}')` : 'none'}; background-size: cover; background-position: center;"></div>
+                        <div class="admin-court-info">
+                            <h4>${c.name}</h4>
+                            <p>${c.sportName || '-'} • ${c.surfaceType || '-'} • Rp${(c.pricePerHour / 1000).toFixed(0)}K/hr</p>
+                        </div>
+                        <div>
+                            ${c.badgeLabel ? `<span class="badge badge-lime" style="font-size: 10px;">${c.badgeLabel}</span>` : ''}
+                        </div>
+                        <div class="admin-court-actions">
+                            <div>
+                                <div class="toggle-label">AVAILABILITY</div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" ${c.status === 'ACTIVE' ? 'checked' : ''} onchange="toggleCourt(${c.id}, this)">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <button style="background: none; border: 1px solid var(--color-border-default); color: var(--color-text-tertiary); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 6px;" onclick="showEditCourt(${c.id}, '${c.name.replace(/'/g, "\\'")}', '${(c.description || '').replace(/'/g, "\\'")}', '${c.surfaceType.replace(/'/g, "\\'")}', ${c.pricePerHour}, ${c.capacity}, '${(c.imageUrl || '').replace(/'/g, "\\'")}', '${(c.paymentLinkUrl || '').replace(/'/g, "\\'")}')">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+                                Edit
+                            </button>
+                            <button style="background: none; border: 1px solid var(--color-border-default); color: var(--color-text-tertiary); padding: 8px 12px; border-radius: var(--radius-sm); cursor: pointer; font-size: 12px;" onclick="showSlotManager(${c.id}, '${c.name.replace(/'/g, "\\'")}')">
+                                Slots
+                            </button>
+                            <button style="background: none; border: none; color: var(--color-text-secondary); cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;" onclick="deleteCourt(${c.id})">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+            });
+
+        // Timeline
+        fetch('/api/admin/bookings/timeline', { headers: { 'Authorization': 'Bearer ' + token } })
+            .then(r => r.json())
+            .then(bookings => {
+                const tbody = document.getElementById('timelineBody');
+                if (bookings.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--color-text-secondary);">No bookings today.</td></tr>';
+                } else {
+                    tbody.innerHTML = bookings.map(b => `
+                        <tr>
+                            <td>${b.startTime} - ${b.endTime}</td>
+                            <td>${b.userName || 'Unknown'}</td>
+                            <td>${b.courtName}</td>
+                            <td><span class="status-dot ${b.status.toLowerCase()}"></span>${b.status}</td>
+                        </tr>
+                    `).join('');
+                }
+            });
+    }
+
+    function toggleCourt(id, checkbox) {
+        fetch(`/api/admin/courts/${id}/availability`, {
+            method: 'PATCH',
+            headers: { 'Authorization': 'Bearer ' + token }
+        }).catch(() => { checkbox.checked = !checkbox.checked; });
+    }
+
+    function deleteCourt(id) {
+        if (!confirm('Delete this court?')) return;
+        fetch(`/api/admin/courts/${id}`, {
+            method: 'DELETE',
+            headers: { 'Authorization': 'Bearer ' + token }
+        }).then(() => loadAdminDashboard());
+    }
+
+    function showAddCourt() {
+        document.getElementById('addCourtModal').style.display = 'flex';
+    }
+
+    function hideAddCourt() {
+        document.getElementById('addCourtModal').style.display = 'none';
+    }
+
+    function submitAddCourt(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = {
+            name: form.name.value,
+            description: form.description.value,
+            surfaceType: form.surfaceType.value,
+            indoor: true,
+            pricePerHour: parseInt(form.pricePerHour.value),
+            capacity: parseInt(form.capacity.value),
+            paymentLinkUrl: form.paymentLinkUrl.value || null,
+            status: 'ACTIVE',
+            sportId: 1
+        };
+
+        fetch('/api/admin/courts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+            body: JSON.stringify(data)
+        })
+        .then(r => r.json())
+        .then(() => {
+            hideAddCourt();
+            form.reset();
+            loadAdminDashboard();
+        })
+        .catch(() => alert('Failed to add court.'));
+    }
+
+    function showEditCourt(id, name, description, surfaceType, pricePerHour, capacity, imageUrl, paymentLinkUrl) {
+        document.getElementById('editCourtId').value = id;
+        document.getElementById('editName').value = name;
+        document.getElementById('editDescription').value = description;
+        document.getElementById('editSurfaceType').value = surfaceType;
+        document.getElementById('editPricePerHour').value = pricePerHour;
+        document.getElementById('editCapacity').value = capacity;
+        document.getElementById('editImageUrl').value = imageUrl;
+        document.getElementById('editPaymentLinkUrl').value = paymentLinkUrl || '';
+        document.getElementById('editCourtModal').style.display = 'flex';
+    }
+
+    function hideEditCourt() {
+        document.getElementById('editCourtModal').style.display = 'none';
+    }
+
+    function submitEditCourt(event) {
+        event.preventDefault();
+        const form = event.target;
+        const id = form.id.value;
+        const data = {
+            name: form.name.value,
+            description: form.description.value,
+            surfaceType: form.surfaceType.value,
+            indoor: true,
+            pricePerHour: parseInt(form.pricePerHour.value),
+            capacity: parseInt(form.capacity.value),
+            paymentLinkUrl: form.paymentLinkUrl.value || null,
+            status: 'ACTIVE',
+            sportId: 1,
+            imageUrl: form.imageUrl.value || null
+        };
+
+        fetch(`/api/admin/courts/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+            body: JSON.stringify(data)
+        })
+        .then(r => r.json())
+        .then(() => {
+            hideEditCourt();
+            loadAdminDashboard();
+        })
+        .catch(() => alert('Failed to update court.'));
+    }
+
+    let slotManagerCourtId = null;
+
+    function showSlotManager(courtId, courtName) {
+        slotManagerCourtId = courtId;
+        document.getElementById('slotCourtName').textContent = 'Court: ' + courtName;
+        document.getElementById('slotManagerModal').style.display = 'flex';
+        loadSlotPreview(courtId);
+    }
+
+    function hideSlotManager() {
+        document.getElementById('slotManagerModal').style.display = 'none';
+    }
+
+    function loadSlotPreview(courtId) {
+        const container = document.getElementById('slotList');
+        container.innerHTML = '<p style="color: var(--color-text-secondary);">Loading slot count...</p>';
+        fetch('/api/admin/courts/' + courtId + '/slots/count', { headers: { 'Authorization': 'Bearer ' + token } })
+            .then(r => r.json())
+            .then(data => {
+                container.innerHTML = '<p style="margin-bottom: var(--space-3);">Total slots: <strong>' + data.count + '</strong></p>'
+                    + '<p style="font-size: 13px; color: var(--color-text-secondary);">' + data.message + '</p>'
+                    + '<div style="margin-top: var(--space-3); display: flex; gap: var(--space-2); flex-wrap: wrap;">'
+                    + (data.dates || []).map(d => '<span style="background: var(--color-bg-elevated); padding: 4px 10px; border-radius: var(--radius-sm); font-size: 12px;">' + d + '</span>').join('')
+                    + '</div>';
+            })
+            .catch(() => {
+                container.innerHTML = '<p style="color: var(--color-text-secondary);">Could not load slot info.</p>';
+            });
+    }
+
+    function generateSlots() {
+        if (!slotManagerCourtId) return;
+        fetch('/api/admin/courts/' + slotManagerCourtId + '/slots?days=14', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + token }
+        })
+        .then(() => {
+            alert('Slots generated for 14 days!');
+            loadSlotPreview(slotManagerCourtId);
+            loadAdminDashboard();
+        })
+        .catch(() => alert('Failed to generate slots.'));
+    }
+
+    function generateSlotsNextWeek() {
+        if (!slotManagerCourtId) return;
+        fetch('/api/admin/courts/' + slotManagerCourtId + '/slots?days=7', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + token }
+        })
+        .then(() => {
+            alert('Slots generated for next 7 days!');
+            loadSlotPreview(slotManagerCourtId);
+            loadAdminDashboard();
+        })
+        .catch(() => alert('Failed to generate slots.'));
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAdminDashboard);
+    </script>
+</body>
+</html>

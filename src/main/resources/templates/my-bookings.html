@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('My Bookings')}"></head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar('my-bookings')}"></div>
+    <div th:replace="~{fragments/topbar :: topbar}"></div>
+
+    <main class="main-content">
+        <h1 id="pageTitle" style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.32px; margin-bottom: var(--space-2);">Your Bookings</h1>
+        <p id="pageSubtitle" style="color: var(--color-text-secondary); margin-bottom: var(--space-6);">Keep track of your games and upcoming sessions.</p>
+
+        <div class="booking-stats-row" id="statsRow">
+            <div class="booking-stat-card">
+                <div class="stat-label">THIS MONTH</div>
+                <div class="stat-value" id="thisMonthCount">-</div>
+            </div>
+            <div class="booking-stat-card">
+                <div class="stat-label">UPCOMING</div>
+                <div class="stat-value" id="upcomingCount">-</div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: var(--space-8);">
+            <div class="section-header">
+                <h2>Upcoming Matches</h2>
+            </div>
+            <div class="upcoming-grid" id="upcomingGrid"></div>
+        </div>
+
+        <div>
+            <div class="section-header">
+                <h2>Past Bookings</h2>
+            </div>
+            <div class="table-container" id="pastBookingsTable">
+                <table>
+                    <thead>
+                        <tr id="pastTableHeader">
+                            <th>Court</th>
+                            <th id="pastUserHeader" style="display:none;">User</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pastBookingsBody">
+                        <tr><td colspan="6" style="text-align: center; color: var(--color-text-secondary);">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/bottomnav :: bottomnav('my-bookings')}"></div>
+
+    <script>
+    const token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    const isAdmin = user.role === 'ADMIN';
+
+    async function apiFetch(url, options = {}) {
+        const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+        const response = await fetch(url, { ...options, headers });
+        let data = null;
+        try { data = await response.json(); } catch (_) { data = {}; }
+        if (response.status === 401) {
+            window.location.href = '/login';
+            return null;
+        }
+        if (!response.ok) {
+            throw new Error(data.error || data.message || 'Request failed (' + response.status + ')');
+        }
+        return data;
+    }
+
+    async function loadBookings() {
+        if (!token) {
+            document.getElementById('upcomingGrid').innerHTML = '<p style="color: var(--color-text-secondary);">Please login to view your bookings.</p>';
+            document.getElementById('pastBookingsBody').innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--color-text-secondary);"><a href="/login" style="color: var(--color-accent-primary);">Login here</a></td></tr>';
+            return;
+        }
+
+        var upcomingGrid = document.getElementById('upcomingGrid');
+        var pastBody = document.getElementById('pastBookingsBody');
+        upcomingGrid.innerHTML = '<p style="color: var(--color-text-secondary);">Loading...</p>';
+        pastBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--color-text-secondary);">Loading...</td></tr>';
+
+        try {
+            if (isAdmin) {
+                var all = await apiFetch('/api/admin/bookings/all');
+                var now = new Date();
+                var today = now.toISOString().split('T')[0];
+                var upcoming = all.filter(function(b) {
+                    return (b.status === 'CONFIRMED' || b.status === 'PENDING_PAYMENT' || b.status === 'ACTIVE')
+                        && b.date >= today;
+                });
+                var past = all.filter(function(b) {
+                    return b.status === 'COMPLETED' || b.status === 'CANCELLED'
+                        || (b.status === 'CONFIRMED' && b.date < today);
+                });
+                renderUpcoming(upcoming);
+                renderPast(past);
+                renderStats(all);
+            } else {
+                var result = await Promise.all([
+                    apiFetch('/api/bookings/me?upcoming=true'),
+                    apiFetch('/api/bookings/me?past=true'),
+                    apiFetch('/api/bookings/me')
+                ]);
+                renderUpcoming(result[0]);
+                renderPast(result[1]);
+                renderStats(result[2]);
+            }
+        } catch (err) {
+            upcomingGrid.innerHTML = '<p style="color: var(--color-text-secondary);">' + err.message + '</p>';
+            pastBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--color-text-secondary);">' + err.message + '</td></tr>';
+        }
+    }
+
+    function renderStats(allBookings) {
+        const now = new Date();
+        const month = now.getMonth();
+        const year = now.getFullYear();
+        const thisMonth = (allBookings || []).filter(function(b) {
+            if (b.status === 'CANCELLED') return false;
+            var d = new Date(b.date + 'T12:00:00');
+            return d.getMonth() === month && d.getFullYear() === year;
+        });
+        document.getElementById('thisMonthCount').textContent = thisMonth.length;
+        var upcomingCards = document.querySelectorAll('#upcomingGrid .booking-card:not(.empty-state-card)').length;
+        document.getElementById('upcomingCount').textContent = upcomingCards || 0;
+    }
+
+    function renderUpcoming(bookings) {
+        var grid = document.getElementById('upcomingGrid');
+        if (!bookings || bookings.length === 0) {
+            grid.innerHTML = '\n\
+                <div class="booking-card empty-state-card" style="grid-column: 1/-1;">\n\
+                    <div class="icon-circle">&#x1f4c5;</div>\n\
+                    <h3>' + (isAdmin ? 'All caught up' : 'Book Another') + '</h3>\n\
+                    <p style="color: var(--color-text-secondary);">' + (isAdmin ? 'No upcoming bookings across all users.' : 'No upcoming matches yet.<br>Browse courts and book your next game.') + '</p>\n\
+                    ' + (isAdmin ? '' : '<a href="/booking" class="btn-primary" style="padding: 12px 32px;">Browse Courts</a>') + '\n\
+                </div>\n\
+            ';
+            return;
+        }
+        grid.innerHTML = bookings.map(function(b) {
+            var statusLabel;
+            switch (b.status) {
+                case 'CONFIRMED': statusLabel = 'Confirmed'; break;
+                case 'PENDING_PAYMENT': statusLabel = 'Pending Payment'; break;
+                case 'ACTIVE': statusLabel = 'Active Now'; break;
+                default: statusLabel = b.status;
+            }
+            var actionsHtml = '';
+            if (isAdmin) {
+                if (b.status === 'PENDING_PAYMENT') {
+                    actionsHtml = '\n\
+                        <button class="btn-primary" onclick="adminConfirmBooking(' + b.id + ')">Confirm</button>\n\
+                        <button class="btn-secondary" onclick="cancelBooking(' + b.id + ')">Cancel</button>\n\
+                    ';
+                } else if (b.status === 'CONFIRMED') {
+                    actionsHtml = '\n\
+                        <button class="btn-secondary" onclick="cancelBooking(' + b.id + ')">Cancel</button>\n\
+                    ';
+                } else if (b.status === 'ACTIVE') {
+                    actionsHtml = '<span class="badge badge-glass" style="width:100%;justify-content:center;">In Progress</span>';
+                }
+            } else {
+                if (b.status === 'PENDING_PAYMENT') {
+                    actionsHtml = '\n\
+                        <button class="btn-primary" onclick="payBooking(' + b.id + ', this)">Pay Now</button>\n\
+                        <button class="btn-secondary" onclick="cancelBooking(' + b.id + ')">Cancel</button>\n\
+                    ';
+                } else if (b.status === 'CONFIRMED') {
+                    actionsHtml = '\n\
+                        <button class="btn-secondary" style="flex:2;" onclick="rescheduleBooking(' + b.id + ', ' + b.courtId + ')">Reschedule</button>\n\
+                        <button class="btn-secondary" onclick="cancelBooking(' + b.id + ')">Cancel</button>\n\
+                    ';
+                } else if (b.status === 'ACTIVE') {
+                    actionsHtml = '<span class="badge badge-glass" style="width:100%;justify-content:center;">In Progress</span>';
+                }
+            }
+            var userHtml = isAdmin ? '\n\
+                <div class="booking-detail-row" style="margin-top: 4px;">\n\
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>\n\
+                    ' + (b.userName || 'Unknown') + '\n\
+                </div>\n\
+            ' : '';
+            return '\n\
+                <div class="booking-card">\n\
+                   <div class="booking-card-image" style="' + (b.courtImageUrl ? 'background-image: url(' + b.courtImageUrl + '); background-size: cover; background-position: center;' : '') + '">\n\
+                    </div>\n\
+                    <div class="booking-card-body">\n\
+                        <h3>' + b.courtName + '</h3>\n\
+                        <div class="booking-detail-row">\n\
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zM4 8h12v8H4V8z" clip-rule="evenodd"/></svg>\n\
+                            ' + b.date + '\n\
+                        </div>\n\
+                        <div class="booking-detail-row">\n\
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>\n\
+                            ' + b.startTime + ' - ' + b.endTime + '\n\
+                        </div>\n\
+                        ' + userHtml + '\n\
+                        <div class="booking-card-actions">\n\
+                            ' + actionsHtml + '\n\
+                        </div>\n\
+                    </div>\n\
+                </div>\n\
+            ';
+        }).join('');
+    }
+
+    function renderPast(bookings) {
+        var tbody = document.getElementById('pastBookingsBody');
+        if (!bookings || bookings.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--color-text-secondary);">No past bookings yet.</td></tr>';
+            return;
+        }
+        tbody.innerHTML = bookings.map(function(b) {
+            var statusDot = (b.status || '').toLowerCase();
+            var labelHtml = '';
+            switch (b.status) {
+                case 'CANCELLED': labelHtml = '<span class="status-dot cancelled"></span>Cancelled'; break;
+                case 'COMPLETED': labelHtml = '<span class="status-dot completed"></span>Completed'; break;
+                case 'CONFIRMED': labelHtml = '<span class="status-dot confirmed"></span>Missed'; break;
+                default: labelHtml = '<span class="status-dot ' + statusDot + '"></span>' + b.status;
+            }
+            var userCell = isAdmin ? '\n\
+                <td>' + (b.userName || 'Unknown') + '</td>\n\
+            ' : '';
+            return '\n\
+                <tr>\n\
+                    <td>' + b.courtName + '</td>\n\
+                    ' + userCell + '\n\
+                    <td>' + b.date + '</td>\n\
+                    <td>' + b.startTime + ' - ' + b.endTime + '</td>\n\
+                    <td>' + labelHtml + '</td>\n\
+                    <td style="display: flex; gap: var(--space-2); align-items: center; height: 83px;">\n\
+                        <button style="background: none; border: 1px solid var(--color-border-default); color: var(--color-text-tertiary); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer;" onclick="window.location.href=\'/booking?courtId=' + b.courtId + '\'">Book Again</button>\n\
+                    </td>\n\
+                </tr>\n\
+            ';
+        }).join('');
+    }
+
+    async function cancelBooking(id) {
+        if (!confirm('Cancel this booking?')) return;
+        try {
+            await apiFetch('/api/bookings/' + id, {
+                method: 'PATCH',
+                body: JSON.stringify({ action: 'cancel' })
+            });
+            await loadBookings();
+        } catch (err) {
+            alert(err.message || 'Failed to cancel booking.');
+        }
+    }
+
+    let snapLoaded = false;
+
+async function loadSnapScript() {
+    if (snapLoaded && window.snap) return;
+    var configRes = await fetch('/payment/snap-config').then(function(r) { return r.json(); });
+    return new Promise(function(resolve, reject) {
+        var script = document.createElement('script');
+        script.src = configRes.snapBaseUrl;
+        script.setAttribute('data-client-key', configRes.clientKey);
+        script.onload = function() { snapLoaded = true; resolve(); };
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+}
+
+async function payBooking(id, btn) {
+    btn.disabled = true;
+    btn.textContent = 'Processing...';
+    try {
+        await loadSnapScript();
+        var result = await apiFetch('/payment/charge/' + id, { method: 'POST' });
+        btn.disabled = false;
+        btn.textContent = 'Pay Now';
+
+        window.snap.pay(result.token, {
+            onSuccess: async function() {
+                alert('Pembayaran berhasil!');
+                loadBookings();
+            },
+            onPending: function() {
+                alert('Menunggu pembayaran. Status akan otomatis terupdate setelah dikonfirmasi Midtrans.');
+                loadBookings();
+            },
+            onError: function() {
+                alert('Pembayaran gagal, silakan coba lagi.');
+            },
+            onClose: function() {
+            }
+        });
+    } catch (err) {
+        alert(err.message || 'Payment failed.');
+        btn.disabled = false;
+        btn.textContent = 'Pay Now';
+    }
+}
+
+    async function adminConfirmBooking(id) {
+        var btn = event.target;
+        btn.disabled = true;
+        btn.textContent = 'Confirming...';
+        try {
+            await apiFetch('/api/admin/bookings/' + id + '/confirm', { method: 'POST' });
+            alert('Booking confirmed!');
+            await loadBookings();
+        } catch (err) {
+            alert(err.message || 'Failed to confirm booking.');
+            btn.disabled = false;
+            btn.textContent = 'Confirm';
+        }
+    }
+
+    function rescheduleBooking(bookingId, courtId) {
+        window.location.href = '/booking?courtId=' + courtId + '&reschedule=' + bookingId;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (isAdmin) {
+            document.getElementById('pageTitle').textContent = 'Users Bookings';
+            document.getElementById('pageSubtitle').textContent = 'View and manage all user bookings across the platform.';
+            document.getElementById('pastUserHeader').style.display = '';
+        }
+        loadBookings();
+    });
+    window.addEventListener('pageshow', function(e) {
+        if (e.persisted) loadBookings();
+    });
+    </script>
+</body>
+</html>

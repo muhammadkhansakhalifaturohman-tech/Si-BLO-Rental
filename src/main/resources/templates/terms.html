@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Terms of Service')}"></head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar('home')}"></div>
+    <div th:replace="~{fragments/topbar :: topbar}"></div>
+
+    <main class="main-content" style="max-width: 800px;">
+        <h1 style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; margin-bottom: var(--space-6);">Terms of Service</h1>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">1. Booking & Cancellation</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">All bookings are subject to availability. Cancellations must be made at least 24 hours before the scheduled start time for a full refund.</p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">2. User Conduct</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">Users must treat facilities and staff with respect. Damage to property will be charged to the responsible user.</p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">3. Liability</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">SI-BLO is not liable for injuries sustained during use of facilities. Users participate at their own risk.</p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">4. Changes to Terms</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">We reserve the right to modify these terms. Users will be notified of material changes via email.</p>
+        </section>
+    </main>
+
+    <div th:replace="~{fragments/bottomnav :: bottomnav('')}"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Privacy Policy')}"></head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar('home')}"></div>
+    <div th:replace="~{fragments/topbar :: topbar}"></div>
+
+    <main class="main-content" style="max-width: 800px;">
+        <h1 style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; margin-bottom: var(--space-6);">Privacy Policy</h1>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">1. Information We Collect</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">We collect information you provide when creating an account, making bookings, or contacting support. This includes your name, email address, phone number, and payment information.</p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">2. How We Use Your Information</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">Your information is used to process bookings, communicate about your reservations, improve our services, and send relevant updates with your consent.</p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">3. Data Security</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">We implement industry-standard security measures to protect your personal data. However, no method of electronic storage is 100% secure.</p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: var(--space-3);">4. Contact</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7;">For privacy-related inquiries, contact us at <a href="mailto:support@siblo.com" style="color: var(--color-accent-primary);">support@siblo.com</a>.</p>
+        </section>
+    </main>
+
+    <div th:replace="~{fragments/bottomnav :: bottomnav('')}"></div>
+</body>
+</html>

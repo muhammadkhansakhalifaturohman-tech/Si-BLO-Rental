@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Explore Map')}"></head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar('home')}"></div>
+    <div th:replace="~{fragments/topbar :: topbar}"></div>
+
+    <main class="main-content">
+        <h1 style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.32px; margin-bottom: var(--space-4);">Explore Venues</h1>
+        <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-5);">Find courts near you with our interactive map.</p>
+        <div id="map" style="height: 600px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border-subtle);"></div>
+        <div id="venueInfo" style="margin-top: var(--space-4); padding: var(--space-4); background: var(--color-bg-elevated); border-radius: var(--radius-md); min-height: 60px; display: none;">
+            <h3 id="venueInfoName" style="font-size: 18px; font-weight: 700; margin-bottom: var(--space-2);"></h3>
+            <p id="venueInfoAddress" style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-2);"></p>
+            <div id="venueInfoCourts"></div>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/bottomnav :: bottomnav('')}"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const map = L.map('map').setView([-6.2146, 106.8451], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        fetch('/api/venues')
+            .then(r => r.json())
+            .then(venues => {
+                venues.forEach(v => {
+                    if (!v.latitude || !v.longitude) return;
+                    const marker = L.marker([v.latitude, v.longitude]).addTo(map);
+                    const courtsList = (v.courts || []).map(c =>
+                        '<div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 0;">' +
+                        '<span>' + c.name + '</span>' +
+                        '<a href="/booking?courtId=' + c.id + '" style="color: var(--color-accent-primary); font-size: 12px; text-decoration: none;">Book</a>' +
+                        '</div>'
+                    ).join('');
+
+                    marker.bindPopup(
+                        '<div style="font-family: sans-serif; min-width: 200px;">' +
+                        '<h3 style="margin: 0 0 4px; font-size: 16px;">' + v.name + '</h3>' +
+                        '<p style="margin: 0 0 8px; font-size: 12px; color: #666;">' + (v.address || '') + '</p>' +
+                        (courtsList ? '<div style="border-top: 1px solid #eee; padding-top: 4px;">' + courtsList + '</div>' : '') +
+                        '</div>'
+                    );
+
+                    marker.on('click', function() {
+                        const info = document.getElementById('venueInfo');
+                        info.style.display = 'block';
+                        document.getElementById('venueInfoName').textContent = v.name;
+                        document.getElementById('venueInfoAddress').textContent = v.address + (v.zone ? ' - ' + v.zone : '');
+                        document.getElementById('venueInfoCourts').innerHTML = courtsList ?
+                            '<div style="margin-top: var(--space-2);"><strong>Courts:</strong></div>' + courtsList :
+                            '<p style="font-size: 13px; color: var(--color-text-secondary);">No courts at this venue.</p>';
+                        map.setView([v.latitude, v.longitude], 15);
+                    });
+                });
+            });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Book a Court')}"></head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar('booking')}"></div>
+    <div th:replace="~{fragments/topbar :: topbar}"></div>
+
+    <main class="main-content" style="padding-bottom: 160px;">
+        <div id="rescheduleBanner" style="display:none; background: var(--color-accent-primary); color: #fff; padding: 12px 20px; border-radius: var(--radius-md); margin-bottom: var(--space-4); font-weight: 600;">
+            Rescheduling booking #<span id="rescheduleBannerId"></span> &mdash; pick a new date and time.
+        </div>
+        <div class="booking-layout">
+            <div th:if="${court}" class="court-detail-card">
+                <div class="court-detail-image" th:style="${court.imageUrl} ? 'background-image: url(' + ${court.imageUrl} + ')' : ''">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, var(--color-bg-primary) 0%, rgba(8,20,37,0) 100%);"></div>
+                    <div th:if="${court.badgeLabel}" style="position: absolute; top: var(--space-4); right: var(--space-4);">
+                        <span class="badge badge-lime" th:text="${court.badgeLabel}">PREMIUM</span>
+                    </div>
+                    <div style="position: absolute; bottom: var(--space-5); left: var(--space-5);">
+                        <h2 style="font-family: 'Anybody', sans-serif; font-size: 28px; font-weight: 700;" th:text="${court.name}">Grand Slam Center - Court 04</h2>
+                        <div style="display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-2);">
+                            <span style="font-size: 14px; color: var(--color-text-secondary);">
+                                <span th:text="${court.sportName}">Tennis</span> &bull; <span th:text="${court.surfaceType}">Acrylic</span>
+                            </span>
+                            <span class="court-price" style="font-size: 20px;">
+                                Rp<span th:text="${#numbers.formatInteger(court.pricePerHour / 1000, 1, 'COMMA')}">350</span>K<small style="font-size: 14px;">/hr</small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="court-detail-body">
+                    <h2>DESCRIPTION</h2>
+                    <p th:text="${court.description}">
+                        Experience championship-grade play on our elite Court 04. Featuring a high-performance acrylic surface designed for consistent ball bounce and player comfort.
+                    </p>
+                    <div style="display: flex; gap: var(--space-6); margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--color-border-subtle);">
+                        <div><span style="color: var(--color-text-secondary); font-size: 14px;">Capacity</span><br><strong th:text="${court.capacity} + ' Max'">4 Max</strong></div>
+                        <div><span style="color: var(--color-text-secondary); font-size: 14px;">Rating</span><br><strong><span th:text="${court.rating}">4.8</span> (<span th:text="${court.reviewCount}">56</span>)</strong></div>
+                        <div><span style="color: var(--color-text-secondary); font-size: 14px;">Surface</span><br><strong th:text="${court.surfaceType}">Acrylic</strong></div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; padding: 16px; margin-top: var(--space-5); font-size: 16px;" onclick="handleBookThis()">Book This Court</button>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4);">
+                    <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; white-space: nowrap;">SELECT COURT</h3>
+                    <select id="courtSelector" onchange="switchCourt(this.value)" style="flex: 1; padding: 10px 16px; background: var(--color-bg-elevated); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); color: var(--color-text-primary); font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; outline: none; cursor: pointer;">
+                        <option th:each="c : ${courts}" th:value="${c.id}" th:selected="${court?.id == c.id}" th:text="${c.name} + ' - ' + ${c.venueName}"></option>
+                    </select>
+                </div>
+
+                <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-4);">SELECT DATE</h3>
+                <div class="date-scroller" id="dateScroller"></div>
+
+                <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-4);">SELECT TIME</h3>
+                <div id="timeSlotGrid" class="time-slot-grid">
+                    <p style="grid-column: 1/-1; color: var(--color-text-secondary);">Select a date to see available time slots. Click a slot to add it to your booking.</p>
+                </div>
+
+                <div id="bookingSummary" style="display: none; margin-top: var(--space-6);">
+                    <h3 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-4);">BOOKING SUMMARY</h3>
+                    <div class="card" style="padding: var(--space-5);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                            <span style="color: var(--color-text-secondary);">Court</span>
+                            <span style="font-weight: 700;" id="summaryCourt" th:if="${court}" th:text="${court.name}">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                            <span style="color: var(--color-text-secondary);">Date</span>
+                            <span style="font-weight: 700;" id="summaryDate">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                            <span style="color: var(--color-text-secondary);">Slots</span>
+                            <span style="font-weight: 700;" id="summarySlots">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: var(--space-3); border-top: 1px solid var(--color-border-subtle);">
+                            <span style="color: var(--color-text-secondary); font-size: 18px; font-weight: 700;">Total</span>
+                            <span style="font-size: 24px; font-weight: 800; color: var(--color-accent-primary);" id="summaryTotal">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="checkout-bar" id="checkoutBar" style="display: none;">
+        <div class="checkout-summary">
+            <div class="checkout-item">
+                <div class="label">Date</div>
+                <div class="value" id="checkoutDate">-</div>
+            </div>
+            <div class="checkout-divider"></div>
+            <div class="checkout-item">
+                <div class="label">Duration</div>
+                <div class="value" id="checkoutDuration">-</div>
+            </div>
+            <div class="checkout-divider"></div>
+            <div class="checkout-item">
+                <div class="label">Total</div>
+                <div class="price" id="checkoutPrice">-</div>
+            </div>
+            <div class="checkout-divider"></div>
+            <div class="checkout-item">
+                <div class="label">Court</div>
+                <div class="value" th:if="${court}" th:text="${court.name}">Court</div>
+            </div>
+        </div>
+        <div class="checkout-actions">
+            <button class="btn-secondary" aria-label="Save">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293z"/></svg>
+            </button>
+            <button class="btn-primary" id="confirmBookingBtn" onclick="confirmBooking()">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Confirm Booking
+            </button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" style="display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); align-items: center; justify-content: center;">
+        <div class="card" style="max-width: 480px; width: 90%; padding: var(--space-6); text-align: center;">
+            <div style="font-size: 48px; margin-bottom: var(--space-4);">&#x1f4b0;</div>
+            <h2 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-2);">Complete Payment</h2>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-5);">Your booking is pending. Complete payment within 15 minutes to confirm.</p>
+            <div style="background: var(--color-bg-elevated); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-5);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                    <span style="color: var(--color-text-secondary);">Booking ID</span>
+                    <span style="font-weight: 700;" id="modalBookingId">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                    <span style="color: var(--color-text-secondary);">Court</span>
+                    <span style="font-weight: 700;" id="modalCourtName">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                    <span style="color: var(--color-text-secondary);">Date</span>
+                    <span style="font-weight: 700;" id="modalDate">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                    <span style="color: var(--color-text-secondary);">Slots</span>
+                    <span style="font-weight: 700;" id="modalSlots">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding-top: var(--space-3); border-top: 1px solid var(--color-border-subtle);">
+                    <span style="color: var(--color-text-secondary); font-size: 18px; font-weight: 700;">Total</span>
+                    <span style="font-size: 28px; font-weight: 800; color: var(--color-accent-primary);" id="modalTotal">-</span>
+                </div>
+            </div>
+            <div style="display: flex; gap: var(--space-4);">
+                <button class="btn-secondary" style="flex: 1; padding: 16px;" onclick="cancelPayment()">Cancel</button>
+                <button class="btn-primary" style="flex: 1; padding: 16px; font-size: 16px;" id="payNowBtn" onclick="payNow()">Pay Now</button>
+            </div>
+            <p style="color: var(--color-text-secondary); font-size: 12px; margin-top: var(--space-3);">Payment expires at <span id="modalExpires">-</span></p>
+        </div>
+    </div>
+
+    <div th:replace="~{fragments/bottomnav :: bottomnav('booking')}"></div>
+
+    <script th:inline="javascript">
+    const DATE_SCROLLER_DAYS = /*[[${dateScrollerDays}]]*/ 14;
+    let selectedSlots = [];
+    let selectedDate = null;
+    let courtId = /*[[${court?.id}]]*/ null;
+    let pricePerHour = /*[[${court?.pricePerHour}]]*/ 0;
+    let pendingBookingId = null;
+    let rescheduleId = null;
+
+    async function apiFetch(url, options = {}) {
+        const token = localStorage.getItem('token');
+        const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+        const response = await fetch(url, { ...options, headers });
+        let data = null;
+        try { data = await response.json(); } catch (_) { data = {}; }
+        if (response.status === 401) {
+            window.location.href = '/login';
+            return null;
+        }
+        if (!response.ok) {
+            throw new Error(data.error || data.message || 'Request failed (' + response.status + ')');
+        }
+        return data;
+    }
+
+    (function() {
+        const params = new URLSearchParams(window.location.search);
+        rescheduleId = params.get('reschedule');
+        if (rescheduleId) {
+            var banner = document.getElementById('rescheduleBanner');
+            document.getElementById('rescheduleBannerId').textContent = rescheduleId;
+            banner.style.display = 'block';
+        }
+    })();
+
+    function switchCourt(newId) {
+        let url = '/booking?courtId=' + newId;
+        if (rescheduleId) url += '&reschedule=' + rescheduleId;
+        window.location.href = url;
+    }
+
+    function toLocalDateStr(d) {
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return y + '-' + m + '-' + day;
+    }
+
+    function initDateScroller() {
+        const scroller = document.getElementById('dateScroller');
+        const today = new Date();
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        for (let i = 0; i < DATE_SCROLLER_DAYS; i++) {
+            const date = new Date(today);
+            date.setDate(today.getDate() + i);
+            const card = document.createElement('div');
+            card.className = 'date-card' + (i === 0 ? ' selected' : '');
+            card.dataset.date = toLocalDateStr(date);
+            card.innerHTML = `
+                <span class="day-name">${days[date.getDay()]}</span>
+                <span class="day-number">${date.getDate()}</span>
+                <span class="month-name">${months[date.getMonth()]}</span>
+            `;
+            card.addEventListener('click', () => selectDate(card));
+            scroller.appendChild(card);
+        }
+        if (courtId) loadSlots(toLocalDateStr(today));
+    }
+
+    function selectDate(card) {
+        document.querySelectorAll('.date-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        selectedDate = card.dataset.date;
+        selectedSlots = [];
+        if (courtId) loadSlots(selectedDate);
+    }
+
+    function loadSlots(date) {
+        const grid = document.getElementById('timeSlotGrid');
+        grid.innerHTML = '<p style="grid-column: 1/-1; color: var(--color-text-secondary);">Loading slots...</p>';
+
+        if (!courtId) {
+            grid.innerHTML = '<p style="grid-column: 1/-1; color: var(--color-text-secondary);">No court selected.</p>';
+            return;
+        }
+
+        fetch(`/api/courts/${courtId}/availability?date=${date}`)
+            .then(r => { if (!r.ok) throw new Error('API error'); return r.json(); })
+            .then(slots => {
+                if (slots.length === 0) {
+                    grid.innerHTML = '<p style="grid-column: 1/-1; color: var(--color-text-secondary);">No time slots available for this date.</p>';
+                    return;
+                }
+                const available = slots.filter(s => s.status === 'AVAILABLE');
+                grid.innerHTML = slots.map(slot => {
+                    let cls = 'slot-btn';
+                    if (slot.status === 'BOOKED') cls += ' booked';
+                    else if (slot.status === 'BLOCKED') cls += ' unavailable';
+                    else if (slot.status === 'HELD') cls += ' booked';
+                    return `<button class="${cls}" data-slot-id="${slot.id}" data-start="${slot.startTime}" data-end="${slot.endTime}" onclick="toggleSlot(this)" ${slot.status !== 'AVAILABLE' ? 'disabled' : ''}>${slot.startTime.substring(0, 5)}</button>`;
+                }).join('');
+                if (available.length === 0 && slots.length > 0) {
+                    grid.innerHTML += '<p style="grid-column: 1/-1; color: var(--color-text-secondary); text-align: center; margin-top: 8px;">All slots are booked for this date.</p>';
+                }
+            })
+            .catch(() => {
+                grid.innerHTML = '<p style="grid-column: 1/-1; color: var(--color-text-secondary);">Failed to load time slots. Please try again.</p>';
+            });
+    }
+
+    function toggleSlot(btn) {
+        if (btn.classList.contains('booked') || btn.classList.contains('unavailable')) return;
+
+        const slotId = parseInt(btn.dataset.slotId);
+        const idx = selectedSlots.indexOf(slotId);
+
+        if (idx > -1) {
+            selectedSlots.splice(idx, 1);
+            btn.classList.remove('selected');
+        } else {
+            selectedSlots.push(slotId);
+            btn.classList.add('selected');
+        }
+        updateCheckout();
+    }
+
+    function updateCheckout() {
+        const bar = document.getElementById('checkoutBar');
+        const summary = document.getElementById('bookingSummary');
+        if (selectedSlots.length === 0) {
+            bar.style.display = 'none';
+            summary.style.display = 'none';
+            return;
+        }
+        bar.style.display = 'flex';
+        summary.style.display = 'block';
+
+        const dateEl = document.getElementById('checkoutDate');
+        const durEl = document.getElementById('checkoutDuration');
+        const priceEl = document.getElementById('checkoutPrice');
+
+        const summaryCourt = document.getElementById('summaryCourt');
+        const summaryDate = document.getElementById('summaryDate');
+        const summarySlots = document.getElementById('summarySlots');
+        const summaryTotal = document.getElementById('summaryTotal');
+
+        if (selectedDate) {
+            const d = new Date(selectedDate + 'T12:00:00');
+            const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            dateEl.textContent = dateStr;
+            summaryDate.textContent = dateStr;
+        }
+
+        durEl.textContent = selectedSlots.length + ' Hour' + (selectedSlots.length > 1 ? 's' : '');
+        priceEl.textContent = 'Rp' + (selectedSlots.length * pricePerHour).toLocaleString('id-ID');
+
+        summarySlots.textContent = selectedSlots.length + ' selected';
+        summaryTotal.textContent = 'Rp' + (selectedSlots.length * pricePerHour).toLocaleString('id-ID');
+    }
+
+    function handleBookThis() {
+        if (selectedSlots.length > 0) {
+            confirmBooking();
+        } else {
+            document.querySelector('.date-scroller').scrollIntoView({behavior:'smooth'});
+            const grid = document.getElementById('timeSlotGrid');
+            if (grid) grid.innerHTML = '<p style="grid-column: 1/-1; color: var(--color-accent-primary); font-weight: 600;">Select one or more time slots above, then click Book This Court again.</p>';
+        }
+    }
+
+    async function confirmBooking() {
+        if (selectedSlots.length === 0 || !selectedDate || !courtId) return;
+        const token = localStorage.getItem('token');
+        if (!token) { alert('Please login first.'); window.location.href = '/login'; return; }
+
+        const doc = document.getElementById('confirmBookingBtn');
+        doc.disabled = true;
+        doc.textContent = 'Processing...';
+
+        try {
+            if (rescheduleId) {
+                const payload = {
+                    action: 'reschedule',
+                    courtId: courtId,
+                    slotIds: selectedSlots,
+                    date: selectedDate
+                };
+                await apiFetch('/api/bookings/' + rescheduleId, {
+                    method: 'PATCH',
+                    body: JSON.stringify(payload)
+                });
+                alert('Booking rescheduled!');
+                window.location.href = '/my-bookings';
+            } else {
+                let data = await apiFetch('/api/bookings', {
+                    method: 'POST',
+                    body: JSON.stringify({ courtId: courtId, slotIds: selectedSlots, date: selectedDate })
+                });
+                if (data.status === 'PENDING_PAYMENT') {
+                    showPaymentModal(data);
+                } else {
+                    alert('Booking confirmed!');
+                    window.location.href = '/my-bookings';
+                }
+            }
+        } catch (err) {
+            doc.disabled = false;
+            doc.textContent = 'Confirm Booking';
+            alert(err.message || 'Booking failed.');
+        }
+    }
+
+    function showPaymentModal(booking) {
+        pendingBookingId = booking.id;
+        document.getElementById('modalBookingId').textContent = '#' + booking.id;
+        document.getElementById('modalCourtName').textContent = booking.courtName || 'Court';
+        document.getElementById('modalDate').textContent = booking.date || selectedDate;
+        document.getElementById('modalSlots').textContent = (booking.slotIds ? booking.slotIds.length : selectedSlots.length) + ' selected';
+        document.getElementById('modalTotal').textContent = 'Rp' + (booking.totalPrice || (selectedSlots.length * pricePerHour)).toLocaleString('id-ID');
+        if (booking.paymentExpiresAt) {
+            const exp = new Date(booking.paymentExpiresAt);
+            document.getElementById('modalExpires').textContent = exp.toLocaleTimeString();
+        }
+        document.getElementById('paymentModal').style.display = 'flex';
+    }
+
+    async function cancelPayment() {
+        document.getElementById('paymentModal').style.display = 'none';
+        if (pendingBookingId) {
+            try {
+                await apiFetch('/api/bookings/' + pendingBookingId, {
+                    method: 'PATCH',
+                    body: JSON.stringify({ action: 'cancel' })
+                });
+            } catch (_) {}
+        }
+        window.location.href = '/my-bookings';
+    }
+
+    let snapLoaded = false;
+
+async function loadSnapScript() {
+    if (snapLoaded && window.snap) return;
+    var configRes = await fetch('/payment/snap-config').then(function(r) { return r.json(); });
+    return new Promise(function(resolve, reject) {
+        var script = document.createElement('script');
+        script.src = configRes.snapBaseUrl;
+        script.setAttribute('data-client-key', configRes.clientKey);
+        script.onload = function() { snapLoaded = true; resolve(); };
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+}
+
+async function payNow() {
+    const token = localStorage.getItem('token');
+    const btn = document.getElementById('payNowBtn');
+    btn.disabled = true;
+    btn.textContent = 'Processing...';
+
+    try {
+        await loadSnapScript();
+
+        const response = await fetch('/payment/charge/' + pendingBookingId, {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + token }
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert(data.error || data.message || 'Payment failed.');
+            btn.disabled = false;
+            btn.textContent = 'Pay Now';
+            return;
+        }
+
+        btn.disabled = false;
+        btn.textContent = 'Pay Now';
+
+        window.snap.pay(data.token, {
+            onSuccess: async function() {
+                alert('Pembayaran berhasil!');
+                window.location.href = '/my-bookings';
+            },
+            onPending: function() {
+                alert('Menunggu pembayaran. Status akan otomatis terupdate setelah dikonfirmasi Midtrans.');
+                window.location.href = '/my-bookings';
+            },
+            onError: function() {
+                alert('Pembayaran gagal, silakan coba lagi.');
+            },
+            onClose: function() {
+            }
+        });
+    } catch (err) {
+        alert('Payment failed. Please try again.');
+        btn.disabled = false;
+        btn.textContent = 'Pay Now';
+    }
+}
+
+    document.addEventListener('DOMContentLoaded', initDateScroller);
+    window.addEventListener('pageshow', function(e) {
+        if (e.persisted) initDateScroller();
+    });
+    </script>
+</body>
+</html>
