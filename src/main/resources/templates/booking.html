@@ -338,6 +338,8 @@
                 throw new Error(charge && charge.error ? charge.error : 'Payment initiation failed');
             }
 
+            await loadSnapScript();
+
             window.snap.pay(charge.token, {
                 onSuccess: function() {
                     alert('Pembayaran berhasil!');

@@ -1,0 +1,401 @@
+2026-07-01T18:13:40.878959434Z [inf]  Starting Container
+2026-07-01T18:13:41.568544966Z [inf]  
+2026-07-01T18:13:41.568548066Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:13:41.568551176Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:13:41.568554186Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:13:41.568557226Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:13:41.568560555Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:13:41.568564015Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:13:41.568567315Z [inf]  
+2026-07-01T18:13:41.568570235Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:13:41.568573295Z [inf]  
+2026-07-01T18:13:41.568576365Z [inf]  2026-07-01T18:13:41.422Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:13:41.568579515Z [inf]  2026-07-01T18:13:41.424Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:13:42.746806696Z [inf]  2026-07-01T18:13:42.741Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:13:42.846987392Z [inf]  2026-07-01T18:13:42.841Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:13:43.954915785Z [inf]  2026-07-01T18:13:43.928Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:13:43.954919205Z [inf]  2026-07-01T18:13:43.938Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:13:43.954923025Z [inf]  2026-07-01T18:13:43.938Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:13:43.997469037Z [inf]  2026-07-01T18:13:43.990Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:13:43.997475047Z [inf]  2026-07-01T18:13:43.991Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2495 ms
+2026-07-01T18:13:44.392512299Z [inf]  2026-07-01T18:13:44.389Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:13:44.567338633Z [inf]  2026-07-01T18:13:44.488Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:13:44.567341273Z [inf]  2026-07-01T18:13:44.531Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:13:45.328262783Z [inf]  2026-07-01T18:13:45.319Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:13:45.402535204Z [inf]  2026-07-01T18:13:45.393Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:13:45.937531302Z [inf]  2026-07-01T18:13:45.889Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52285a5f
+2026-07-01T18:13:45.937534162Z [inf]  2026-07-01T18:13:45.890Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:13:45.937536682Z [inf]  2026-07-01T18:13:45.924Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:13:45.942900690Z [inf]  2026-07-01T18:13:45.940Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:13:45.942922110Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:13:45.942926509Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:13:45.942930359Z [inf]  	Database version: 18.4
+2026-07-01T18:13:45.942943529Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:13:45.942946749Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:13:45.942958999Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:13:45.942962159Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:13:47.040063400Z [inf]  2026-07-01T18:13:47.034Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:13:47.130719501Z [inf]  2026-07-01T18:13:47.117Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-07-01T18:13:47.130723721Z [inf]  2026-07-01T18:13:47.118Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk8vo36cen604as7etdfwmyjsxt" of relation "payments" does not exist, skipping
+2026-07-01T18:13:47.130728441Z [inf]  2026-07-01T18:13:47.124Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-07-01T18:13:47.130732441Z [inf]  2026-07-01T18:13:47.124Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uknuscjm6x127hkb15kcb8n56wo" of relation "payments" does not exist, skipping
+2026-07-01T18:13:47.131975959Z [inf]  2026-07-01T18:13:47.130Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-07-01T18:13:47.131980079Z [inf]  2026-07-01T18:13:47.130Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uktj61or3k005spbrx0lgjpwtde" of relation "sports" does not exist, skipping
+2026-07-01T18:13:47.143887322Z [inf]  2026-07-01T18:13:47.136Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-07-01T18:13:47.143892782Z [inf]  2026-07-01T18:13:47.137Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "ukqxhovifeqyxkuw6m06q6n1sep" of relation "sports" does not exist, skipping
+2026-07-01T18:13:47.143896282Z [inf]  2026-07-01T18:13:47.142Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-07-01T18:13:47.143899422Z [inf]  2026-07-01T18:13:47.142Z  WARN 1 --- [siblo-rent] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2026-07-01T18:13:47.183243956Z [inf]  2026-07-01T18:13:47.170Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:13:47.627925802Z [inf]  2026-07-01T18:13:47.618Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:13:51.090877581Z [inf]  
+2026-07-01T18:13:51.090884881Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:13:51.090889240Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:13:51.090892560Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:13:51.090895940Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:13:51.090899320Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:13:51.090903330Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:13:51.090908150Z [inf]  
+2026-07-01T18:13:51.096287257Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:13:51.096292117Z [inf]  
+2026-07-01T18:13:51.245975308Z [inf]  2026-07-01T18:13:51.241Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:13:51.245979458Z [inf]  2026-07-01T18:13:51.243Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:13:52.758206623Z [inf]  2026-07-01T18:13:52.753Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:13:52.882831041Z [inf]  2026-07-01T18:13:52.867Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:13:53.965213313Z [inf]  2026-07-01T18:13:53.957Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:13:53.965296052Z [inf]  2026-07-01T18:13:53.948Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:13:53.985739692Z [inf]  2026-07-01T18:13:53.981Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:13:54.008516459Z [inf]  2026-07-01T18:13:53.999Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:13:54.008527619Z [inf]  2026-07-01T18:13:54.000Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2707 ms
+2026-07-01T18:13:54.354784572Z [inf]  2026-07-01T18:13:54.352Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:13:54.486390702Z [inf]  2026-07-01T18:13:54.485Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:13:54.669626495Z [inf]  2026-07-01T18:13:54.583Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:13:55.247546267Z [inf]  2026-07-01T18:13:55.242Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:13:55.290197178Z [inf]  2026-07-01T18:13:55.284Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:13:55.798082858Z [inf]  2026-07-01T18:13:55.786Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@143413cd
+2026-07-01T18:13:55.798088797Z [inf]  2026-07-01T18:13:55.787Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:13:55.810749963Z [inf]  2026-07-01T18:13:55.809Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:13:55.853682052Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:13:55.853688942Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:13:55.853702242Z [inf]  2026-07-01T18:13:55.849Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:13:55.853712872Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:13:55.853717662Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:13:55.853720991Z [inf]  	Database version: 18.4
+2026-07-01T18:13:55.853724551Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:13:55.853728111Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:13:57.125331311Z [inf]  2026-07-01T18:13:57.114Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:13:57.277945435Z [inf]  2026-07-01T18:13:57.248Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:13:57.746757698Z [inf]  2026-07-01T18:13:57.690Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:01.138598075Z [inf]  
+2026-07-01T18:14:01.138603735Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:01.138606705Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:01.138610125Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:01.138612815Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:01.138619825Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:01.138623005Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:01.138625695Z [inf]  
+2026-07-01T18:14:01.138628335Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:01.138631145Z [inf]  
+2026-07-01T18:14:01.311545790Z [inf]  2026-07-01T18:14:01.298Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:01.311552300Z [inf]  2026-07-01T18:14:01.300Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:14:02.851429806Z [inf]  2026-07-01T18:14:02.795Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:14:02.867875126Z [inf]  2026-07-01T18:14:02.866Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:14:03.935737710Z [inf]  2026-07-01T18:14:03.933Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:14:03.945757172Z [inf]  2026-07-01T18:14:03.943Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:14:03.945762892Z [inf]  2026-07-01T18:14:03.944Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:14:04.021120453Z [inf]  2026-07-01T18:14:03.994Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:14:04.021125863Z [inf]  2026-07-01T18:14:03.996Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2641 ms
+2026-07-01T18:14:04.362273009Z [inf]  2026-07-01T18:14:04.343Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:14:04.502607095Z [inf]  2026-07-01T18:14:04.496Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:14:04.578099505Z [inf]  2026-07-01T18:14:04.548Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:14:05.306165850Z [inf]  2026-07-01T18:14:05.298Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:14:05.346548376Z [inf]  2026-07-01T18:14:05.345Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:14:05.920842098Z [inf]  2026-07-01T18:14:05.919Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@143413cd
+2026-07-01T18:14:05.922111286Z [inf]  2026-07-01T18:14:05.920Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:14:05.950881503Z [inf]  2026-07-01T18:14:05.949Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:14:05.969901876Z [inf]  2026-07-01T18:14:05.966Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:14:05.969904916Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:14:05.969907616Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:14:05.969910496Z [inf]  	Database version: 18.4
+2026-07-01T18:14:05.969913236Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:14:05.969916326Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:14:05.969918616Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:14:05.969921076Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:14:06.959627110Z [inf]  2026-07-01T18:14:06.955Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:14:07.230780004Z [inf]  2026-07-01T18:14:07.106Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:14:07.605507332Z [inf]  2026-07-01T18:14:07.602Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:11.203896136Z [inf]  
+2026-07-01T18:14:11.203901266Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:11.203904355Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:11.203907275Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:11.203909645Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:11.203912155Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:11.203914905Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:11.203917865Z [inf]  
+2026-07-01T18:14:11.203920935Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:11.203923875Z [inf]  
+2026-07-01T18:14:11.372689802Z [inf]  2026-07-01T18:14:11.304Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:11.372692582Z [inf]  2026-07-01T18:14:11.306Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:14:12.737840213Z [inf]  2026-07-01T18:14:12.702Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:14:12.947579889Z [inf]  2026-07-01T18:14:12.802Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:14:13.801419748Z [inf]  2026-07-01T18:14:13.798Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:14:13.942109251Z [inf]  2026-07-01T18:14:13.807Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:14:13.942116421Z [inf]  2026-07-01T18:14:13.823Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:14:13.942121561Z [inf]  2026-07-01T18:14:13.824Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2417 ms
+2026-07-01T18:14:13.942174120Z [inf]  2026-07-01T18:14:13.807Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:14:14.222682023Z [inf]  2026-07-01T18:14:14.216Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:14:14.494350424Z [inf]  2026-07-01T18:14:14.400Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:14:14.501318956Z [inf]  2026-07-01T18:14:14.498Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:14:15.136361248Z [inf]  2026-07-01T18:14:15.119Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:14:15.210371754Z [inf]  2026-07-01T18:14:15.202Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:14:15.692534783Z [inf]  2026-07-01T18:14:15.691Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52285a5f
+2026-07-01T18:14:15.694112028Z [inf]  2026-07-01T18:14:15.692Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:14:15.716311311Z [inf]  2026-07-01T18:14:15.712Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:14:15.737802040Z [inf]  2026-07-01T18:14:15.734Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:14:15.737818500Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:14:15.737821410Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:14:15.737824530Z [inf]  	Database version: 18.4
+2026-07-01T18:14:15.737827220Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:14:15.737829770Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:14:15.737832650Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:14:15.737835800Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:14:16.834097027Z [inf]  2026-07-01T18:14:16.808Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:14:17.031158038Z [inf]  2026-07-01T18:14:16.951Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:14:17.658547888Z [inf]  2026-07-01T18:14:17.406Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:20.805536308Z [inf]  
+2026-07-01T18:14:20.805544328Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:20.805549018Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:20.805553408Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:20.805557908Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:20.805562068Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:20.805565408Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:20.805569429Z [inf]  
+2026-07-01T18:14:20.844015903Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:20.844027112Z [inf]  
+2026-07-01T18:14:21.155570874Z [inf]  2026-07-01T18:14:20.975Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:21.155574074Z [inf]  2026-07-01T18:14:20.977Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:14:22.270902290Z [inf]  2026-07-01T18:14:22.192Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:14:22.310380633Z [inf]  2026-07-01T18:14:22.296Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:14:23.324733040Z [inf]  2026-07-01T18:14:23.279Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:14:23.324735710Z [inf]  2026-07-01T18:14:23.293Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:14:23.324738330Z [inf]  2026-07-01T18:14:23.293Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:14:23.346785964Z [inf]  2026-07-01T18:14:23.341Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:14:23.346790484Z [inf]  2026-07-01T18:14:23.342Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2302 ms
+2026-07-01T18:14:23.739978076Z [inf]  2026-07-01T18:14:23.736Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:14:23.891941430Z [inf]  2026-07-01T18:14:23.884Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:14:24.036105680Z [inf]  2026-07-01T18:14:23.985Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:14:24.593058552Z [inf]  2026-07-01T18:14:24.589Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:14:24.695438210Z [inf]  2026-07-01T18:14:24.684Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:14:25.111057364Z [inf]  2026-07-01T18:14:25.105Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66b6873f
+2026-07-01T18:14:25.111071783Z [inf]  2026-07-01T18:14:25.106Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:14:25.149507868Z [inf]  2026-07-01T18:14:25.133Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:14:25.154100803Z [inf]  2026-07-01T18:14:25.150Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:14:25.154104753Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:14:25.154107573Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:14:25.154110233Z [inf]  	Database version: 18.4
+2026-07-01T18:14:25.154112893Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:14:25.154115643Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:14:25.154119273Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:14:25.154121893Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:14:26.118453440Z [inf]  2026-07-01T18:14:26.114Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:14:26.310478061Z [inf]  2026-07-01T18:14:26.262Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:14:26.808232423Z [inf]  2026-07-01T18:14:26.790Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:30.493099778Z [inf]  
+2026-07-01T18:14:30.493108188Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:30.493112348Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:30.493115438Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:30.493117928Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:30.493120668Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:30.493123098Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:30.493125748Z [inf]  
+2026-07-01T18:14:30.493128218Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:30.493130778Z [inf]  
+2026-07-01T18:14:30.636353478Z [inf]  2026-07-01T18:14:30.585Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:30.636356848Z [inf]  2026-07-01T18:14:30.588Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:14:31.892990662Z [inf]  2026-07-01T18:14:31.891Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:14:32.066363807Z [inf]  2026-07-01T18:14:32.062Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:14:33.084379734Z [inf]  2026-07-01T18:14:33.078Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:14:33.089278097Z [inf]  2026-07-01T18:14:33.086Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:14:33.089284167Z [inf]  2026-07-01T18:14:33.086Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:14:33.165103336Z [inf]  2026-07-01T18:14:33.161Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:14:33.165108516Z [inf]  2026-07-01T18:14:33.162Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2479 ms
+2026-07-01T18:14:33.478760559Z [inf]  2026-07-01T18:14:33.475Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:14:33.617072737Z [inf]  2026-07-01T18:14:33.577Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:14:33.690657708Z [inf]  2026-07-01T18:14:33.671Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:14:34.296670784Z [inf]  2026-07-01T18:14:34.278Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:14:34.490519449Z [inf]  2026-07-01T18:14:34.362Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:14:34.797232401Z [inf]  2026-07-01T18:14:34.789Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66b6873f
+2026-07-01T18:14:34.797242971Z [inf]  2026-07-01T18:14:34.790Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:14:34.814000488Z [inf]  2026-07-01T18:14:34.809Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:14:34.835320289Z [inf]  2026-07-01T18:14:34.832Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:14:34.835327759Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:14:34.835332119Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:14:34.835337489Z [inf]  	Database version: 18.4
+2026-07-01T18:14:34.835342459Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:14:34.835346849Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:14:34.835351129Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:14:34.835355659Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:14:35.827759489Z [inf]  2026-07-01T18:14:35.816Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:14:35.951816207Z [inf]  2026-07-01T18:14:35.948Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:14:36.482147244Z [inf]  2026-07-01T18:14:36.379Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:39.819651442Z [inf]  
+2026-07-01T18:14:39.819655312Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:39.819658192Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:39.819660811Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:39.819663421Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:39.819665631Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:39.819667711Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:39.819670231Z [inf]  
+2026-07-01T18:14:39.824218647Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:39.824223497Z [inf]  
+2026-07-01T18:14:39.927440709Z [inf]  2026-07-01T18:14:39.901Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:39.927445889Z [inf]  2026-07-01T18:14:39.925Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:14:41.238679679Z [inf]  2026-07-01T18:14:41.233Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:14:41.381343325Z [inf]  2026-07-01T18:14:41.339Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:14:42.263848374Z [inf]  2026-07-01T18:14:42.245Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:14:42.263853994Z [inf]  2026-07-01T18:14:42.254Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:14:42.263857074Z [inf]  2026-07-01T18:14:42.255Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:14:42.274217323Z [inf]  2026-07-01T18:14:42.271Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:14:42.274220303Z [inf]  2026-07-01T18:14:42.272Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2320 ms
+2026-07-01T18:14:42.711018536Z [inf]  2026-07-01T18:14:42.701Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:14:42.839660210Z [inf]  2026-07-01T18:14:42.837Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:14:42.934829860Z [inf]  2026-07-01T18:14:42.931Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:14:43.538591713Z [inf]  2026-07-01T18:14:43.450Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:14:43.538595593Z [inf]  2026-07-01T18:14:43.508Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:14:43.953324362Z [inf]  2026-07-01T18:14:43.939Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52285a5f
+2026-07-01T18:14:43.953330052Z [inf]  2026-07-01T18:14:43.940Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:14:44.028025613Z [inf]  2026-07-01T18:14:44.024Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:14:44.044882838Z [inf]  2026-07-01T18:14:44.040Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:14:44.044888858Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:14:44.044892698Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:14:44.044895988Z [inf]  	Database version: 18.4
+2026-07-01T18:14:44.044899698Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:14:44.044902968Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:14:44.044905908Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:14:44.044909438Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:14:45.202414493Z [inf]  2026-07-01T18:14:45.200Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:14:45.370472562Z [inf]  2026-07-01T18:14:45.367Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:14:45.840340913Z [inf]  2026-07-01T18:14:45.823Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:49.319628202Z [inf]  
+2026-07-01T18:14:49.319635492Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:49.319638952Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:49.319643022Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:49.319645712Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:49.319649502Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:49.319652351Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:49.319654752Z [inf]  
+2026-07-01T18:14:49.397714980Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:49.397721790Z [inf]  
+2026-07-01T18:14:49.635333150Z [inf]  2026-07-01T18:14:49.472Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:49.635337050Z [inf]  2026-07-01T18:14:49.474Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:14:50.798157699Z [inf]  2026-07-01T18:14:50.768Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:14:50.826973687Z [inf]  2026-07-01T18:14:50.816Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:14:51.880635253Z [inf]  2026-07-01T18:14:51.877Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:14:51.893340158Z [inf]  2026-07-01T18:14:51.888Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:14:51.893349609Z [inf]  2026-07-01T18:14:51.888Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:14:51.911287174Z [inf]  2026-07-01T18:14:51.909Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:14:51.911295013Z [inf]  2026-07-01T18:14:51.910Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2411 ms
+2026-07-01T18:14:52.278949585Z [inf]  2026-07-01T18:14:52.275Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:14:52.374098336Z [inf]  2026-07-01T18:14:52.368Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:14:52.393382708Z [inf]  2026-07-01T18:14:52.389Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:14:52.890108200Z [inf]  2026-07-01T18:14:52.888Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:14:52.969955921Z [inf]  2026-07-01T18:14:52.966Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:14:53.438206941Z [inf]  2026-07-01T18:14:53.308Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1760e594
+2026-07-01T18:14:53.438212681Z [inf]  2026-07-01T18:14:53.309Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:14:53.438215581Z [inf]  2026-07-01T18:14:53.369Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:14:53.438218221Z [inf]  2026-07-01T18:14:53.385Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:14:53.438220871Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:14:53.438223501Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:14:53.438226251Z [inf]  	Database version: 18.4
+2026-07-01T18:14:53.438229041Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:14:53.438231581Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:14:53.438234131Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:14:53.438236661Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:14:54.468969171Z [inf]  2026-07-01T18:14:54.465Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:14:54.654176754Z [inf]  2026-07-01T18:14:54.614Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:14:55.110284054Z [inf]  2026-07-01T18:14:55.076Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:14:59.255759369Z [inf]  
+2026-07-01T18:14:59.255765949Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:14:59.255769119Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:14:59.255771609Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:14:59.255774069Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:14:59.255776649Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:14:59.255779479Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:14:59.255782549Z [inf]  
+2026-07-01T18:14:59.295140684Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:14:59.295143684Z [inf]  
+2026-07-01T18:14:59.433533884Z [inf]  2026-07-01T18:14:59.431Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:14:59.433537484Z [inf]  2026-07-01T18:14:59.433Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:15:00.958905416Z [inf]  2026-07-01T18:15:00.915Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:15:01.002735488Z [inf]  2026-07-01T18:15:00.994Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:15:02.034138999Z [inf]  2026-07-01T18:15:02.030Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:15:02.045903115Z [inf]  2026-07-01T18:15:02.040Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:15:02.045911174Z [inf]  2026-07-01T18:15:02.041Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:15:02.134292182Z [inf]  2026-07-01T18:15:02.116Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:15:02.134296752Z [inf]  2026-07-01T18:15:02.117Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2593 ms
+2026-07-01T18:15:02.531696057Z [inf]  2026-07-01T18:15:02.524Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:15:02.725224300Z [inf]  2026-07-01T18:15:02.723Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:15:02.823430152Z [inf]  2026-07-01T18:15:02.821Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:15:03.559383305Z [inf]  2026-07-01T18:15:03.520Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:15:03.757927218Z [inf]  2026-07-01T18:15:03.624Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:15:04.284326806Z [inf]  2026-07-01T18:15:04.281Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@143413cd
+2026-07-01T18:15:04.284330156Z [inf]  2026-07-01T18:15:04.282Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:15:04.327991790Z [inf]  2026-07-01T18:15:04.322Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:15:04.340182151Z [inf]  2026-07-01T18:15:04.339Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:15:04.340192021Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:15:04.340196981Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:15:04.340201321Z [inf]  	Database version: 18.4
+2026-07-01T18:15:04.340204811Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:15:04.340209721Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:15:04.340215371Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:15:04.340219351Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:15:05.460966553Z [inf]  2026-07-01T18:15:05.457Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:15:05.762436954Z [inf]  2026-07-01T18:15:05.598Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:15:06.191281542Z [inf]  2026-07-01T18:15:06.179Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:15:08.306410593Z [inf]  2026-07-01T18:15:08.246Z  INFO 1 --- [siblo-rent] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-07-01T18:15:08.349406674Z [inf]  2026-07-01T18:15:08.339Z  WARN 1 --- [siblo-rent] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-01T18:15:11.829621594Z [inf]  
+2026-07-01T18:15:11.829625494Z [inf]    .   ____          _            __ _ _
+2026-07-01T18:15:11.829629834Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-07-01T18:15:11.829633784Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-07-01T18:15:11.829638314Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-07-01T18:15:11.829641624Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-07-01T18:15:11.829645014Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-07-01T18:15:11.829648484Z [inf]  
+2026-07-01T18:15:11.829653674Z [inf]   :: Spring Boot ::                (v3.4.1)
+2026-07-01T18:15:11.829656944Z [inf]  
+2026-07-01T18:15:11.914936672Z [inf]  2026-07-01T18:15:11.909Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Starting RentApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/target/rent-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-07-01T18:15:11.914940402Z [inf]  2026-07-01T18:15:11.911Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : The following 1 profile is active: "prod"
+2026-07-01T18:15:13.246410477Z [inf]  2026-07-01T18:15:13.239Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-01T18:15:13.352719572Z [inf]  2026-07-01T18:15:13.342Z  INFO 1 --- [siblo-rent] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 7 JPA repository interfaces.
+2026-07-01T18:15:14.346318660Z [inf]  2026-07-01T18:15:14.344Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T18:15:14.358753109Z [inf]  2026-07-01T18:15:14.352Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T18:15:14.358760299Z [inf]  2026-07-01T18:15:14.353Z  INFO 1 --- [siblo-rent] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-07-01T18:15:14.375451167Z [inf]  2026-07-01T18:15:14.371Z  INFO 1 --- [siblo-rent] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T18:15:14.403248516Z [inf]  2026-07-01T18:15:14.402Z  INFO 1 --- [siblo-rent] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2417 ms
+2026-07-01T18:15:14.805222499Z [inf]  2026-07-01T18:15:14.739Z  INFO 1 --- [siblo-rent] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-01T18:15:14.853428319Z [inf]  2026-07-01T18:15:14.846Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-07-01T18:15:14.974535909Z [inf]  2026-07-01T18:15:14.942Z  INFO 1 --- [siblo-rent] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-01T18:15:15.648229317Z [inf]  2026-07-01T18:15:15.646Z  INFO 1 --- [siblo-rent] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-01T18:15:15.861390270Z [inf]  2026-07-01T18:15:15.726Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T18:15:16.148937978Z [inf]  2026-07-01T18:15:16.144Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@143413cd
+2026-07-01T18:15:16.148942548Z [inf]  2026-07-01T18:15:16.145Z  INFO 1 --- [siblo-rent] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T18:15:16.165399068Z [inf]  2026-07-01T18:15:16.164Z  WARN 1 --- [siblo-rent] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-01T18:15:16.208066902Z [inf]  2026-07-01T18:15:16.204Z  INFO 1 --- [siblo-rent] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-07-01T18:15:16.208069972Z [inf]  	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-07-01T18:15:16.208072802Z [inf]  	Database driver: undefined/unknown
+2026-07-01T18:15:16.208075932Z [inf]  	Database version: 18.4
+2026-07-01T18:15:16.208078582Z [inf]  	Autocommit mode: undefined/unknown
+2026-07-01T18:15:16.208081292Z [inf]  	Isolation level: undefined/unknown
+2026-07-01T18:15:16.208083952Z [inf]  	Minimum pool size: undefined/unknown
+2026-07-01T18:15:16.208086792Z [inf]  	Maximum pool size: undefined/unknown
+2026-07-01T18:15:17.209165540Z [inf]  2026-07-01T18:15:17.205Z  INFO 1 --- [siblo-rent] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-01T18:15:17.351806280Z [inf]  2026-07-01T18:15:17.343Z  INFO 1 --- [siblo-rent] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-01T18:15:17.916062714Z [inf]  2026-07-01T18:15:17.833Z  INFO 1 --- [siblo-rent] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-01T18:15:20.087622514Z [inf]  2026-07-01T18:15:20.070Z  INFO 1 --- [siblo-rent] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-07-01T18:15:20.240704532Z [inf]  2026-07-01T18:15:20.202Z  WARN 1 --- [siblo-rent] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-01T18:15:22.039045020Z [inf]  2026-07-01T18:15:22.025Z  INFO 1 --- [siblo-rent] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-01T18:15:22.039051859Z [inf]  2026-07-01T18:15:22.036Z  INFO 1 --- [siblo-rent] [           main] com.siblo.rent.RentApplication           : Started RentApplication in 10.706 seconds (process running for 11.354)
+2026-07-01T18:15:51.963415893Z [inf]  2026-07-01T18:15:42.091Z  INFO 1 --- [siblo-rent] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-01T18:15:51.963418983Z [inf]  2026-07-01T18:15:42.091Z  INFO 1 --- [siblo-rent] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-01T18:15:51.963421733Z [inf]  2026-07-01T18:15:42.092Z  INFO 1 --- [siblo-rent] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-01T18:31:25.569472874Z [inf]  2026-07-01T18:31:22.068Z  INFO 1 --- [siblo-rent] [   scheduling-1] c.s.r.s.BookingLifecycleScheduler        : Expired 1 pending payment(s)

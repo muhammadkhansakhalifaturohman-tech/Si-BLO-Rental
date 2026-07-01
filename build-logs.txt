@@ -1,0 +1,1596 @@
+2026-07-01T18:12:23.494779976Z [inf]  Progress (1): 0.9/6.8 MB
+2026-07-01T18:12:23.494901418Z [inf]  Progress (1): 0.9/6.8 MB
+2026-07-01T18:12:23.495052224Z [inf]  Progress (1): 0.9/6.8 MB
+2026-07-01T18:12:23.495186115Z [inf]  Progress (1): 0.9/6.8 MB
+2026-07-01T18:12:23.495367517Z [inf]  Progress (1): 0.9/6.8 MB
+2026-07-01T18:12:23.495512505Z [inf]  Progress (1): 0.9/6.8 MB
+2026-07-01T18:12:23.495643852Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.495780687Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.495903341Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.496026576Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.496175159Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.496314318Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.496481639Z [inf]  Progress (1): 1.0/6.8 MB
+2026-07-01T18:12:23.496617443Z [inf]  Progress (1): 1.1/6.8 MB
+2026-07-01T18:12:23.496751534Z [inf]  Progress (1): 1.1/6.8 MB
+2026-07-01T18:12:23.496913547Z [inf]  Progress (1): 1.1/6.8 MB
+2026-07-01T18:12:23.497086667Z [inf]  Progress (1): 1.1/6.8 MB
+2026-07-01T18:12:23.497227118Z [inf]  Progress (1): 1.1/6.8 MB
+2026-07-01T18:12:23.497350312Z [inf]  Progress (1): 1.1/6.8 MB
+2026-07-01T18:12:23.497469251Z [inf]  Progress (1): 1.2/6.8 MB
+2026-07-01T18:12:23.497600768Z [inf]  Progress (1): 1.2/6.8 MB
+2026-07-01T18:12:23.497777163Z [inf]  Progress (1): 1.2/6.8 MB
+2026-07-01T18:12:23.497905926Z [inf]  Progress (1): 1.2/6.8 MB
+2026-07-01T18:12:23.498030473Z [inf]  Progress (1): 1.2/6.8 MB
+2026-07-01T18:12:23.498241009Z [inf]  Progress (1): 1.2/6.8 MB
+2026-07-01T18:12:23.4983818Z [inf]  Progress (1): 1.3/6.8 MB
+2026-07-01T18:12:23.498530543Z [inf]  Progress (1): 1.3/6.8 MB
+2026-07-01T18:12:23.498635881Z [inf]  Progress (1): 1.3/6.8 MB
+2026-07-01T18:12:23.498755431Z [inf]  Progress (1): 1.3/6.8 MB
+2026-07-01T18:12:23.498884584Z [inf]  Progress (1): 1.3/6.8 MB
+2026-07-01T18:12:23.499031905Z [inf]  Progress (1): 1.3/6.8 MB
+2026-07-01T18:12:23.499208711Z [inf]  Progress (1): 1.4/6.8 MB
+2026-07-01T18:12:23.499382081Z [inf]  Progress (1): 1.4/6.8 MB
+2026-07-01T18:12:23.499558545Z [inf]  Progress (1): 1.4/6.8 MB
+2026-07-01T18:12:23.499717684Z [inf]  Progress (1): 1.4/6.8 MB
+2026-07-01T18:12:23.499859427Z [inf]  Progress (1): 1.4/6.8 MB
+2026-07-01T18:12:23.500029592Z [inf]  Progress (1): 1.4/6.8 MB
+2026-07-01T18:12:23.500203563Z [inf]  Progress (1): 1.5/6.8 MB
+2026-07-01T18:12:23.50032774Z [inf]  Progress (1): 1.5/6.8 MB
+2026-07-01T18:12:23.500487529Z [inf]  Progress (1): 1.5/6.8 MB
+2026-07-01T18:12:23.500604525Z [inf]  Progress (1): 1.5/6.8 MB
+2026-07-01T18:12:23.500740609Z [inf]  Progress (1): 1.5/6.8 MB
+2026-07-01T18:12:23.500841961Z [inf]  Progress (1): 1.5/6.8 MB
+2026-07-01T18:12:23.500979557Z [inf]  Progress (1): 1.6/6.8 MB
+2026-07-01T18:12:23.501109392Z [inf]  Progress (1): 1.6/6.8 MB
+2026-07-01T18:12:23.501252848Z [inf]  Progress (1): 1.6/6.8 MB
+2026-07-01T18:12:23.501382923Z [inf]  Progress (1): 1.6/6.8 MB
+2026-07-01T18:12:23.501512838Z [inf]  Progress (1): 1.6/6.8 MB
+2026-07-01T18:12:23.50166795Z [inf]  Progress (1): 1.6/6.8 MB
+2026-07-01T18:12:23.501782282Z [inf]  Progress (1): 1.7/6.8 MB
+2026-07-01T18:12:23.501898016Z [inf]  Progress (1): 1.7/6.8 MB
+2026-07-01T18:12:23.502032167Z [inf]  Progress (1): 1.7/6.8 MB
+2026-07-01T18:12:23.50217388Z [inf]  Progress (1): 1.7/6.8 MB
+2026-07-01T18:12:23.502334841Z [inf]  Progress (1): 1.7/6.8 MB
+2026-07-01T18:12:23.50247431Z [inf]  Progress (1): 1.7/6.8 MB
+2026-07-01T18:12:23.502594561Z [inf]  Progress (1): 1.8/6.8 MB
+2026-07-01T18:12:23.502749673Z [inf]  Progress (1): 1.8/6.8 MB
+2026-07-01T18:12:23.502876744Z [inf]  Progress (1): 1.8/6.8 MB
+2026-07-01T18:12:23.503014721Z [inf]  Progress (1): 1.8/6.8 MB
+2026-07-01T18:12:23.503151787Z [inf]  Progress (1): 1.8/6.8 MB
+2026-07-01T18:12:23.503314791Z [inf]  Progress (1): 1.8/6.8 MB
+2026-07-01T18:12:23.503442773Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.503574681Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.503704456Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.503829694Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.503979168Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.504079008Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.50423376Z [inf]  Progress (1): 1.9/6.8 MB
+2026-07-01T18:12:23.504361762Z [inf]  Progress (1): 2.0/6.8 MB
+2026-07-01T18:12:23.504491547Z [inf]  Progress (1): 2.0/6.8 MB
+2026-07-01T18:12:23.504614702Z [inf]  Progress (1): 2.0/6.8 MB
+2026-07-01T18:12:23.504852338Z [inf]  Progress (1): 2.0/6.8 MB
+2026-07-01T18:12:23.505012669Z [inf]  Progress (1): 2.0/6.8 MB
+2026-07-01T18:12:23.505288563Z [inf]  Progress (1): 2.0/6.8 MB
+2026-07-01T18:12:23.505507571Z [inf]  Progress (1): 2.1/6.8 MB
+2026-07-01T18:12:23.505716695Z [inf]  Progress (1): 2.1/6.8 MB
+2026-07-01T18:12:23.50589351Z [inf]  Progress (1): 2.1/6.8 MB
+2026-07-01T18:12:23.506002314Z [inf]  Progress (1): 2.1/6.8 MB
+2026-07-01T18:12:23.506185428Z [inf]  Progress (1): 2.1/6.8 MB
+2026-07-01T18:12:23.506290697Z [inf]  Progress (1): 2.1/6.8 MB
+2026-07-01T18:12:23.506480751Z [inf]  Progress (1): 2.2/6.8 MB
+2026-07-01T18:12:23.508580742Z [inf]  Progress (1): 2.2/6.8 MB
+Progress (1): 2.2/6.8 MB
+2026-07-01T18:12:23.508711599Z [inf]  Progress (1): 2.2/6.8 MB
+Progress (1): 2.2/6.8 MB
+Progress (1): 2.2/6.8 MB
+Progress (1): 2.3/6.8 MB
+Progress (1): 2.3/6.8 MB
+Progress (1): 2.3/6.8 MB
+Progress (1): 2.3/6.8 MB
+2026-07-01T18:12:23.508736947Z [inf]  Progress (1): 2.3/6.8 MB
+Progress (1): 2.3/6.8 MB
+Progress (1): 2.4/6.8 MB
+Progress (1): 2.4/6.8 MB
+Progress (1): 2.4/6.8 MB
+Progress (1): 2.4/6.8 MB
+Progress (1): 2.4/6.8 MB
+Progress (1): 2.4/6.8 MB
+2026-07-01T18:12:23.508920732Z [inf]  Progress (1): 2.5/6.8 MB
+2026-07-01T18:12:23.509097107Z [inf]  Progress (1): 2.5/6.8 MB
+2026-07-01T18:12:23.509220903Z [inf]  Progress (1): 2.5/6.8 MB
+2026-07-01T18:12:23.509344568Z [inf]  Progress (1): 2.5/6.8 MB
+2026-07-01T18:12:23.509482796Z [inf]  Progress (1): 2.5/6.8 MB
+2026-07-01T18:12:23.509644008Z [inf]  Progress (1): 2.5/6.8 MB
+2026-07-01T18:12:23.509740082Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.50986554Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.509982596Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.510108494Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.510208074Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.510434163Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.51053162Z [inf]  Progress (1): 2.6/6.8 MB
+2026-07-01T18:12:23.510755395Z [inf]  Progress (1): 2.7/6.8 MB
+2026-07-01T18:12:23.510829817Z [inf]  Progress (1): 2.7/6.8 MB
+2026-07-01T18:12:23.510940062Z [inf]  Progress (1): 2.7/6.8 MB
+2026-07-01T18:12:23.51105863Z [inf]  Progress (1): 2.7/6.8 MB
+2026-07-01T18:12:23.511202897Z [inf]  Progress (1): 2.7/6.8 MB
+2026-07-01T18:12:23.511321394Z [inf]  Progress (1): 2.7/6.8 MB
+2026-07-01T18:12:23.511439221Z [inf]  Progress (1): 2.8/6.8 MB
+2026-07-01T18:12:23.511552031Z [inf]  Progress (1): 2.8/6.8 MB
+2026-07-01T18:12:23.51167859Z [inf]  Progress (1): 2.8/6.8 MB
+2026-07-01T18:12:23.511794704Z [inf]  Progress (1): 2.8/6.8 MB
+2026-07-01T18:12:23.51183182Z [inf]  Progress (1): 2.8/6.8 MB
+2026-07-01T18:12:23.511940403Z [inf]  Progress (1): 2.8/6.8 MB
+2026-07-01T18:12:23.51208528Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.512095887Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.51225167Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.51233172Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.512436117Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.512569267Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.512689767Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.51280479Z [inf]  Progress (1): 2.9/6.8 MB
+2026-07-01T18:12:23.512907284Z [inf]  Progress (1): 3.0/6.8 MB
+2026-07-01T18:12:23.513068796Z [inf]  Progress (1): 3.0/6.8 MB
+2026-07-01T18:12:23.513159893Z [inf]  Progress (1): 3.0/6.8 MB
+2026-07-01T18:12:23.513300784Z [inf]  Progress (1): 3.0/6.8 MB
+2026-07-01T18:12:23.513433233Z [inf]  Progress (1): 3.0/6.8 MB
+2026-07-01T18:12:23.513797119Z [inf]  Progress (1): 3.0/6.8 MB
+2026-07-01T18:12:23.513887975Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514029638Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514155727Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514316198Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514338391Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514463789Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514622838Z [inf]  Progress (1): 3.1/6.8 MB
+2026-07-01T18:12:23.514720945Z [inf]  Progress (1): 3.2/6.8 MB
+2026-07-01T18:12:23.514886053Z [inf]  Progress (1): 3.2/6.8 MB
+2026-07-01T18:12:23.515002197Z [inf]  Progress (1): 3.2/6.8 MB
+2026-07-01T18:12:23.515122488Z [inf]  Progress (1): 3.2/6.8 MB
+2026-07-01T18:12:23.515237049Z [inf]  Progress (1): 3.2/6.8 MB
+2026-07-01T18:12:23.515358742Z [inf]  Progress (1): 3.2/6.8 MB
+2026-07-01T18:12:23.515508416Z [inf]  Progress (1): 3.3/6.8 MB
+2026-07-01T18:12:23.515624551Z [inf]  Progress (1): 3.3/6.8 MB
+2026-07-01T18:12:23.515751141Z [inf]  Progress (1): 3.3/6.8 MB
+2026-07-01T18:12:23.515876479Z [inf]  Progress (1): 3.3/6.8 MB
+2026-07-01T18:12:23.515999484Z [inf]  Progress (1): 3.3/6.8 MB
+2026-07-01T18:12:23.51612366Z [inf]  Progress (1): 3.3/6.8 MB
+2026-07-01T18:12:23.516252353Z [inf]  Progress (1): 3.4/6.8 MB
+2026-07-01T18:12:23.516387255Z [inf]  Progress (1): 3.4/6.8 MB
+2026-07-01T18:12:23.516517501Z [inf]  Progress (1): 3.4/6.8 MB
+2026-07-01T18:12:23.516658893Z [inf]  Progress (1): 3.4/6.8 MB
+2026-07-01T18:12:23.516760475Z [inf]  Progress (1): 3.4/6.8 MB
+2026-07-01T18:12:23.516880746Z [inf]  Progress (1): 3.4/6.8 MB
+2026-07-01T18:12:23.51700392Z [inf]  Progress (1): 3.5/6.8 MB
+2026-07-01T18:12:23.517113114Z [inf]  Progress (1): 3.5/6.8 MB
+2026-07-01T18:12:23.517245393Z [inf]  Progress (1): 3.5/6.8 MB
+2026-07-01T18:12:23.517352243Z [inf]  Progress (1): 3.5/6.8 MB
+2026-07-01T18:12:23.517438052Z [inf]  Progress (1): 3.5/6.8 MB
+2026-07-01T18:12:23.517573215Z [inf]  Progress (1): 3.5/6.8 MB
+2026-07-01T18:12:23.51770342Z [inf]  Progress (1): 3.6/6.8 MB
+2026-07-01T18:12:23.517817521Z [inf]  Progress (1): 3.6/6.8 MB
+2026-07-01T18:12:23.517964572Z [inf]  Progress (1): 3.6/6.8 MB
+2026-07-01T18:12:23.518033705Z [inf]  Progress (1): 3.6/6.8 MB
+2026-07-01T18:12:23.518160286Z [inf]  Progress (1): 3.6/6.8 MB
+2026-07-01T18:12:23.518265353Z [inf]  Progress (1): 3.6/6.8 MB
+2026-07-01T18:12:23.518385964Z [inf]  Progress (1): 3.7/6.8 MB
+2026-07-01T18:12:23.518482158Z [inf]  Progress (1): 3.7/6.8 MB
+2026-07-01T18:12:23.51859651Z [inf]  Progress (1): 3.7/6.8 MB
+2026-07-01T18:12:23.518719324Z [inf]  Progress (1): 3.7/6.8 MB
+2026-07-01T18:12:23.518857472Z [inf]  Progress (1): 3.7/6.8 MB
+2026-07-01T18:12:23.518972003Z [inf]  Progress (1): 3.7/6.8 MB
+2026-07-01T18:12:23.519070191Z [inf]  Progress (1): 3.8/6.8 MB
+2026-07-01T18:12:23.519175338Z [inf]  Progress (1): 3.8/6.8 MB
+2026-07-01T18:12:23.519348689Z [inf]  Progress (1): 3.8/6.8 MB
+2026-07-01T18:12:23.519470762Z [inf]  Progress (1): 3.8/6.8 MB
+2026-07-01T18:12:23.519540807Z [inf]  Progress (1): 3.8/6.8 MB
+2026-07-01T18:12:23.519664733Z [inf]  Progress (1): 3.8/6.8 MB
+2026-07-01T18:12:23.519803361Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.519887507Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.519999866Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.52014263Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.520246155Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.520363972Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.520504783Z [inf]  Progress (1): 3.9/6.8 MB
+2026-07-01T18:12:23.52064287Z [inf]  Progress (1): 4.0/6.8 MB
+2026-07-01T18:12:23.520723281Z [inf]  Progress (1): 4.0/6.8 MB
+2026-07-01T18:12:23.52085609Z [inf]  Progress (1): 4.0/6.8 MB
+2026-07-01T18:12:23.520959145Z [inf]  Progress (1): 4.0/6.8 MB
+2026-07-01T18:12:23.521107297Z [inf]  Progress (1): 4.0/6.8 MB
+2026-07-01T18:12:23.521202029Z [inf]  Progress (1): 4.0/6.8 MB
+2026-07-01T18:12:23.521323472Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.521484423Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.521551374Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.521745645Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.521833076Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.521892675Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.522024043Z [inf]  Progress (1): 4.1/6.8 MB
+2026-07-01T18:12:23.52215597Z [inf]  Progress (1): 4.2/6.8 MB
+2026-07-01T18:12:23.522308319Z [inf]  Progress (1): 4.2/6.8 MB
+2026-07-01T18:12:23.522467378Z [inf]  Progress (1): 4.2/6.8 MB
+Progress (1): 4.2/6.8 MB
+2026-07-01T18:12:23.522603041Z [inf]  Progress (1): 4.2/6.8 MB
+2026-07-01T18:12:23.522741849Z [inf]  Progress (1): 4.2/6.8 MB
+2026-07-01T18:12:23.522857803Z [inf]  Progress (1): 4.3/6.8 MB
+2026-07-01T18:12:23.522963923Z [inf]  Progress (1): 4.3/6.8 MB
+2026-07-01T18:12:23.523082471Z [inf]  Progress (1): 4.3/6.8 MB
+2026-07-01T18:12:23.523209742Z [inf]  Progress (1): 4.3/6.8 MB
+2026-07-01T18:12:23.523363613Z [inf]  Progress (1): 4.3/6.8 MB
+2026-07-01T18:12:23.523470453Z [inf]  Progress (1): 4.3/6.8 MB
+2026-07-01T18:12:23.523593738Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.523738525Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.523833638Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.52395543Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.524063432Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.524116622Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.524230633Z [inf]  Progress (1): 4.4/6.8 MB
+2026-07-01T18:12:23.524365846Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.524460148Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.524581229Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.524684174Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.524810714Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.524886167Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.525019887Z [inf]  Progress (1): 4.5/6.8 MB
+2026-07-01T18:12:23.525119247Z [inf]  Progress (1): 4.6/6.8 MB
+2026-07-01T18:12:23.525272517Z [inf]  Progress (1): 4.6/6.8 MB
+2026-07-01T18:12:23.525392637Z [inf]  Progress (1): 4.6/6.8 MB
+2026-07-01T18:12:23.525501069Z [inf]  Progress (1): 4.6/6.8 MB
+2026-07-01T18:12:23.525652216Z [inf]  Progress (1): 4.6/6.8 MB
+2026-07-01T18:12:23.525773378Z [inf]  Progress (1): 4.6/6.8 MB
+2026-07-01T18:12:23.525870975Z [inf]  Progress (1): 4.7/6.8 MB
+2026-07-01T18:12:23.525979627Z [inf]  Progress (1): 4.7/6.8 MB
+2026-07-01T18:12:23.526087199Z [inf]  Progress (1): 4.7/6.8 MB
+2026-07-01T18:12:23.526208751Z [inf]  Progress (1): 4.7/6.8 MB
+2026-07-01T18:12:23.526297745Z [inf]  Progress (1): 4.7/6.8 MB
+2026-07-01T18:12:23.526382562Z [inf]  Progress (1): 4.7/6.8 MB
+2026-07-01T18:12:23.526420369Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.526532968Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.526633088Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.526717294Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.526812527Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.526939307Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.52700756Z [inf]  Progress (1): 4.8/6.8 MB
+2026-07-01T18:12:23.527114581Z [inf]  Progress (1): 4.9/6.8 MB
+2026-07-01T18:12:23.52722776Z [inf]  Progress (1): 4.9/6.8 MB
+2026-07-01T18:12:23.527332097Z [inf]  Progress (1): 4.9/6.8 MB
+2026-07-01T18:12:23.527405237Z [inf]  Progress (1): 4.9/6.8 MB
+2026-07-01T18:12:23.527497555Z [inf]  Progress (1): 4.9/6.8 MB
+2026-07-01T18:12:23.527617585Z [inf]  Progress (1): 4.9/6.8 MB
+2026-07-01T18:12:23.527696604Z [inf]  Progress (1): 5.0/6.8 MB
+2026-07-01T18:12:23.527746048Z [inf]  Progress (1): 5.0/6.8 MB
+2026-07-01T18:12:23.527872277Z [inf]  Progress (1): 5.0/6.8 MB
+2026-07-01T18:12:23.527962633Z [inf]  Progress (1): 5.0/6.8 MB
+2026-07-01T18:12:23.528037976Z [inf]  Progress (1): 5.0/6.8 MB
+2026-07-01T18:12:23.528159128Z [inf]  Progress (1): 5.0/6.8 MB
+2026-07-01T18:12:23.528298897Z [inf]  Progress (1): 5.1/6.8 MB
+Progress (1): 5.1/6.8 MB
+2026-07-01T18:12:23.528453429Z [inf]  Progress (1): 5.1/6.8 MB
+2026-07-01T18:12:23.528714741Z [inf]  Progress (1): 5.1/6.8 MB
+2026-07-01T18:12:23.528728322Z [inf]  Progress (1): 5.1/6.8 MB
+2026-07-01T18:12:23.528868161Z [inf]  Progress (1): 5.1/6.8 MB
+2026-07-01T18:12:23.528936294Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.529006179Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.529111457Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.529137035Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.529230535Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.5293536Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.529452608Z [inf]  Progress (1): 5.2/6.8 MB
+2026-07-01T18:12:23.529538367Z [inf]  Progress (1): 5.3/6.8 MB
+2026-07-01T18:12:23.529625428Z [inf]  Progress (1): 5.3/6.8 MB
+2026-07-01T18:12:23.52974012Z [inf]  Progress (1): 5.3/6.8 MB
+2026-07-01T18:12:23.529802113Z [inf]  Progress (1): 5.3/6.8 MB
+2026-07-01T18:12:23.529924216Z [inf]  Progress (1): 5.3/6.8 MB
+2026-07-01T18:12:23.530002483Z [inf]  Progress (1): 5.3/6.8 MB
+2026-07-01T18:12:23.530103185Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.530185358Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.5302736Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.530371337Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.530379038Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.530496875Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.530577807Z [inf]  Progress (1): 5.4/6.8 MB
+2026-07-01T18:12:23.530692068Z [inf]  Progress (1): 5.5/6.8 MB
+2026-07-01T18:12:23.530757566Z [inf]  Progress (1): 5.5/6.8 MB
+2026-07-01T18:12:23.530916134Z [inf]  Progress (1): 5.5/6.8 MB
+2026-07-01T18:12:23.530924237Z [inf]  Progress (1): 5.5/6.8 MB
+2026-07-01T18:12:23.531061552Z [inf]  Progress (1): 5.5/6.8 MB
+2026-07-01T18:12:23.531150426Z [inf]  Progress (1): 5.5/6.8 MB
+2026-07-01T18:12:23.531262674Z [inf]  Progress (1): 5.6/6.8 MB
+2026-07-01T18:12:23.531331287Z [inf]  Progress (1): 5.6/6.8 MB
+2026-07-01T18:12:23.53153981Z [inf]  Progress (1): 5.6/6.8 MB
+Progress (1): 5.6/6.8 MB
+2026-07-01T18:12:23.531613431Z [inf]  Progress (1): 5.6/6.8 MB
+2026-07-01T18:12:23.531623766Z [inf]  Progress (1): 5.6/6.8 MB
+2026-07-01T18:12:23.531755444Z [inf]  Progress (1): 5.6/6.8 MB
+2026-07-01T18:12:23.53182627Z [inf]  Progress (1): 5.7/6.8 MB
+2026-07-01T18:12:23.531910105Z [inf]  Progress (1): 5.7/6.8 MB
+2026-07-01T18:12:23.531996966Z [inf]  Progress (1): 5.7/6.8 MB
+2026-07-01T18:12:23.532098759Z [inf]  Progress (1): 5.7/6.8 MB
+2026-07-01T18:12:23.532188303Z [inf]  Progress (1): 5.7/6.8 MB
+2026-07-01T18:12:23.532274262Z [inf]  Progress (1): 5.7/6.8 MB
+2026-07-01T18:12:23.532373341Z [inf]  Progress (1): 5.8/6.8 MB
+2026-07-01T18:12:23.532463646Z [inf]  Progress (1): 5.8/6.8 MB
+2026-07-01T18:12:23.532538519Z [inf]  Progress (1): 5.8/6.8 MB
+2026-07-01T18:12:23.532729665Z [inf]  Progress (1): 5.8/6.8 MB
+Progress (1): 5.8/6.8 MB
+2026-07-01T18:12:23.532886601Z [inf]  Progress (1): 5.8/6.8 MB
+2026-07-01T18:12:23.532944207Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533038959Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533142585Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533154903Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533302915Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533337748Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533439931Z [inf]  Progress (1): 5.9/6.8 MB
+2026-07-01T18:12:23.533531678Z [inf]  Progress (1): 6.0/6.8 MB
+2026-07-01T18:12:23.533691689Z [inf]  Progress (1): 6.0/6.8 MB
+2026-07-01T18:12:23.533726681Z [inf]  Progress (1): 6.0/6.8 MB
+2026-07-01T18:12:23.533815434Z [inf]  Progress (1): 6.0/6.8 MB
+2026-07-01T18:12:23.533894022Z [inf]  Progress (1): 6.0/6.8 MB
+2026-07-01T18:12:23.533991679Z [inf]  Progress (1): 6.0/6.8 MB
+2026-07-01T18:12:23.534087062Z [inf]  Progress (1): 6.1/6.8 MB
+2026-07-01T18:12:23.534173922Z [inf]  Progress (1): 6.1/6.8 MB
+2026-07-01T18:12:23.534289475Z [inf]  Progress (1): 6.1/6.8 MB
+2026-07-01T18:12:23.534481984Z [inf]  Progress (1): 6.1/6.8 MB
+Progress (1): 6.1/6.8 MB
+2026-07-01T18:12:23.534690708Z [inf]  Progress (1): 6.1/6.8 MB
+Progress (1): 6.2/6.8 MB
+2026-07-01T18:12:23.534758699Z [inf]  Progress (1): 6.2/6.8 MB
+2026-07-01T18:12:23.534838679Z [inf]  Progress (1): 6.2/6.8 MB
+2026-07-01T18:12:23.53491889Z [inf]  Progress (1): 6.2/6.8 MB
+2026-07-01T18:12:23.535070277Z [inf]  Progress (1): 6.2/6.8 MB
+2026-07-01T18:12:23.535126591Z [inf]  Progress (1): 6.2/6.8 MB
+2026-07-01T18:12:23.535240963Z [inf]  Progress (1): 6.3/6.8 MB
+2026-07-01T18:12:23.535309035Z [inf]  Progress (1): 6.3/6.8 MB
+2026-07-01T18:12:23.53541878Z [inf]  Progress (1): 6.3/6.8 MB
+2026-07-01T18:12:23.535530668Z [inf]  Progress (1): 6.3/6.8 MB
+2026-07-01T18:12:23.535632871Z [inf]  Progress (1): 6.3/6.8 MB
+2026-07-01T18:12:23.535728365Z [inf]  Progress (1): 6.3/6.8 MB
+2026-07-01T18:12:23.535838219Z [inf]  Progress (1): 6.4/6.8 MB
+2026-07-01T18:12:23.535956166Z [inf]  Progress (1): 6.4/6.8 MB
+Progress (1): 6.4/6.8 MB
+2026-07-01T18:12:23.536082285Z [inf]  Progress (1): 6.4/6.8 MB
+2026-07-01T18:12:23.536165561Z [inf]  Progress (1): 6.4/6.8 MB
+2026-07-01T18:12:23.536246031Z [inf]  Progress (1): 6.4/6.8 MB
+2026-07-01T18:12:23.536334935Z [inf]  Progress (1): 6.4/6.8 MB
+2026-07-01T18:12:23.536424399Z [inf]  Progress (1): 6.5/6.8 MB
+2026-07-01T18:12:23.536521935Z [inf]  Progress (1): 6.5/6.8 MB
+2026-07-01T18:12:23.536610188Z [inf]  Progress (1): 6.5/6.8 MB
+2026-07-01T18:12:23.536694935Z [inf]  Progress (1): 6.5/6.8 MB
+2026-07-01T18:12:23.536833042Z [inf]  Progress (1): 6.5/6.8 MB
+2026-07-01T18:12:23.536886302Z [inf]  Progress (1): 6.5/6.8 MB
+2026-07-01T18:12:23.536992651Z [inf]  Progress (1): 6.6/6.8 MB
+2026-07-01T18:12:23.537065981Z [inf]  Progress (1): 6.6/6.8 MB
+2026-07-01T18:12:23.537158831Z [inf]  Progress (1): 6.6/6.8 MB
+2026-07-01T18:12:23.537238831Z [inf]  Progress (1): 6.6/6.8 MB
+2026-07-01T18:12:23.537352461Z [inf]  Progress (1): 6.6/6.8 MB
+2026-07-01T18:12:23.537428906Z [inf]  Progress (1): 6.6/6.8 MB
+2026-07-01T18:12:23.537546112Z [inf]  Progress (1): 6.7/6.8 MB
+2026-07-01T18:12:23.537641976Z [inf]  Progress (1): 6.7/6.8 MB
+2026-07-01T18:12:23.537736057Z [inf]  Progress (1): 6.7/6.8 MB
+2026-07-01T18:12:23.537837078Z [inf]  Progress (1): 6.7/6.8 MB
+Progress (1): 6.7/6.8 MB
+2026-07-01T18:12:23.537952832Z [inf]  Progress (1): 6.7/6.8 MB
+2026-07-01T18:12:23.538043058Z [inf]  Progress (1): 6.7/6.8 MB
+2026-07-01T18:12:23.538129708Z [inf]  Progress (1): 6.8/6.8 MB
+2026-07-01T18:12:23.538196137Z [inf]  Progress (1): 6.8/6.8 MB
+Progress (1): 6.8 MB    
+2026-07-01T18:12:23.538892422Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.5-11/zstd-jni-1.5.5-11.jar (6.8 MB at 52 MB/s)
+
+2026-07-01T18:12:23.679733128Z [inf]  [INFO] Building jar: /app/target/rent-0.0.1-SNAPSHOT.jar
+
+2026-07-01T18:12:23.815281294Z [inf]  [INFO] 
+[INFO] --- spring-boot:3.4.1:repackage (repackage) @ rent ---
+
+2026-07-01T18:12:23.818181726Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/3.4.1/spring-boot-buildpack-platform-3.4.1.pom
+
+2026-07-01T18:12:23.850861057Z [inf]  Progress (1): 969 B
+Progress (1): 3.2 kB
+2026-07-01T18:12:23.851373416Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/3.4.1/spring-boot-buildpack-platform-3.4.1.pom (3.2 kB at 94 kB/s)
+
+2026-07-01T18:12:23.853704944Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.pom
+
+2026-07-01T18:12:23.88954588Z [inf]  Progress (1): 1.4 kB
+Progress (1): 2.3 kB
+2026-07-01T18:12:23.8899457Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.pom (2.3 kB at 63 kB/s)
+
+2026-07-01T18:12:23.891918339Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.pom
+
+2026-07-01T18:12:23.918029747Z [inf]  Progress (1): 1.4 kB
+Progress (1): 2.0 kB
+2026-07-01T18:12:23.918510178Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.pom (2.0 kB at 75 kB/s)
+
+2026-07-01T18:12:23.920466493Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.pom
+
+2026-07-01T18:12:23.944794635Z [inf]  Progress (1): 787 B
+Progress (1): 2.0 kB
+Progress (1): 3.6 kB
+Progress (1): 7.2 kB
+Progress (1): 7.7 kB
+2026-07-01T18:12:23.944855416Z [inf]  Progress (1): 9.6 kB
+Progress (1): 12 kB 
+Progress (1): 15 kB
+2026-07-01T18:12:23.944930639Z [inf]  Progress (1): 18 kB
+Progress (1): 22 kB
+2026-07-01T18:12:23.945416388Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.pom (22 kB at 868 kB/s)
+
+2026-07-01T18:12:23.948878061Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.4.1/httpclient5-5.4.1.pom
+
+2026-07-01T18:12:23.981560408Z [inf]  Progress (1): 867 B
+Progress (1): 3.2 kB
+Progress (1): 5.6 kB
+Progress (1): 6.1 kB
+2026-07-01T18:12:23.98204167Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.4.1/httpclient5-5.4.1.pom (6.1 kB at 184 kB/s)
+
+2026-07-01T18:12:23.983742652Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5-parent/5.4.1/httpclient5-parent-5.4.1.pom
+
+2026-07-01T18:12:24.019914695Z [inf]  Progress (1): 841 B
+Progress (1): 2.2 kB
+Progress (1): 4.0 kB
+Progress (1): 8.4 kB
+Progress (1): 11 kB 
+Progress (1): 15 kB
+Progress (1): 16 kB
+2026-07-01T18:12:24.020422657Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5-parent/5.4.1/httpclient5-parent-5.4.1.pom (16 kB at 440 kB/s)
+
+2026-07-01T18:12:24.022252983Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-parent/13/httpcomponents-parent-13.pom
+
+2026-07-01T18:12:24.051369539Z [inf]  Progress (1): 805 B
+Progress (1): 2.1 kB
+Progress (1): 4.1 kB
+Progress (1): 5.9 kB
+Progress (1): 7.1 kB
+Progress (1): 8.5 kB
+Progress (1): 12 kB 
+Progress (1): 16 kB
+2026-07-01T18:12:24.051435959Z [inf]  Progress (1): 18 kB
+Progress (1): 22 kB
+Progress (1): 24 kB
+2026-07-01T18:12:24.05149711Z [inf]  Progress (1): 27 kB
+Progress (1): 30 kB
+Progress (1): 30 kB
+2026-07-01T18:12:24.052151913Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-parent/13/httpcomponents-parent-13.pom (30 kB at 1.0 MB/s)
+
+2026-07-01T18:12:24.05429643Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom
+
+2026-07-01T18:12:24.098559052Z [inf]  Progress (1): 745 B
+Progress (1): 2.1 kB
+Progress (1): 3.9 kB
+Progress (1): 7.3 kB
+Progress (1): 12 kB 
+Progress (1): 16 kB
+Progress (1): 19 kB
+Progress (1): 20 kB
+2026-07-01T18:12:24.099037219Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom (20 kB at 463 kB/s)
+
+2026-07-01T18:12:24.101866535Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.3.1/httpcore5-5.3.1.pom
+
+2026-07-01T18:12:24.140377136Z [inf]  Progress (1): 884 B
+Progress (1): 2.9 kB
+Progress (1): 3.9 kB
+2026-07-01T18:12:24.140811918Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.3.1/httpcore5-5.3.1.pom (3.9 kB at 101 kB/s)
+
+2026-07-01T18:12:24.142477146Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-parent/5.3.1/httpcore5-parent-5.3.1.pom
+
+2026-07-01T18:12:24.170078479Z [inf]  Progress (1): 842 B
+Progress (1): 2.2 kB
+Progress (1): 4.0 kB
+Progress (1): 7.5 kB
+Progress (1): 10 kB 
+Progress (1): 14 kB
+2026-07-01T18:12:24.170590407Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-parent/5.3.1/httpcore5-parent-5.3.1.pom (14 kB at 498 kB/s)
+
+2026-07-01T18:12:24.173367584Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.3.1/httpcore5-h2-5.3.1.pom
+
+2026-07-01T18:12:24.205017061Z [inf]  Progress (1): 890 B
+Progress (1): 3.1 kB
+Progress (1): 3.6 kB
+2026-07-01T18:12:24.205506956Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.3.1/httpcore5-h2-5.3.1.pom (3.6 kB at 113 kB/s)
+
+2026-07-01T18:12:24.208372415Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.pom
+
+2026-07-01T18:12:24.236166217Z [inf]  Progress (1): 1.2 kB
+Progress (1): 2.8 kB
+2026-07-01T18:12:24.236679337Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.pom (2.8 kB at 101 kB/s)
+
+2026-07-01T18:12:24.239049062Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.pom
+
+2026-07-01T18:12:24.258109991Z [inf]  Progress (1): 915 B
+Progress (1): 3.3 kB
+Progress (1): 3.6 kB
+2026-07-01T18:12:24.258465875Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.pom (3.6 kB at 181 kB/s)
+
+2026-07-01T18:12:24.2602419Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-master/4.7.2/antlr4-master-4.7.2.pom
+
+2026-07-01T18:12:24.282145394Z [inf]  Progress (1): 1.0 kB
+Progress (1): 2.9 kB
+Progress (1): 4.4 kB
+2026-07-01T18:12:24.282578313Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-master/4.7.2/antlr4-master-4.7.2.pom (4.4 kB at 200 kB/s)
+
+2026-07-01T18:12:24.284854578Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom
+
+2026-07-01T18:12:24.31966001Z [inf]  Progress (1): 1.0 kB
+Progress (1): 3.7 kB
+Progress (1): 4.3 kB
+2026-07-01T18:12:24.320102595Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom (4.3 kB at 119 kB/s)
+
+2026-07-01T18:12:24.322360342Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.4.1/spring-boot-loader-tools-3.4.1.pom
+
+2026-07-01T18:12:24.345550797Z [inf]  Progress (1): 1.0 kB
+Progress (1): 2.2 kB
+2026-07-01T18:12:24.345968814Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.4.1/spring-boot-loader-tools-3.4.1.pom (2.2 kB at 97 kB/s)
+
+2026-07-01T18:12:24.348224358Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.pom
+
+2026-07-01T18:12:24.373907203Z [inf]  Progress (1): 791 B
+Progress (1): 2.3 kB
+Progress (1): 5.3 kB
+2026-07-01T18:12:24.374407153Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.pom (5.3 kB at 203 kB/s)
+
+2026-07-01T18:12:24.37620506Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/37/maven-shared-components-37.pom
+
+2026-07-01T18:12:24.404065612Z [inf]  Progress (1): 781 B
+Progress (1): 2.3 kB
+Progress (1): 4.5 kB
+Progress (1): 4.9 kB
+2026-07-01T18:12:24.404588096Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/37/maven-shared-components-37.pom (4.9 kB at 175 kB/s)
+
+2026-07-01T18:12:24.406301066Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom
+
+2026-07-01T18:12:24.44078114Z [inf]  Progress (1): 721 B
+Progress (1): 1.9 kB
+Progress (1): 5.4 kB
+Progress (1): 9.5 kB
+Progress (1): 14 kB 
+Progress (1): 19 kB
+Progress (1): 23 kB
+Progress (1): 26 kB
+Progress (1): 28 kB
+Progress (1): 30 kB
+Progress (1): 34 kB
+Progress (1): 37 kB
+2026-07-01T18:12:24.440805626Z [inf]  Progress (1): 40 kB
+2026-07-01T18:12:24.440810764Z [inf]  Progress (1): 45 kB
+Progress (1): 46 kB
+2026-07-01T18:12:24.441347209Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom (46 kB at 1.3 MB/s)
+
+2026-07-01T18:12:24.445244316Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.pom
+
+2026-07-01T18:12:24.47809191Z [inf]  Progress (1): 764 B
+Progress (1): 2.3 kB
+Progress (1): 4.8 kB
+2026-07-01T18:12:24.478215015Z [inf]  Progress (1): 8.4 kB
+Progress (1): 11 kB 
+Progress (1): 12 kB
+2026-07-01T18:12:24.478959542Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.pom (12 kB at 377 kB/s)
+
+2026-07-01T18:12:24.485121097Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.pom
+
+2026-07-01T18:12:24.512909461Z [inf]  Progress (1): 1.0 kB
+Progress (1): 3.3 kB
+Progress (1): 3.8 kB
+2026-07-01T18:12:24.513567909Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.pom (3.8 kB at 132 kB/s)
+
+2026-07-01T18:12:24.51650807Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.32/slf4j-parent-1.7.32.pom
+
+2026-07-01T18:12:24.542476603Z [inf]  Progress (1): 1.0 kB
+Progress (1): 3.2 kB
+Progress (1): 6.0 kB
+Progress (1): 9.1 kB
+Progress (1): 12 kB 
+Progress (1): 14 kB
+2026-07-01T18:12:24.543212487Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.32/slf4j-parent-1.7.32.pom (14 kB at 511 kB/s)
+
+2026-07-01T18:12:24.547301763Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.pom
+
+2026-07-01T18:12:24.572961342Z [inf]  Progress (1): 1.3 kB
+Progress (1): 2.4 kB
+2026-07-01T18:12:24.573512609Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.pom (2.4 kB at 88 kB/s)
+
+2026-07-01T18:12:24.576926982Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.pom
+
+2026-07-01T18:12:24.604203718Z [inf]  Progress (1): 1.1 kB
+Progress (1): 2.8 kB
+2026-07-01T18:12:24.604802456Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.pom (2.8 kB at 100 kB/s)
+
+2026-07-01T18:12:24.608394125Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.pom
+
+2026-07-01T18:12:24.633782207Z [inf]  Progress (1): 1.1 kB
+Progress (1): 2.6 kB
+2026-07-01T18:12:24.63435727Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.pom (2.6 kB at 100 kB/s)
+
+2026-07-01T18:12:24.63766966Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom
+
+2026-07-01T18:12:24.663231132Z [inf]  Progress (1): 956 B
+Progress (1): 2.2 kB
+Progress (1): 3.2 kB
+Progress (1): 4.6 kB
+2026-07-01T18:12:24.66432926Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom (4.6 kB at 170 kB/s)
+
+2026-07-01T18:12:24.668592567Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.pom
+
+2026-07-01T18:12:24.694935211Z [inf]  Progress (1): 786 B
+Progress (1): 2.2 kB
+Progress (1): 4.4 kB
+Progress (1): 6.2 kB
+2026-07-01T18:12:24.695729452Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.pom (6.2 kB at 231 kB/s)
+
+2026-07-01T18:12:24.700415964Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom
+
+2026-07-01T18:12:24.728430207Z [inf]  Progress (1): 937 B
+Progress (1): 2.2 kB
+2026-07-01T18:12:24.729208965Z [inf]                      
+2026-07-01T18:12:24.729224498Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom (2.2 kB at 76 kB/s)
+
+2026-07-01T18:12:24.731559241Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom
+
+2026-07-01T18:12:24.756513823Z [inf]  Progress (1): 798 B
+Progress (1): 3.2 kB
+Progress (1): 5.1 kB
+Progress (1): 9.1 kB
+2026-07-01T18:12:24.756597789Z [inf]  Progress (1): 12 kB 
+Progress (1): 17 kB
+2026-07-01T18:12:24.756616887Z [inf]  Progress (1): 20 kB
+2026-07-01T18:12:24.756672591Z [inf]  Progress (1): 23 kB
+2026-07-01T18:12:24.756842426Z [inf]  Progress (1): 28 kB
+Progress (1): 30 kB
+2026-07-01T18:12:24.757488766Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom (30 kB at 1.2 MB/s)
+
+2026-07-01T18:12:24.761324942Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom
+
+2026-07-01T18:12:24.785106173Z [inf]  Progress (1): 938 B
+Progress (1): 1.9 kB
+2026-07-01T18:12:24.786102508Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom (1.9 kB at 79 kB/s)
+
+2026-07-01T18:12:24.789364692Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.13.0/commons-io-2.13.0.pom
+
+2026-07-01T18:12:24.822789022Z [inf]  Progress (1): 771 B
+Progress (1): 2.1 kB
+Progress (1): 5.2 kB
+Progress (1): 7.9 kB
+Progress (1): 10 kB 
+Progress (1): 12 kB
+Progress (1): 15 kB
+Progress (1): 18 kB
+Progress (1): 20 kB
+2026-07-01T18:12:24.823230865Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.13.0/commons-io-2.13.0.pom (20 kB at 598 kB/s)
+
+2026-07-01T18:12:24.825414671Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/58/commons-parent-58.pom
+
+2026-07-01T18:12:24.865953876Z [inf]  Progress (1): 707 B
+Progress (1): 1.9 kB
+Progress (1): 3.1 kB
+Progress (1): 4.6 kB
+Progress (1): 6.5 kB
+Progress (1): 8.4 kB
+2026-07-01T18:12:24.865975018Z [inf]  Progress (1): 10 kB 
+Progress (1): 12 kB
+2026-07-01T18:12:24.866087136Z [inf]  Progress (1): 15 kB
+Progress (1): 18 kB
+2026-07-01T18:12:24.866126916Z [inf]  Progress (1): 20 kB
+2026-07-01T18:12:24.866187997Z [inf]  Progress (1): 23 kB
+Progress (1): 26 kB
+2026-07-01T18:12:24.866333385Z [inf]  Progress (1): 29 kB
+Progress (1): 33 kB
+Progress (1): 33 kB
+2026-07-01T18:12:24.866472725Z [inf]  Progress (1): 36 kB
+Progress (1): 41 kB
+Progress (1): 44 kB
+Progress (1): 47 kB
+Progress (1): 49 kB
+2026-07-01T18:12:24.866543551Z [inf]  Progress (1): 51 kB
+Progress (1): 55 kB
+2026-07-01T18:12:24.866706175Z [inf]  Progress (1): 58 kB
+Progress (1): 61 kB
+Progress (1): 64 kB
+2026-07-01T18:12:24.866718814Z [inf]  Progress (1): 67 kB
+2026-07-01T18:12:24.866810992Z [inf]  Progress (1): 73 kB
+Progress (1): 76 kB
+2026-07-01T18:12:24.866942429Z [inf]  Progress (1): 80 kB
+Progress (1): 83 kB
+2026-07-01T18:12:24.867971784Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/58/commons-parent-58.pom (83 kB at 2.0 MB/s)
+
+2026-07-01T18:12:24.876516204Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.pom
+
+2026-07-01T18:12:24.905290797Z [inf]  Progress (1): 1.1 kB
+Progress (1): 5.0 kB
+Progress (1): 8.6 kB
+Progress (1): 13 kB 
+2026-07-01T18:12:24.905329635Z [inf]  Progress (1): 14 kB
+2026-07-01T18:12:24.906644368Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.pom (14 kB at 463 kB/s)
+
+2026-07-01T18:12:24.910142547Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.pom
+
+2026-07-01T18:12:24.93736465Z [inf]  Progress (1): 763 B
+Progress (1): 2.2 kB
+Progress (1): 5.1 kB
+Progress (1): 8.9 kB
+Progress (1): 12 kB 
+Progress (1): 14 kB
+Progress (1): 16 kB
+Progress (1): 19 kB
+2026-07-01T18:12:24.937583619Z [inf]  Progress (1): 22 kB
+Progress (1): 24 kB
+2026-07-01T18:12:24.938473214Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.pom (24 kB at 820 kB/s)
+
+2026-07-01T18:12:24.941951703Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/48/commons-parent-48.pom
+
+2026-07-01T18:12:24.97275546Z [inf]  Progress (1): 704 B
+Progress (1): 1.9 kB
+Progress (1): 3.2 kB
+Progress (1): 4.7 kB
+Progress (1): 8.4 kB
+2026-07-01T18:12:24.972783633Z [inf]  Progress (1): 11 kB 
+2026-07-01T18:12:24.972898695Z [inf]  Progress (1): 14 kB
+Progress (1): 17 kB
+2026-07-01T18:12:24.972910934Z [inf]  Progress (1): 21 kB
+2026-07-01T18:12:24.972966087Z [inf]  Progress (1): 24 kB
+2026-07-01T18:12:24.97299493Z [inf]  Progress (1): 26 kB
+2026-07-01T18:12:24.973057564Z [inf]  Progress (1): 29 kB
+2026-07-01T18:12:24.973083192Z [inf]  Progress (1): 32 kB
+2026-07-01T18:12:24.973163893Z [inf]  Progress (1): 36 kB
+2026-07-01T18:12:24.97318208Z [inf]  Progress (1): 38 kB
+Progress (1): 39 kB
+2026-07-01T18:12:24.973309652Z [inf]  Progress (1): 41 kB
+Progress (1): 45 kB
+2026-07-01T18:12:24.973335731Z [inf]  Progress (1): 50 kB
+2026-07-01T18:12:24.973413578Z [inf]  Progress (1): 55 kB
+2026-07-01T18:12:24.973452807Z [inf]  Progress (1): 59 kB
+2026-07-01T18:12:24.973550223Z [inf]  Progress (1): 62 kB
+2026-07-01T18:12:24.973572797Z [inf]  Progress (1): 64 kB
+Progress (1): 66 kB
+2026-07-01T18:12:24.973765055Z [inf]  Progress (1): 68 kB
+Progress (1): 70 kB
+2026-07-01T18:12:24.97379501Z [inf]  Progress (1): 72 kB
+Progress (1): 72 kB
+2026-07-01T18:12:24.974617354Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/48/commons-parent-48.pom (72 kB at 2.2 MB/s)
+
+2026-07-01T18:12:24.984886051Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/3.4.1/spring-boot-buildpack-platform-3.4.1.jar
+
+2026-07-01T18:12:25.023772897Z [inf]  Progress (1): 7.7/297 kB
+Progress (1): 16/297 kB 
+2026-07-01T18:12:25.023800238Z [inf]  Progress (1): 32/297 kB
+2026-07-01T18:12:25.023995871Z [inf]  Progress (1): 49/297 kB
+2026-07-01T18:12:25.024073418Z [inf]  Progress (1): 65/297 kB
+2026-07-01T18:12:25.024178075Z [inf]  Progress (1): 81/297 kB
+2026-07-01T18:12:25.024264134Z [inf]  Progress (1): 98/297 kB
+2026-07-01T18:12:25.024376803Z [inf]  Progress (1): 114/297 kB
+2026-07-01T18:12:25.024588521Z [inf]  Progress (1): 131/297 kB
+2026-07-01T18:12:25.024625817Z [inf]  Progress (1): 147/297 kB
+2026-07-01T18:12:25.024904835Z [inf]  Progress (1): 163/297 kB
+Progress (1): 180/297 kB
+2026-07-01T18:12:25.024947609Z [inf]  Progress (1): 196/297 kB
+2026-07-01T18:12:25.025066758Z [inf]  Progress (1): 212/297 kB
+2026-07-01T18:12:25.025206207Z [inf]  Progress (1): 229/297 kB
+2026-07-01T18:12:25.025393939Z [inf]  Progress (1): 245/297 kB
+2026-07-01T18:12:25.025503033Z [inf]  Progress (1): 262/297 kB
+2026-07-01T18:12:25.025632096Z [inf]  Progress (1): 278/297 kB
+2026-07-01T18:12:25.025749873Z [inf]  Progress (1): 294/297 kB
+Progress (1): 297 kB    
+2026-07-01T18:12:25.026551215Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/3.4.1/spring-boot-buildpack-platform-3.4.1.jar (297 kB at 7.1 MB/s)
+
+2026-07-01T18:12:25.027262673Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar
+
+2026-07-01T18:12:25.027582162Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar
+
+2026-07-01T18:12:25.027657555Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.jar
+
+2026-07-01T18:12:25.027798056Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.4.1/httpclient5-5.4.1.jar
+
+2026-07-01T18:12:25.028010024Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.3.1/httpcore5-5.3.1.jar
+
+2026-07-01T18:12:25.050704365Z [inf]  Progress (1): 7.7/908 kB
+Progress (1): 16/908 kB 
+2026-07-01T18:12:25.050855742Z [inf]  Progress (1): 32/908 kB
+2026-07-01T18:12:25.050968781Z [inf]  Progress (1): 48/908 kB
+2026-07-01T18:12:25.051095541Z [inf]  Progress (1): 65/908 kB
+2026-07-01T18:12:25.051145446Z [inf]  Progress (1): 81/908 kB
+2026-07-01T18:12:25.051258035Z [inf]  Progress (1): 97/908 kB
+2026-07-01T18:12:25.051405356Z [inf]  Progress (1): 114/908 kB
+2026-07-01T18:12:25.051546017Z [inf]  Progress (1): 130/908 kB
+2026-07-01T18:12:25.051620068Z [inf]  Progress (1): 147/908 kB
+2026-07-01T18:12:25.051795181Z [inf]  Progress (1): 163/908 kB
+2026-07-01T18:12:25.051845106Z [inf]  Progress (1): 179/908 kB
+2026-07-01T18:12:25.051954089Z [inf]  Progress (1): 196/908 kB
+2026-07-01T18:12:25.052057815Z [inf]  Progress (1): 212/908 kB
+2026-07-01T18:12:25.052077435Z [inf]  Progress (1): 217/908 kB
+2026-07-01T18:12:25.052203183Z [inf]  Progress (1): 233/908 kB
+2026-07-01T18:12:25.052312077Z [inf]  Progress (1): 250/908 kB
+2026-07-01T18:12:25.052438787Z [inf]  Progress (1): 266/908 kB
+2026-07-01T18:12:25.052532127Z [inf]  Progress (1): 282/908 kB
+2026-07-01T18:12:25.052644796Z [inf]  Progress (1): 299/908 kB
+2026-07-01T18:12:25.052869894Z [inf]  Progress (1): 311/908 kB
+Progress (1): 328/908 kB
+2026-07-01T18:12:25.052952447Z [inf]  Progress (1): 344/908 kB
+2026-07-01T18:12:25.0530678Z [inf]  Progress (1): 360/908 kB
+2026-07-01T18:12:25.05314746Z [inf]  Progress (1): 377/908 kB
+2026-07-01T18:12:25.053261501Z [inf]  Progress (1): 393/908 kB
+2026-07-01T18:12:25.053367931Z [inf]  Progress (1): 410/908 kB
+2026-07-01T18:12:25.05347408Z [inf]  Progress (1): 426/908 kB
+2026-07-01T18:12:25.053629073Z [inf]  Progress (1): 442/908 kB
+2026-07-01T18:12:25.053702132Z [inf]  Progress (1): 459/908 kB
+2026-07-01T18:12:25.053832899Z [inf]  Progress (1): 475/908 kB
+2026-07-01T18:12:25.053931126Z [inf]  Progress (2): 475/908 kB | 7.7/906 kB
+Progress (2): 492/908 kB | 7.7/906 kB
+2026-07-01T18:12:25.05394037Z [inf]  Progress (2): 492/908 kB | 7.7/906 kB
+2026-07-01T18:12:25.054038297Z [inf]  Progress (2): 508/908 kB | 7.7/906 kB
+2026-07-01T18:12:25.054136294Z [inf]  Progress (2): 508/908 kB | 24/906 kB 
+Progress (2): 524/908 kB | 24/906 kB
+2026-07-01T18:12:25.054331617Z [inf]  Progress (2): 541/908 kB | 24/906 kB
+Progress (2): 541/908 kB | 40/906 kB
+2026-07-01T18:12:25.054369333Z [inf]  Progress (2): 557/908 kB | 40/906 kB
+Progress (2): 557/908 kB | 57/906 kB
+2026-07-01T18:12:25.054469163Z [inf]  Progress (2): 573/908 kB | 57/906 kB
+Progress (2): 573/908 kB | 73/906 kB
+2026-07-01T18:12:25.054582032Z [inf]  Progress (2): 590/908 kB | 73/906 kB
+2026-07-01T18:12:25.054637876Z [inf]  Progress (2): 590/908 kB | 90/906 kB
+2026-07-01T18:12:25.054669554Z [inf]  Progress (2): 606/908 kB | 90/906 kB
+2026-07-01T18:12:25.054751907Z [inf]  Progress (2): 606/908 kB | 106/906 kB
+Progress (2): 623/908 kB | 106/906 kB
+2026-07-01T18:12:25.054868112Z [inf]  Progress (2): 634/908 kB | 106/906 kB
+Progress (2): 634/908 kB | 122/906 kB
+2026-07-01T18:12:25.054959499Z [inf]  Progress (2): 634/908 kB | 131/906 kB
+Progress (2): 650/908 kB | 131/906 kB
+2026-07-01T18:12:25.055080641Z [inf]  Progress (2): 650/908 kB | 147/906 kB
+Progress (2): 666/908 kB | 147/906 kB
+2026-07-01T18:12:25.055185829Z [inf]  Progress (2): 683/908 kB | 147/906 kB
+Progress (2): 683/908 kB | 164/906 kB
+2026-07-01T18:12:25.055342113Z [inf]  Progress (2): 699/908 kB | 164/906 kB
+Progress (2): 699/908 kB | 180/906 kB
+2026-07-01T18:12:25.05542025Z [inf]  Progress (2): 716/908 kB | 180/906 kB
+Progress (2): 716/908 kB | 197/906 kB
+2026-07-01T18:12:25.055521753Z [inf]  Progress (2): 732/908 kB | 197/906 kB
+Progress (2): 732/908 kB | 213/906 kB
+2026-07-01T18:12:25.055636314Z [inf]  Progress (2): 748/908 kB | 213/906 kB
+Progress (2): 748/908 kB | 229/906 kB
+2026-07-01T18:12:25.055735834Z [inf]  Progress (2): 765/908 kB | 229/906 kB
+2026-07-01T18:12:25.055807341Z [inf]  Progress (2): 765/908 kB | 246/906 kB
+Progress (2): 781/908 kB | 246/906 kB
+2026-07-01T18:12:25.055938948Z [inf]  Progress (2): 781/908 kB | 262/906 kB
+Progress (2): 797/908 kB | 262/906 kB
+2026-07-01T18:12:25.056049725Z [inf]  Progress (2): 797/908 kB | 279/906 kB
+Progress (2): 814/908 kB | 279/906 kB
+2026-07-01T18:12:25.056162243Z [inf]  Progress (2): 830/908 kB | 279/906 kB
+Progress (2): 830/908 kB | 295/906 kB
+Progress (3): 830/908 kB | 295/906 kB | 0/1.9 MB
+2026-07-01T18:12:25.056201863Z [inf]  Progress (3): 830/908 kB | 295/906 kB | 0/1.9 MB
+2026-07-01T18:12:25.056310265Z [inf]  Progress (3): 847/908 kB | 295/906 kB | 0/1.9 MB
+Progress (3): 847/908 kB | 311/906 kB | 0/1.9 MB
+2026-07-01T18:12:25.056319479Z [inf]  Progress (3): 847/908 kB | 311/906 kB | 0/1.9 MB
+Progress (3): 863/908 kB | 311/906 kB | 0/1.9 MB
+2026-07-01T18:12:25.056419439Z [inf]  Progress (3): 863/908 kB | 328/906 kB | 0/1.9 MB
+2026-07-01T18:12:25.056475413Z [inf]  Progress (3): 863/908 kB | 328/906 kB | 0/1.9 MB
+Progress (3): 879/908 kB | 328/906 kB | 0/1.9 MB
+2026-07-01T18:12:25.056500671Z [inf]  Progress (3): 879/908 kB | 344/906 kB | 0/1.9 MB
+Progress (3): 879/908 kB | 344/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.056575193Z [inf]  Progress (3): 896/908 kB | 344/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.056655203Z [inf]  Progress (3): 896/908 kB | 360/906 kB | 0.1/1.9 MB
+Progress (3): 896/908 kB | 360/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.05666643Z [inf]  Progress (3): 908 kB | 360/906 kB | 0.1/1.9 MB    
+2026-07-01T18:12:25.0567733Z [inf]  Progress (3): 908 kB | 377/906 kB | 0.1/1.9 MB
+Progress (3): 908 kB | 377/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.056936405Z [inf]  Progress (3): 908 kB | 393/906 kB | 0.1/1.9 MB
+Progress (3): 908 kB | 393/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.057058418Z [inf]  Progress (3): 908 kB | 410/906 kB | 0.1/1.9 MB
+Progress (3): 908 kB | 410/906 kB | 0.1/1.9 MB
+Progress (3): 908 kB | 410/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.05709985Z [inf]  Progress (3): 908 kB | 426/906 kB | 0.1/1.9 MB
+2026-07-01T18:12:25.057302204Z [inf]  Progress (3): 908 kB | 426/906 kB | 0.2/1.9 MB
+Progress (3): 908 kB | 442/906 kB | 0.2/1.9 MB
+Progress (3): 908 kB | 442/906 kB | 0.2/1.9 MB
+Progress (3): 908 kB | 459/906 kB | 0.2/1.9 MB
+2026-07-01T18:12:25.057395003Z [inf]                                                
+2026-07-01T18:12:25.057416255Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.4.1/httpclient5-5.4.1.jar (908 kB at 30 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.3.1/httpcore5-h2-5.3.1.jar
+
+2026-07-01T18:12:25.057475934Z [inf]  Progress (2): 459/906 kB | 0.2/1.9 MB
+Progress (2): 475/906 kB | 0.2/1.9 MB
+2026-07-01T18:12:25.057576245Z [inf]  Progress (2): 475/906 kB | 0.2/1.9 MB
+Progress (2): 492/906 kB | 0.2/1.9 MB
+2026-07-01T18:12:25.057716365Z [inf]  Progress (2): 492/906 kB | 0.2/1.9 MB
+Progress (2): 508/906 kB | 0.2/1.9 MB
+2026-07-01T18:12:25.05778629Z [inf]  Progress (2): 508/906 kB | 0.2/1.9 MB
+Progress (2): 524/906 kB | 0.2/1.9 MB
+2026-07-01T18:12:25.05785308Z [inf]  Progress (2): 524/906 kB | 0.2/1.9 MB
+2026-07-01T18:12:25.057965128Z [inf]  Progress (2): 541/906 kB | 0.2/1.9 MB
+Progress (2): 541/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058057778Z [inf]  Progress (2): 557/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058074363Z [inf]  Progress (2): 557/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058140492Z [inf]  Progress (2): 573/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058169886Z [inf]  Progress (2): 573/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058284007Z [inf]  Progress (2): 590/906 kB | 0.3/1.9 MB
+Progress (2): 590/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058377057Z [inf]  Progress (2): 606/906 kB | 0.3/1.9 MB
+Progress (2): 606/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058501293Z [inf]  Progress (2): 623/906 kB | 0.3/1.9 MB
+Progress (2): 623/906 kB | 0.3/1.9 MB
+2026-07-01T18:12:25.058609615Z [inf]  Progress (2): 623/906 kB | 0.4/1.9 MB
+Progress (2): 639/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.058712921Z [inf]  Progress (2): 639/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.058727512Z [inf]  Progress (2): 655/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.058816506Z [inf]  Progress (2): 655/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.058858609Z [inf]  Progress (2): 672/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.058938719Z [inf]  Progress (2): 672/906 kB | 0.4/1.9 MB
+Progress (2): 688/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.059042595Z [inf]  Progress (2): 688/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.059102846Z [inf]  Progress (2): 705/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.059146431Z [inf]  Progress (2): 705/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.05917927Z [inf]  Progress (2): 721/906 kB | 0.4/1.9 MB
+2026-07-01T18:12:25.059328855Z [inf]  Progress (2): 721/906 kB | 0.5/1.9 MB
+Progress (2): 737/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059419581Z [inf]  Progress (2): 737/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059442756Z [inf]  Progress (2): 754/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059524508Z [inf]  Progress (2): 754/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059602195Z [inf]  Progress (2): 770/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059716196Z [inf]  Progress (2): 770/906 kB | 0.5/1.9 MB
+Progress (2): 786/906 kB | 0.5/1.9 MB
+Progress (2): 786/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059811819Z [inf]  Progress (2): 803/906 kB | 0.5/1.9 MB
+Progress (2): 803/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.059948404Z [inf]  Progress (2): 819/906 kB | 0.5/1.9 MB
+Progress (2): 819/906 kB | 0.5/1.9 MB
+2026-07-01T18:12:25.06003893Z [inf]  Progress (2): 836/906 kB | 0.5/1.9 MB
+Progress (2): 836/906 kB | 0.6/1.9 MB
+2026-07-01T18:12:25.060293913Z [inf]  Progress (2): 852/906 kB | 0.6/1.9 MB
+2026-07-01T18:12:25.060341654Z [inf]  Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060355675Z [inf]  Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060380663Z [inf]  Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060437338Z [inf]  Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060444689Z [inf]  Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060506331Z [inf]  Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+Progress (3): 852/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060527523Z [inf]  Progress (3): 868/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060620072Z [inf]  Progress (3): 868/906 kB | 0.6/1.9 MB | 0/1.4 MB
+2026-07-01T18:12:25.060626421Z [inf]  Progress (3): 868/906 kB | 0.6/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.060643557Z [inf]  Progress (3): 885/906 kB | 0.6/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.060668254Z [inf]  Progress (3): 885/906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.06068557Z [inf]  Progress (3): 885/906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.060715645Z [inf]  Progress (3): 901/906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.06075215Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB    
+2026-07-01T18:12:25.060775015Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.060793362Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.060899862Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.061003137Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.06101191Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.06113167Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.061209777Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.1/1.4 MB
+2026-07-01T18:12:25.061217158Z [inf]  Progress (3): 906 kB | 0.7/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061317178Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061320653Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061418209Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061433523Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.06152533Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061536457Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061697679Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.0617184Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061790288Z [inf]  Progress (3): 906 kB | 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061817118Z [inf]                                                
+2026-07-01T18:12:25.061856818Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.3.1/httpcore5-5.3.1.jar (906 kB at 27 MB/s)
+
+2026-07-01T18:12:25.061861885Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar
+
+2026-07-01T18:12:25.061906081Z [inf]  Progress (2): 0.8/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.061988745Z [inf]  Progress (2): 0.9/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062102516Z [inf]  Progress (2): 0.9/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062192642Z [inf]  Progress (2): 0.9/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062319872Z [inf]  Progress (2): 0.9/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.06240484Z [inf]  Progress (2): 0.9/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062542627Z [inf]  Progress (2): 0.9/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062616177Z [inf]  Progress (2): 1.0/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.06271838Z [inf]  Progress (2): 1.0/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062730318Z [inf]  Progress (2): 1.0/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062829697Z [inf]  Progress (2): 1.0/1.9 MB | 0.2/1.4 MB
+2026-07-01T18:12:25.062838821Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.062924139Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.062979142Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063058821Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063118831Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063132261Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063266533Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063465101Z [inf]  Progress (2): 1.0/1.9 MB | 0.3/1.4 MB
+Progress (2): 1.1/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063476938Z [inf]  Progress (2): 1.1/1.9 MB | 0.3/1.4 MB
+Progress (2): 1.1/1.9 MB | 0.3/1.4 MB
+2026-07-01T18:12:25.063595877Z [inf]  Progress (2): 1.1/1.9 MB | 0.3/1.4 MB
+Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+2026-07-01T18:12:25.06371167Z [inf]  Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+2026-07-01T18:12:25.063794615Z [inf]  Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+2026-07-01T18:12:25.063858431Z [inf]  Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+2026-07-01T18:12:25.06393754Z [inf]  Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+2026-07-01T18:12:25.06397777Z [inf]  Progress (2): 1.1/1.9 MB | 0.4/1.4 MB
+2026-07-01T18:12:25.064049167Z [inf]  Progress (2): 1.2/1.9 MB | 0.4/1.4 MB
+Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064103529Z [inf]  Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064197239Z [inf]  Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064202787Z [inf]  Progress (3): 1.2/1.9 MB | 0.4/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064267745Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064325702Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064333474Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064361676Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0/1.1 MB
+2026-07-01T18:12:25.064463979Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0/1.1 MB
+Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064500604Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064662717Z [inf]  Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.2/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064682778Z [inf]  Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064709748Z [inf]  Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.06472433Z [inf]  Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064828466Z [inf]  Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064835146Z [inf]  Progress (3): 1.3/1.9 MB | 0.5/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.064962567Z [inf]  Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.065054345Z [inf]  Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.065069578Z [inf]  Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.065073804Z [inf]  Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+2026-07-01T18:12:25.065165271Z [inf]  Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.1/1.1 MB
+Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065176048Z [inf]  Progress (3): 1.3/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065273184Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065278351Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065387335Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065392432Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065414105Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065505352Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065512983Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065578752Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065586123Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065849478Z [inf]  Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.6/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.4/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.065932483Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+2026-07-01T18:12:25.06601746Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.2/1.1 MB
+Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066085672Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066122518Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066166033Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066169929Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.06625098Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066260064Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066287796Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066384952Z [inf]  Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+Progress (3): 1.5/1.9 MB | 0.7/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.06639739Z [inf]  Progress (3): 1.5/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066482738Z [inf]  Progress (3): 1.5/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066492823Z [inf]  Progress (3): 1.5/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066495688Z [inf]  Progress (3): 1.5/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066595618Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066632303Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066693214Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.3/1.1 MB
+2026-07-01T18:12:25.066698001Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.06675728Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.066801877Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.066880155Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.066938893Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067018792Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067034616Z [inf]  Progress (3): 1.6/1.9 MB | 0.8/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067134737Z [inf]  Progress (3): 1.6/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+Progress (3): 1.6/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067149679Z [inf]  Progress (3): 1.6/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067252303Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067318162Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067353655Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067385943Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067393635Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.4/1.1 MB
+2026-07-01T18:12:25.067400225Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.067416429Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.067511121Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.067541807Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.067621837Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.067642568Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.067721417Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.068186435Z [inf]  Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.7/1.9 MB | 0.9/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.068351292Z [inf]  Progress (3): 1.7/1.9 MB | 1.0/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.06838326Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.068405223Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.5/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.5/1.1 MB
+2026-07-01T18:12:25.068473005Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068626976Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068668458Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068683029Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068693706Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068714076Z [inf]  Progress (3): 1.8/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068720276Z [inf]  Progress (3): 1.9/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068732784Z [inf]  Progress (3): 1.9/1.9 MB | 1.0/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068758363Z [inf]  Progress (3): 1.9/1.9 MB | 1.1/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068764983Z [inf]  Progress (3): 1.9/1.9 MB | 1.1/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068937602Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.6/1.1 MB    
+Progress (3): 1.9 MB | 1.1/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068944993Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.6/1.1 MB
+2026-07-01T18:12:25.068971953Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.068987827Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.069001127Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.069013596Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.069025243Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.06926987Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.069352173Z [inf]  Progress (3): 1.9 MB | 1.1/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.069517421Z [inf]  Progress (3): 1.9 MB | 1.2/1.4 MB | 0.7/1.1 MB
+Progress (3): 1.9 MB | 1.2/1.4 MB | 0.7/1.1 MB
+2026-07-01T18:12:25.069529079Z [inf]  Progress (3): 1.9 MB | 1.2/1.4 MB | 0.8/1.1 MB
+                                              
+2026-07-01T18:12:25.069586685Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar (1.9 MB at 44 MB/s)
+Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+                                     
+2026-07-01T18:12:25.069599444Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar
+
+2026-07-01T18:12:25.069932464Z [inf]  Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+2026-07-01T18:12:25.069948468Z [inf]  Progress (2): 1.2/1.4 MB | 0.8/1.1 MB
+2026-07-01T18:12:25.07005598Z [inf]  Progress (2): 1.3/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.3/1.4 MB | 0.8/1.1 MB
+2026-07-01T18:12:25.070164563Z [inf]  Progress (2): 1.3/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.3/1.4 MB | 0.8/1.1 MB
+2026-07-01T18:12:25.070267016Z [inf]  Progress (2): 1.3/1.4 MB | 0.8/1.1 MB
+Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.07038285Z [inf]  Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.07050307Z [inf]  Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.07056311Z [inf]  Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.070617582Z [inf]  Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.0706693Z [inf]  Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.070758894Z [inf]  Progress (2): 1.3/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.070775008Z [inf]  Progress (2): 1.4/1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.070784973Z [inf]  Progress (2): 1.4 MB | 0.9/1.1 MB    
+2026-07-01T18:12:25.070862019Z [inf]  Progress (2): 1.4 MB | 0.9/1.1 MB
+2026-07-01T18:12:25.070958924Z [inf]  Progress (2): 1.4 MB | 1.0/1.1 MB
+Progress (2): 1.4 MB | 1.0/1.1 MB
+2026-07-01T18:12:25.071099545Z [inf]  Progress (2): 1.4 MB | 1.0/1.1 MB
+2026-07-01T18:12:25.071238734Z [inf]  Progress (2): 1.4 MB | 1.0/1.1 MB
+2026-07-01T18:12:25.071348168Z [inf]  Progress (2): 1.4 MB | 1.0/1.1 MB
+2026-07-01T18:12:25.071464262Z [inf]  Progress (2): 1.4 MB | 1.0/1.1 MB
+2026-07-01T18:12:25.071577002Z [inf]  Progress (2): 1.4 MB | 1.0/1.1 MB
+2026-07-01T18:12:25.07168907Z [inf]  Progress (2): 1.4 MB | 1.1/1.1 MB
+2026-07-01T18:12:25.071740367Z [inf]                                   
+Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar (1.4 MB at 30 MB/s)
+
+2026-07-01T18:12:25.071795199Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+Progress (1): 1.1 MB
+2026-07-01T18:12:25.072633537Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.jar (1.1 MB at 24 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.4.1/spring-boot-loader-tools-3.4.1.jar
+
+2026-07-01T18:12:25.080385508Z [inf]  Progress (1): 7.7/241 kB
+Progress (1): 16/241 kB 
+2026-07-01T18:12:25.080418998Z [inf]  Progress (1): 24/241 kB
+2026-07-01T18:12:25.080557286Z [inf]  Progress (1): 40/241 kB
+Progress (1): 57/241 kB
+2026-07-01T18:12:25.080571778Z [inf]  Progress (1): 73/241 kB
+2026-07-01T18:12:25.083260421Z [inf]  Progress (1): 90/241 kB
+2026-07-01T18:12:25.085817398Z [inf]  Progress (1): 106/241 kB
+Progress (1): 122/241 kB
+Progress (1): 139/241 kB
+Progress (1): 155/241 kB
+Progress (1): 172/241 kB
+Progress (1): 188/241 kB
+Progress (1): 204/241 kB
+Progress (1): 221/241 kB
+Progress (1): 237/241 kB
+Progress (1): 241 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.3.1/httpcore5-h2-5.3.1.jar (241 kB at 4.1 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar
+
+2026-07-01T18:12:25.095719665Z [inf]  Progress (1): 7.7/157 kB
+Progress (1): 16/157 kB 
+Progress (1): 32/157 kB
+Progress (1): 49/157 kB
+Progress (1): 65/157 kB
+Progress (1): 81/157 kB
+Progress (1): 82/157 kB
+Progress (1): 98/157 kB
+Progress (1): 115/157 kB
+Progress (1): 131/157 kB
+Progress (1): 147/157 kB
+Progress (1): 157 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar (157 kB at 2.3 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar
+
+2026-07-01T18:12:25.098298675Z [inf]  Progress (1): 16/338 kB
+2026-07-01T18:12:25.09831585Z [inf]  Progress (1): 25/338 kB
+2026-07-01T18:12:25.099449872Z [inf]  Progress (1): 41/338 kB
+Progress (1): 57/338 kB
+Progress (1): 66/338 kB
+Progress (1): 82/338 kB
+Progress (1): 98/338 kB
+Progress (1): 115/338 kB
+Progress (1): 131/338 kB
+Progress (1): 147/338 kB
+Progress (1): 164/338 kB
+Progress (1): 180/338 kB
+Progress (1): 197/338 kB
+2026-07-01T18:12:25.10350728Z [inf]  Progress (1): 209/338 kB
+Progress (1): 225/338 kB
+Progress (1): 242/338 kB
+Progress (1): 258/338 kB
+Progress (1): 262/338 kB
+Progress (1): 279/338 kB
+Progress (1): 295/338 kB
+Progress (1): 311/338 kB
+Progress (1): 328/338 kB
+Progress (1): 338 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar (338 kB at 4.4 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar
+
+2026-07-01T18:12:25.114142046Z [inf]  Progress (1): 7.7/58 kB
+Progress (1): 16/58 kB 
+2026-07-01T18:12:25.114159472Z [inf]  Progress (1): 28/58 kB
+2026-07-01T18:12:25.114230168Z [inf]  Progress (1): 44/58 kB
+2026-07-01T18:12:25.114341115Z [inf]  Progress (1): 58 kB   
+2026-07-01T18:12:25.115000604Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar (58 kB at 671 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar
+
+2026-07-01T18:12:25.115712472Z [inf]  Progress (1): 7.7/20 kB
+Progress (1): 7.7/20 kB
+2026-07-01T18:12:25.115781165Z [inf]  Progress (1): 20 kB    
+2026-07-01T18:12:25.115966904Z [inf]  Progress (2): 20 kB | 7.7/465 kB
+2026-07-01T18:12:25.115976368Z [inf]  Progress (2): 20 kB | 16/465 kB 
+2026-07-01T18:12:25.116207064Z [inf]  Progress (2): 20 kB | 24/465 kB
+2026-07-01T18:12:25.116380565Z [inf]                                 
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 224 kB/s)
+Progress (1): 40/465 kB
+                       
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar
+
+2026-07-01T18:12:25.116399453Z [inf]  Progress (1): 57/465 kB
+2026-07-01T18:12:25.116569468Z [inf]  Progress (1): 73/465 kB
+2026-07-01T18:12:25.119382178Z [inf]  Progress (1): 90/465 kB
+Progress (1): 106/465 kB
+2026-07-01T18:12:25.119392864Z [inf]  Progress (1): 122/465 kB
+Progress (1): 139/465 kB
+2026-07-01T18:12:25.119455568Z [inf]  Progress (1): 155/465 kB
+Progress (1): 172/465 kB
+Progress (1): 188/465 kB
+Progress (1): 204/465 kB
+Progress (1): 221/465 kB
+2026-07-01T18:12:25.119462058Z [inf]  Progress (1): 237/465 kB
+2026-07-01T18:12:25.119485764Z [inf]  Progress (1): 253/465 kB
+2026-07-01T18:12:25.119492824Z [inf]  Progress (1): 270/465 kB
+Progress (1): 286/465 kB
+2026-07-01T18:12:25.119520125Z [inf]  Progress (1): 303/465 kB
+Progress (1): 319/465 kB
+2026-07-01T18:12:25.119524201Z [inf]  Progress (1): 335/465 kB
+2026-07-01T18:12:25.119548468Z [inf]  Progress (1): 343/465 kB
+2026-07-01T18:12:25.119553595Z [inf]  Progress (1): 359/465 kB
+2026-07-01T18:12:25.119576249Z [inf]  Progress (1): 376/465 kB
+2026-07-01T18:12:25.11958305Z [inf]  Progress (1): 392/465 kB
+Progress (1): 408/465 kB
+2026-07-01T18:12:25.119625864Z [inf]  Progress (1): 425/465 kB
+Progress (1): 441/465 kB
+2026-07-01T18:12:25.119710801Z [inf]  Progress (1): 457/465 kB
+2026-07-01T18:12:25.119807186Z [inf]  Progress (1): 465 kB    
+2026-07-01T18:12:25.120427316Z [inf]                      
+2026-07-01T18:12:25.120460316Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.4.1/spring-boot-loader-tools-3.4.1.jar (465 kB at 5.0 MB/s)
+2026-07-01T18:12:25.120471613Z [inf]  
+2026-07-01T18:12:25.120518453Z [inf]  Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar
+2026-07-01T18:12:25.120530741Z [inf]  
+2026-07-01T18:12:25.125420478Z [inf]  Progress (1): 7.7/147 kB
+Progress (1): 16/147 kB 
+Progress (1): 32/147 kB
+Progress (1): 49/147 kB
+Progress (1): 65/147 kB
+Progress (1): 81/147 kB
+Progress (1): 98/147 kB
+Progress (1): 114/147 kB
+Progress (1): 122/147 kB
+Progress (1): 139/147 kB
+Progress (1): 147 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar (147 kB at 1.5 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar
+
+2026-07-01T18:12:25.128287209Z [inf]  Progress (1): 7.7/122 kB
+Progress (1): 16/122 kB 
+2026-07-01T18:12:25.129348101Z [inf]  Progress (1): 32/122 kB
+Progress (1): 49/122 kB
+Progress (1): 65/122 kB
+Progress (1): 81/122 kB
+Progress (1): 98/122 kB
+Progress (1): 114/122 kB
+Progress (1): 122 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar (122 kB at 1.2 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar
+
+2026-07-01T18:12:25.144105543Z [inf]  Progress (1): 7.7/52 kB
+2026-07-01T18:12:25.146835208Z [inf]  Progress (1): 7.7/52 kB
+Progress (1): 24/52 kB 
+Progress (1): 40/52 kB
+Progress (1): 52 kB   
+Progress (2): 52 kB | 7.7/328 kB
+Progress (2): 52 kB | 7.7/328 kB
+Progress (2): 52 kB | 24/328 kB 
+Progress (2): 52 kB | 40/328 kB
+Progress (2): 52 kB | 57/328 kB
+Progress (2): 52 kB | 73/328 kB
+Progress (2): 52 kB | 90/328 kB
+Progress (2): 52 kB | 106/328 kB
+Progress (2): 52 kB | 122/328 kB
+Progress (2): 52 kB | 139/328 kB
+Progress (2): 52 kB | 155/328 kB
+Progress (2): 52 kB | 172/328 kB
+Progress (2): 52 kB | 188/328 kB
+Progress (2): 52 kB | 204/328 kB
+Progress (2): 52 kB | 221/328 kB
+Progress (2): 52 kB | 237/328 kB
+Progress (2): 52 kB | 253/328 kB
+Progress (2): 52 kB | 270/328 kB
+Progress (2): 52 kB | 286/328 kB
+Progress (2): 52 kB | 303/328 kB
+Progress (2): 52 kB | 319/328 kB
+Progress (2): 52 kB | 328 kB    
+                            
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar (328 kB at 2.8 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar
+
+2026-07-01T18:12:25.147197793Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar (52 kB at 433 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar
+
+2026-07-01T18:12:25.155414171Z [inf]  Progress (1): 7.7/72 kB
+2026-07-01T18:12:25.155509373Z [inf]  Progress (1): 15/72 kB 
+2026-07-01T18:12:25.155727501Z [inf]  Progress (1): 32/72 kB
+2026-07-01T18:12:25.155812678Z [inf]  Progress (1): 48/72 kB
+2026-07-01T18:12:25.156016434Z [inf]  Progress (1): 65/72 kB
+2026-07-01T18:12:25.156148622Z [inf]  Progress (1): 72 kB   
+2026-07-01T18:12:25.159290807Z [inf]                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar (72 kB at 555 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.jar
+Progress (1): 7.7/43 kB
+Progress (1): 16/43 kB 
+Progress (1): 28/43 kB
+Progress (1): 43 kB   
+                   
+2026-07-01T18:12:25.159304097Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar (43 kB at 323 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar
+
+2026-07-01T18:12:25.161310577Z [inf]  Progress (1): 7.7/146 kB
+Progress (1): 16/146 kB 
+Progress (1): 32/146 kB
+Progress (1): 49/146 kB
+2026-07-01T18:12:25.161329286Z [inf]  Progress (1): 65/146 kB
+Progress (1): 81/146 kB
+2026-07-01T18:12:25.161449526Z [inf]  Progress (1): 98/146 kB
+2026-07-01T18:12:25.161458289Z [inf]  Progress (1): 114/146 kB
+2026-07-01T18:12:25.161527283Z [inf]  Progress (1): 131/146 kB
+2026-07-01T18:12:25.161538059Z [inf]  Progress (1): 146 kB    
+2026-07-01T18:12:25.162080773Z [inf]                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar (146 kB at 1.1 MB/s)
+
+2026-07-01T18:12:25.176159577Z [inf]  Progress (1): 7.7/136 kB
+Progress (1): 7.7/136 kB
+Progress (1): 24/136 kB 
+2026-07-01T18:12:25.176220448Z [inf]  Progress (1): 40/136 kB
+2026-07-01T18:12:25.1762553Z [inf]  Progress (2): 40/136 kB | 7.7/484 kB
+2026-07-01T18:12:25.176311084Z [inf]  Progress (2): 57/136 kB | 7.7/484 kB
+Progress (2): 57/136 kB | 16/484 kB 
+Progress (2): 73/136 kB | 16/484 kB
+Progress (2): 73/136 kB | 32/484 kB
+2026-07-01T18:12:25.176322531Z [inf]  Progress (2): 90/136 kB | 32/484 kB
+2026-07-01T18:12:25.176429532Z [inf]  Progress (2): 90/136 kB | 49/484 kB
+Progress (2): 106/136 kB | 49/484 kB
+2026-07-01T18:12:25.176461129Z [inf]  Progress (2): 122/136 kB | 49/484 kB
+Progress (2): 122/136 kB | 65/484 kB
+2026-07-01T18:12:25.17653489Z [inf]  Progress (2): 136 kB | 65/484 kB    
+Progress (2): 136 kB | 81/484 kB
+2026-07-01T18:12:25.176586678Z [inf]  Progress (2): 136 kB | 98/484 kB
+2026-07-01T18:12:25.176629131Z [inf]  Progress (2): 136 kB | 114/484 kB
+2026-07-01T18:12:25.176685486Z [inf]  Progress (2): 136 kB | 131/484 kB
+2026-07-01T18:12:25.176728019Z [inf]  Progress (2): 136 kB | 147/484 kB
+2026-07-01T18:12:25.176784454Z [inf]  Progress (2): 136 kB | 163/484 kB
+2026-07-01T18:12:25.176851735Z [inf]  Progress (2): 136 kB | 180/484 kB
+2026-07-01T18:12:25.176923933Z [inf]  Progress (2): 136 kB | 196/484 kB
+2026-07-01T18:12:25.177017734Z [inf]  Progress (2): 136 kB | 212/484 kB
+2026-07-01T18:12:25.177037283Z [inf]  Progress (2): 136 kB | 229/484 kB
+2026-07-01T18:12:25.177065095Z [inf]  Progress (2): 136 kB | 232/484 kB
+2026-07-01T18:12:25.177122802Z [inf]                                   
+2026-07-01T18:12:25.177153698Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar (136 kB at 909 kB/s)
+Progress (1): 248/484 kB
+2026-07-01T18:12:25.177169041Z [inf]  Progress (1): 265/484 kB
+2026-07-01T18:12:25.177253939Z [inf]  Progress (1): 281/484 kB
+2026-07-01T18:12:25.177292697Z [inf]  Progress (1): 298/484 kB
+2026-07-01T18:12:25.177349111Z [inf]  Progress (1): 314/484 kB
+2026-07-01T18:12:25.177500659Z [inf]  Progress (1): 330/484 kB
+Progress (1): 347/484 kB
+2026-07-01T18:12:25.177528941Z [inf]  Progress (1): 363/484 kB
+2026-07-01T18:12:25.177584144Z [inf]  Progress (1): 380/484 kB
+2026-07-01T18:12:25.177677724Z [inf]  Progress (1): 396/484 kB
+2026-07-01T18:12:25.177716593Z [inf]  Progress (1): 412/484 kB
+2026-07-01T18:12:25.177771525Z [inf]  Progress (1): 429/484 kB
+2026-07-01T18:12:25.177827499Z [inf]  Progress (1): 445/484 kB
+2026-07-01T18:12:25.177906678Z [inf]  Progress (1): 451/484 kB
+2026-07-01T18:12:25.178737365Z [inf]  Progress (2): 451/484 kB | 8.2/233 kB
+2026-07-01T18:12:25.178817014Z [inf]  Progress (2): 451/484 kB | 25/233 kB 
+2026-07-01T18:12:25.178856884Z [inf]  Progress (2): 451/484 kB | 33/233 kB
+2026-07-01T18:12:25.179231796Z [inf]  Progress (2): 468/484 kB | 33/233 kB
+2026-07-01T18:12:25.179298456Z [inf]  Progress (2): 484 kB | 33/233 kB    
+2026-07-01T18:12:25.179397164Z [inf]  Progress (2): 484 kB | 49/233 kB
+2026-07-01T18:12:25.179483584Z [inf]  Progress (2): 484 kB | 66/233 kB
+2026-07-01T18:12:25.179649453Z [inf]                                  
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar (484 kB at 3.2 MB/s)
+
+2026-07-01T18:12:25.179809453Z [inf]  Progress (2): 66/233 kB | 7.7/752 kB
+2026-07-01T18:12:25.179817445Z [inf]  Progress (2): 66/233 kB | 16/752 kB 
+2026-07-01T18:12:25.179923234Z [inf]  Progress (2): 66/233 kB | 32/752 kB
+2026-07-01T18:12:25.179980459Z [inf]  Progress (2): 66/233 kB | 49/752 kB
+2026-07-01T18:12:25.180078817Z [inf]  Progress (2): 66/233 kB | 65/752 kB
+2026-07-01T18:12:25.180167831Z [inf]  Progress (2): 66/233 kB | 81/752 kB
+2026-07-01T18:12:25.180252037Z [inf]  Progress (2): 66/233 kB | 98/752 kB
+2026-07-01T18:12:25.180293549Z [inf]  Progress (2): 66/233 kB | 114/752 kB
+2026-07-01T18:12:25.180357625Z [inf]  Progress (2): 66/233 kB | 131/752 kB
+2026-07-01T18:12:25.180399688Z [inf]  Progress (2): 66/233 kB | 147/752 kB
+2026-07-01T18:12:25.180474311Z [inf]  Progress (2): 66/233 kB | 163/752 kB
+2026-07-01T18:12:25.180532338Z [inf]  Progress (2): 66/233 kB | 180/752 kB
+2026-07-01T18:12:25.180608712Z [inf]  Progress (2): 66/233 kB | 196/752 kB
+2026-07-01T18:12:25.180658687Z [inf]  Progress (2): 66/233 kB | 212/752 kB
+2026-07-01T18:12:25.180738507Z [inf]  Progress (2): 66/233 kB | 229/752 kB
+2026-07-01T18:12:25.180789353Z [inf]  Progress (2): 66/233 kB | 245/752 kB
+2026-07-01T18:12:25.180843224Z [inf]  Progress (2): 66/233 kB | 262/752 kB
+2026-07-01T18:12:25.180931526Z [inf]  Progress (2): 66/233 kB | 278/752 kB
+2026-07-01T18:12:25.180974621Z [inf]  Progress (2): 66/233 kB | 294/752 kB
+2026-07-01T18:12:25.180977125Z [inf]  Progress (2): 66/233 kB | 295/752 kB
+2026-07-01T18:12:25.18111412Z [inf]  Progress (2): 66/233 kB | 311/752 kB
+Progress (2): 66/233 kB | 328/752 kB
+2026-07-01T18:12:25.181170225Z [inf]  Progress (2): 66/233 kB | 344/752 kB
+2026-07-01T18:12:25.181203024Z [inf]  Progress (2): 66/233 kB | 360/752 kB
+2026-07-01T18:12:25.181284576Z [inf]  Progress (2): 66/233 kB | 377/752 kB
+2026-07-01T18:12:25.181345648Z [inf]  Progress (2): 66/233 kB | 393/752 kB
+2026-07-01T18:12:25.18139397Z [inf]  Progress (2): 66/233 kB | 410/752 kB
+2026-07-01T18:12:25.181439509Z [inf]  Progress (2): 66/233 kB | 426/752 kB
+2026-07-01T18:12:25.181581041Z [inf]  Progress (2): 66/233 kB | 442/752 kB
+2026-07-01T18:12:25.181759288Z [inf]  Progress (2): 66/233 kB | 459/752 kB
+2026-07-01T18:12:25.181806109Z [inf]  Progress (2): 66/233 kB | 475/752 kB
+2026-07-01T18:12:25.181898397Z [inf]  Progress (2): 66/233 kB | 492/752 kB
+2026-07-01T18:12:25.182024606Z [inf]  Progress (2): 66/233 kB | 508/752 kB
+Progress (2): 66/233 kB | 524/752 kB
+2026-07-01T18:12:25.182111617Z [inf]  Progress (2): 66/233 kB | 541/752 kB
+2026-07-01T18:12:25.182141842Z [inf]  Progress (2): 82/233 kB | 541/752 kB
+2026-07-01T18:12:25.182149574Z [inf]  Progress (2): 82/233 kB | 557/752 kB
+2026-07-01T18:12:25.182258678Z [inf]  Progress (2): 98/233 kB | 557/752 kB
+2026-07-01T18:12:25.182326009Z [inf]  Progress (2): 115/233 kB | 557/752 kB
+2026-07-01T18:12:25.182414572Z [inf]  Progress (2): 131/233 kB | 557/752 kB
+2026-07-01T18:12:25.182514061Z [inf]  Progress (2): 147/233 kB | 557/752 kB
+2026-07-01T18:12:25.182609835Z [inf]  Progress (2): 164/233 kB | 557/752 kB
+2026-07-01T18:12:25.182918217Z [inf]  Progress (2): 164/233 kB | 573/752 kB
+2026-07-01T18:12:25.183024647Z [inf]  Progress (2): 164/233 kB | 590/752 kB
+2026-07-01T18:12:25.183081122Z [inf]  Progress (2): 164/233 kB | 606/752 kB
+2026-07-01T18:12:25.183148012Z [inf]  Progress (2): 164/233 kB | 623/752 kB
+2026-07-01T18:12:25.183414792Z [inf]  Progress (2): 164/233 kB | 639/752 kB
+2026-07-01T18:12:25.183450606Z [inf]  Progress (2): 164/233 kB | 655/752 kB
+2026-07-01T18:12:25.183502904Z [inf]  Progress (2): 164/233 kB | 672/752 kB
+2026-07-01T18:12:25.183549825Z [inf]  Progress (2): 164/233 kB | 688/752 kB
+2026-07-01T18:12:25.183801002Z [inf]  Progress (2): 164/233 kB | 705/752 kB
+2026-07-01T18:12:25.184047441Z [inf]  Progress (2): 164/233 kB | 721/752 kB
+2026-07-01T18:12:25.184078939Z [inf]  Progress (2): 180/233 kB | 721/752 kB
+Progress (2): 180/233 kB | 737/752 kB
+2026-07-01T18:12:25.184155274Z [inf]  Progress (2): 180/233 kB | 752 kB    
+2026-07-01T18:12:25.184160111Z [inf]  Progress (2): 197/233 kB | 752 kB
+2026-07-01T18:12:25.184288093Z [inf]  Progress (2): 213/233 kB | 752 kB
+2026-07-01T18:12:25.184383636Z [inf]  Progress (2): 229/233 kB | 752 kB
+Progress (2): 233 kB | 752 kB    
+2026-07-01T18:12:25.184564577Z [inf]                               
+2026-07-01T18:12:25.184590647Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar (752 kB at 4.8 MB/s)
+
+2026-07-01T18:12:25.185004718Z [inf]  Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.jar (233 kB at 1.5 MB/s)
+
+2026-07-01T18:12:25.684979867Z [inf]  [INFO] Replacing main artifact /app/target/rent-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+
+2026-07-01T18:12:25.685163393Z [inf]  [INFO] The original artifact has been renamed to /app/target/rent-0.0.1-SNAPSHOT.jar.original
+
+2026-07-01T18:12:25.685769332Z [inf]  [INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+
+2026-07-01T18:12:25.687130815Z [inf]  [INFO] Total time:  18.164 s
+
+2026-07-01T18:12:25.687255782Z [inf]  [INFO] Finished at: 2026-07-01T18:12:25Z
+[INFO] ------------------------------------------------------------------------
+
+2026-07-01T18:12:26.046051026Z [inf]  [stage-0 6/7] RUN --mount=type=cache,id=s/f88f8123-ce8a-495c-a4eb-7bf3199646e9-m2/repository,target=/app/.m2/repository ./mvnw clean package -DskipTests
+2026-07-01T18:12:26.149742925Z [inf]  [stage-0 7/7] COPY . /app
+2026-07-01T18:12:26.916075585Z [inf]  [stage-0 7/7] COPY . /app
+2026-07-01T18:12:26.938990326Z [inf]  exporting to docker image format
+2026-07-01T18:12:35.704526129Z [inf]  exporting to docker image format
+2026-07-01T18:12:35.751378596Z [inf]  containerimage.descriptor: eyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2NpLmltYWdlLm1hbmlmZXN0LnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6OThmNGRhOWJlYjk0NDg2MWFjN2Q5Y2U1YmU1NjNlMDZkNjQ3MmIzZGFlZTI5ZjZmMDcwNGU5MTUwYzMyNWEyNCIsInNpemUiOjIyMDAsImFubm90YXRpb25zIjp7Im9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5jcmVhdGVkIjoiMjAyNi0wNy0wMVQxODoxMjoyOFoifSwicGxhdGZvcm0iOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQiLCJvcyI6ImxpbnV4In19
+2026-07-01T18:12:35.751382131Z [inf]  containerimage.config.digest: sha256:479efba0f9dbd92754a822616daa3a61f9c62136dee63ba14bd7fac3eb487aa8
+2026-07-01T18:12:35.751384254Z [inf]  containerimage.digest: sha256:98f4da9beb944861ac7d9ce5be563e06d6472b3daee29f6f0704e9150c325a24
+2026-07-01T18:12:47.169325579Z [inf]  image push
+2026-07-01T18:12:57.268441215Z [inf]  image push
+2026-07-01T18:13:07.268611124Z [inf]  image push
+2026-07-01T18:13:21.778097002Z [inf]  image push
+2026-07-01T18:13:21.778125074Z [inf]  image push
+2026-07-01T18:13:40.759472472Z [inf]  
+2026-07-01T18:13:40.759475608Z [inf]  [35m====================
+Starting Healthcheck
+====================
+[0m
+2026-07-01T18:13:40.759476594Z [inf]  [37mPath: /home[0m
+2026-07-01T18:13:40.759477127Z [inf]  [37mRetry window: 5m0s[0m
+2026-07-01T18:13:40.759477579Z [inf]  
+2026-07-01T18:13:50.826645610Z [inf]  [93mAttempt #1 failed with service unavailable. Continuing to retry for 4m49s[0m
+2026-07-01T18:14:01.865172117Z [inf]  [93mAttempt #2 failed with service unavailable. Continuing to retry for 4m38s[0m
+2026-07-01T18:14:13.906163712Z [inf]  [93mAttempt #3 failed with service unavailable. Continuing to retry for 4m26s[0m
+2026-07-01T18:14:27.945877136Z [inf]  [93mAttempt #4 failed with service unavailable. Continuing to retry for 4m12s[0m
+2026-07-01T18:14:45.986255249Z [inf]  [93mAttempt #5 failed with service unavailable. Continuing to retry for 3m54s[0m
+2026-07-01T18:15:12.027112974Z [inf]  [93mAttempt #6 failed with service unavailable. Continuing to retry for 3m28s[0m
+2026-07-01T18:15:42.470727188Z [inf]  [92m[1/1] Healthcheck succeeded![0m
