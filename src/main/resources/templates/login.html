@@ -49,7 +49,9 @@
             if (data.token) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('user', JSON.stringify(data));
-                window.location.href = '/';
+                var params = new URLSearchParams(window.location.search);
+                var redirect = params.get('redirect') || '/';
+                window.location.href = redirect;
             } else {
                 alert('Login failed: ' + (data.error || 'Invalid credentials'));
             }

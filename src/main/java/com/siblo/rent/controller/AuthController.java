@@ -29,7 +29,6 @@ public class AuthController {
     private final OtpService otpService;
     private final EmailService emailService;
 
-    // Simpan data register sementara (sebelum OTP diverifikasi)
     private final Map<String, Map<String, String>> pendingRegistrations = new ConcurrentHashMap<>();
 
     public AuthController(AuthenticationManager authManager,
@@ -116,14 +115,12 @@ public class AuthController {
         if (userRepository.existsByEmail(email))
             return ResponseEntity.badRequest().body(Map.of("error", "Email already in use"));
 
-        // Simpan data register sementara (hash password immediately)
-        pendingRegistrations.put(email, Map.of(
+        pendingRegistrations.put(email, new ConcurrentHashMap<>(Map.of(
             "name", name,
             "email", email,
             "password", passwordEncoder.encode(password)
-        ));
+        )));
 
-        // Generate & kirim OTP
         String otp = otpService.generateOtp(email);
         emailService.sendOtpEmail(email, otp);
 

@@ -148,9 +148,11 @@ public class DataSeeder implements CommandLineRunner {
     .status(CourtStatus.ACTIVE)
     .badgeLabel("AVAILABLE")
     .imageUrl("/images/downtownBadmintonHall.png")
+    .openTime(LocalTime.of(6, 0))
+    .closeTime(LocalTime.of(22, 0))
     .build());
 
-      courtRepository.save(Court.builder().venue(downtown).sport(futsal)
+       courtRepository.save(Court.builder().venue(downtown).sport(futsal)
     .name("Premium SoccerField 73")
     .surfaceType("Hard Court")
     .indoor(true)
@@ -161,6 +163,8 @@ public class DataSeeder implements CommandLineRunner {
     .status(CourtStatus.ACTIVE)
     .badgeLabel("PREMIUM")
     .imageUrl("/images/area73.png")
+    .openTime(LocalTime.of(6, 0))
+    .closeTime(LocalTime.of(22, 0))
     .build());
 
         courtRepository.save(Court.builder().venue(eastSide).sport(basketball)
@@ -174,6 +178,8 @@ public class DataSeeder implements CommandLineRunner {
     .status(CourtStatus.ACTIVE)
     .badgeLabel("AVAILABLE")
     .imageUrl("/images/Volypremium.png")
+    .openTime(LocalTime.of(6, 0))
+    .closeTime(LocalTime.of(22, 0))
     .paymentLinkUrl("https://app.sandbox.midtrans.com/payment-links/46fe5a45-61ee-4f1f-8ce9-649a56c07be5-6O37zTNI")
     .build());
 

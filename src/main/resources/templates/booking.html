@@ -116,42 +116,6 @@
         </div>
     </div>
 
-    <!-- Payment Modal -->
-    <div id="paymentModal" style="display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); align-items: center; justify-content: center;">
-        <div class="card" style="max-width: 480px; width: 90%; padding: var(--space-6); text-align: center;">
-            <div style="font-size: 48px; margin-bottom: var(--space-4);">&#x1f4b0;</div>
-            <h2 style="font-family: 'Anybody', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: var(--space-2);">Complete Payment</h2>
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-5);">Your booking is pending. Complete payment within 15 minutes to confirm.</p>
-            <div style="background: var(--color-bg-elevated); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-5);">
-                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
-                    <span style="color: var(--color-text-secondary);">Booking ID</span>
-                    <span style="font-weight: 700;" id="modalBookingId">-</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
-                    <span style="color: var(--color-text-secondary);">Court</span>
-                    <span style="font-weight: 700;" id="modalCourtName">-</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
-                    <span style="color: var(--color-text-secondary);">Date</span>
-                    <span style="font-weight: 700;" id="modalDate">-</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
-                    <span style="color: var(--color-text-secondary);">Slots</span>
-                    <span style="font-weight: 700;" id="modalSlots">-</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; padding-top: var(--space-3); border-top: 1px solid var(--color-border-subtle);">
-                    <span style="color: var(--color-text-secondary); font-size: 18px; font-weight: 700;">Total</span>
-                    <span style="font-size: 28px; font-weight: 800; color: var(--color-accent-primary);" id="modalTotal">-</span>
-                </div>
-            </div>
-            <div style="display: flex; gap: var(--space-4);">
-                <button class="btn-secondary" style="flex: 1; padding: 16px;" onclick="cancelPayment()">Cancel</button>
-                <button class="btn-primary" style="flex: 1; padding: 16px; font-size: 16px;" id="payNowBtn" onclick="payNow()">Pay Now</button>
-            </div>
-            <p style="color: var(--color-text-secondary); font-size: 12px; margin-top: var(--space-3);">Payment expires at <span id="modalExpires">-</span></p>
-        </div>
-    </div>
-
     <div th:replace="~{fragments/bottomnav :: bottomnav('booking')}"></div>
 
     <script th:inline="javascript">
@@ -160,8 +124,8 @@
     let selectedDate = null;
     let courtId = /*[[${court?.id}]]*/ null;
     let pricePerHour = /*[[${court?.pricePerHour}]]*/ 0;
-    let pendingBookingId = null;
     let rescheduleId = null;
+    let isLoggedIn = !!localStorage.getItem('token');
 
     async function apiFetch(url, options = {}) {
         const token = localStorage.getItem('token');
@@ -171,7 +135,9 @@
         let data = null;
         try { data = await response.json(); } catch (_) { data = {}; }
         if (response.status === 401) {
-            window.location.href = '/login';
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = '/login?redirect=' + encodeURIComponent(window.location.pathname + window.location.search);
             return null;
         }
         if (!response.ok) {
@@ -330,7 +296,11 @@
     async function confirmBooking() {
         if (selectedSlots.length === 0 || !selectedDate || !courtId) return;
         const token = localStorage.getItem('token');
-        if (!token) { alert('Please login first.'); window.location.href = '/login'; return; }
+        if (!token) {
+            alert('Please login first to book a court.');
+            window.location.href = '/login?redirect=' + encodeURIComponent(window.location.pathname + window.location.search);
+            return;
+        }
 
         const doc = document.getElementById('confirmBookingBtn');
         doc.disabled = true;
@@ -350,50 +320,49 @@
                 });
                 alert('Booking rescheduled!');
                 window.location.href = '/my-bookings';
-            } else {
-                let data = await apiFetch('/api/bookings', {
-                    method: 'POST',
-                    body: JSON.stringify({ courtId: courtId, slotIds: selectedSlots, date: selectedDate })
-                });
-                if (data.status === 'PENDING_PAYMENT') {
-                    showPaymentModal(data);
-                } else {
-                    alert('Booking confirmed!');
-                    window.location.href = '/my-bookings';
-                }
+                return;
             }
+
+            let data = await apiFetch('/api/bookings', {
+                method: 'POST',
+                body: JSON.stringify({ courtId: courtId, slotIds: selectedSlots, date: selectedDate })
+            });
+
+            if (!data || !data.id) {
+                throw new Error(data && data.error ? data.error : 'Booking creation failed with no response data');
+            }
+
+            let charge = await apiFetch('/payment/charge/' + data.id, { method: 'POST' });
+
+            if (!charge || !charge.token) {
+                throw new Error(charge && charge.error ? charge.error : 'Payment initiation failed');
+            }
+
+            window.snap.pay(charge.token, {
+                onSuccess: function() {
+                    alert('Pembayaran berhasil!');
+                    window.location.href = '/my-bookings';
+                },
+                onPending: function() {
+                    alert('Menunggu pembayaran. Status akan otomatis terupdate setelah dikonfirmasi Midtrans.');
+                    window.location.href = '/my-bookings';
+                },
+                onError: function() {
+                    alert('Pembayaran gagal, silakan coba lagi.');
+                    doc.disabled = false;
+                    doc.textContent = 'Confirm Booking';
+                },
+                onClose: function() {
+                    doc.disabled = false;
+                    doc.textContent = 'Confirm Booking';
+                }
+            });
         } catch (err) {
+            console.error('Booking error:', err);
             doc.disabled = false;
             doc.textContent = 'Confirm Booking';
-            alert(err.message || 'Booking failed.');
+            alert(err.message || 'Booking failed. Please check console for details.');
         }
-    }
-
-    function showPaymentModal(booking) {
-        pendingBookingId = booking.id;
-        document.getElementById('modalBookingId').textContent = '#' + booking.id;
-        document.getElementById('modalCourtName').textContent = booking.courtName || 'Court';
-        document.getElementById('modalDate').textContent = booking.date || selectedDate;
-        document.getElementById('modalSlots').textContent = (booking.slotIds ? booking.slotIds.length : selectedSlots.length) + ' selected';
-        document.getElementById('modalTotal').textContent = 'Rp' + (booking.totalPrice || (selectedSlots.length * pricePerHour)).toLocaleString('id-ID');
-        if (booking.paymentExpiresAt) {
-            const exp = new Date(booking.paymentExpiresAt);
-            document.getElementById('modalExpires').textContent = exp.toLocaleTimeString();
-        }
-        document.getElementById('paymentModal').style.display = 'flex';
-    }
-
-    async function cancelPayment() {
-        document.getElementById('paymentModal').style.display = 'none';
-        if (pendingBookingId) {
-            try {
-                await apiFetch('/api/bookings/' + pendingBookingId, {
-                    method: 'PATCH',
-                    body: JSON.stringify({ action: 'cancel' })
-                });
-            } catch (_) {}
-        }
-        window.location.href = '/my-bookings';
     }
 
     let snapLoaded = false;
@@ -411,54 +380,26 @@ async function loadSnapScript() {
     });
 }
 
-async function payNow() {
-    const token = localStorage.getItem('token');
-    const btn = document.getElementById('payNowBtn');
-    btn.disabled = true;
-    btn.textContent = 'Processing...';
+    document.addEventListener('DOMContentLoaded', function() {
+        initDateScroller();
 
-    try {
-        await loadSnapScript();
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+        isLoggedIn = !!token;
 
-        const response = await fetch('/payment/charge/' + pendingBookingId, {
-            method: 'POST',
-            headers: { 'Authorization': 'Bearer ' + token }
-        });
-        const data = await response.json();
-
-        if (!response.ok) {
-            alert(data.error || data.message || 'Payment failed.');
-            btn.disabled = false;
-            btn.textContent = 'Pay Now';
-            return;
+        if (!isLoggedIn) {
+            var loginBanner = document.createElement('div');
+            loginBanner.id = 'loginBanner';
+            loginBanner.style.cssText = 'display: flex; align-items: center; justify-content: space-between; background: var(--color-accent-primary); color: #fff; padding: 12px 20px; border-radius: var(--radius-md); margin-bottom: var(--space-4); font-weight: 600;';
+            loginBanner.innerHTML = '<span>Please login to book a court.</span><a href="/login?redirect=' + encodeURIComponent(window.location.pathname + window.location.search) + '" style="color: #fff; text-decoration: underline; font-size: 14px;">Login Now</a>';
+            var main = document.querySelector('.main-content');
+            if (main) main.insertBefore(loginBanner, main.firstChild);
         }
 
-        btn.disabled = false;
-        btn.textContent = 'Pay Now';
-
-        window.snap.pay(data.token, {
-            onSuccess: async function() {
-                alert('Pembayaran berhasil!');
-                window.location.href = '/my-bookings';
-            },
-            onPending: function() {
-                alert('Menunggu pembayaran. Status akan otomatis terupdate setelah dikonfirmasi Midtrans.');
-                window.location.href = '/my-bookings';
-            },
-            onError: function() {
-                alert('Pembayaran gagal, silakan coba lagi.');
-            },
-            onClose: function() {
-            }
+        loadSnapScript().catch(function(e) {
+            console.warn('Snap.js preload failed (will retry on confirm):', e);
         });
-    } catch (err) {
-        alert('Payment failed. Please try again.');
-        btn.disabled = false;
-        btn.textContent = 'Pay Now';
-    }
-}
-
-    document.addEventListener('DOMContentLoaded', initDateScroller);
+    });
     window.addEventListener('pageshow', function(e) {
         if (e.persisted) initDateScroller();
     });
