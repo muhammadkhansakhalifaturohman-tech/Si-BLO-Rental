@@ -6,7 +6,7 @@
   },
   "deploy": {
     "numReplicas": 1,
-    "startCommand": "java -jar target/rent-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod",
+    "startCommand": "java -Xmx256m -XX:MaxMetaspaceSize=128m -XX:+UseSerialGC -jar target/rent-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod",
     "healthcheckPath": "/home",
     "restartPolicyType": "ON_FAILURE"
   }
