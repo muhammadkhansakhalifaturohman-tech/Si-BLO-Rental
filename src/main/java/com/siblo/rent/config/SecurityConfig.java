@@ -38,6 +38,8 @@ public class SecurityConfig {
                 .requestMatchers("/", "/home", "/login", "/register", "/booking", "/my-bookings",
                     "/manage-admin",
                     "/css/**", "/js/**", "/images/**", "/videos/**",
+                    "/manifest.json", "/sw.js", "/favicon.ico", "/favicon-*.png",
+                    "/android-chrome-*.png", "/apple-touch-icon.png",
                     "/api/auth/login", "/api/auth/register/send-otp", "/api/auth/register/verify-otp",
                     "/api/sports/**", "/api/courts/**").permitAll()
                 .requestMatchers("/api/bookings/**").authenticated()

@@ -155,10 +155,11 @@
                 })
             });
 
+            const data = await res.json();
             if (res.ok) {
                 alert('OTP baru telah dikirim ke ' + pendingEmail);
             } else {
-                alert('Gagal kirim ulang OTP.');
+                alert(data.error || 'Gagal kirim ulang OTP.');
             }
         } catch (err) {
             alert('Gagal kirim ulang OTP.');

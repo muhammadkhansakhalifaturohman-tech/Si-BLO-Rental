@@ -1,0 +1,497 @@
+====================================================================================================
+                          DIAGRAM CLASS — SI-BLO PRO COURT RENTALS
+====================================================================================================
+
+  +---------------------------------------------------------------------------------------------+
+  |                                      ENTITIES (JPA)                                         |
+  +---------------------------------------------------------------------------------------------+
+
+  +----------------------+       +----------------------+       +----------------------+
+  |        User         |       |        Sport         |       |       Venue          |
+  +----------------------+       +----------------------+       +----------------------+
+  | - id: Long          |       | - id: Long           |       | - id: Long           |
+  | - name: String      |       | - name: String       |       | - name: String       |
+  | - email: String     |       | - slug: String       |       | - address: String    |
+  | - password: String  |       | - icon: String       |       | - zone: String       |
+  | - role: Role        |       | - locationCount: Int |       | - latitude: Double   |
+  | - membershipTier:   |       | - imageUrl: String   |       | - longitude: Double  |
+  |     String          |       +----------------------+       +----------------------+
+  | - avatarUrl: String |             1      *                  | 1              *
+  +----------------------+       +------------------+          +------------------+
+  | 1              *     |       |        Court      |<---------+                  |
+  +--------+-------------+       +------------------+          +------------------+
+           |                     | - id: Long       |
+           |                     | - name: String    |
+           |                     | - description:    |
+           |                     |     String        |
+           |                     | - surfaceType:    |
+           |                     |     String        |
+           |                     | - indoor: Boolean |
+           |                     | - pricePerHour:   |
+           |                     |     Integer       |
+           |                     | - capacity: Int   |
+           |                     | - rating: Double  |
+           |                     | - reviewCount:    |
+           |                     |     Integer       |
+           |                     | - status:         |
+           |                     |     CourtStatus   |
+           |                     | - imageUrl: Str   |
+           |                     | - badgeLabel: Str |
+           |                     | - paymentLinkUrl: |
+           |                     |     String        |
+           |                     | - openTime:       |
+           |                     |     LocalTime     |
+           |                     | - closeTime:      |
+           |                     |     LocalTime     |
+           |                     +------------------+
+           |                     | 1              * |
+           |                     +---------+--------+
+           |                               |
+           |                               |
+  +--------+-------------+       +---------+--------+
+  |       Booking        |       |     TimeSlot     |
+  +----------------------+       +------------------+
+  | - id: Long           |       | - id: Long       |
+  | - slotIds: List<Long>|       | - date: LocalDate|
+  | - date: LocalDate    |       | - startTime:     |
+  | - startTime:LocalTime|       |     LocalTime    |
+  | - endTime: LocalTime |       | - endTime:       |
+  | - totalPrice: Integer|       |     LocalTime    |
+  | - status:            |       | - status:        |
+  |     BookingStatus    |       |     SlotStatus   |
+  | - paymentExpiresAt:  |       | - version: Long  |
+  |     LocalDateTime    |       +------------------+
+  | - createdAt:         |
+  |     LocalDateTime    |
+  +----------------------+
+  | 1              1     |
+  +---------+------------+
+            |
+            |
+  +---------+------------+
+  |       Payment        |
+  +----------------------+
+  | - id: Long           |
+  | - orderId: String    |
+  | - transactionId: Str |
+  | - amount: Integer    |
+  | - status: PaymentSt. |
+  | - method: String     |
+  | - paidAt: LocalDT    |
+  +----------------------+
+
+
+  +============================================================================================+
+  |                                         ENUMS                                              |
+  +============================================================================================+
+
+  +------------------+    +------------------+    +------------------+    +------------------+
+  |   User.Role      |    | Court.CourtStatus|    | TimeSlot.        |    | Payment.         |
+  |                  |    |                  |    |   SlotStatus     |    |   PaymentStatus  |
+  +------------------+    +------------------+    +------------------+    +------------------+
+  | MEMBER           |    | ACTIVE           |    | AVAILABLE        |    | PENDING          |
+  | ADMIN            |    | MAINTENANCE      |    | HELD             |    | COMPLETED        |
+  +------------------+    | INACTIVE         |    | BOOKED           |    | FAILED           |
+                          +------------------+    | BLOCKED          |    | REFUNDED         |
+                          +------------------+    +------------------+    +------------------+
+
+  +------------------+
+  |   Booking.       |
+  |   BookingStatus  |
+  +------------------+
+  | CONFIRMED        |
+  | PENDING_PAYMENT  |
+  | COMPLETED        |
+  | CANCELLED        |
+  | ACTIVE           |
+  +------------------+
+
+
+  +============================================================================================+
+  |                                   REPOSITORIES (Spring Data JPA)                           |
+  +============================================================================================+
+
+  +------------------+     +------------------+     +------------------+     +------------------+
+  |  UserRepository  |     |  SportRepository |     |  VenueRepository |     |  CourtRepository |
+  |  extends         |     |  extends         |     |  extends         |     |  extends         |
+  |  JpaRepository   |     |  JpaRepository   |     |  JpaRepository   |     |  JpaRepository   |
+  +------------------+     +------------------+     +------------------+     +------------------+
+  | + findByEmail()  |     | + findBySlug()   |     | + findAll-       |     | + findBySportId()|
+  | + existsByEmail()|     +------------------+     |   WithCourts()   |     | + findByStatus() |
+  +------------------+                               +------------------+     | + searchCourts() |
+                                                                              | + findActive-    |
+  +------------------+     +------------------+     +------------------+      |   Courts()       |
+  | BookingRepository|     | TimeSlotRepos.   |     | PaymentRepository|      +------------------+
+  | extends          |     | extends          |     | extends          |
+  | JpaRepository   |     | JpaRepository   |     | JpaRepository   |
+  +------------------+     +------------------+     +------------------+
+  | + findByUser_Id()|     | + findByCourtId- |     | + findByBooking- |
+  | + findUpcoming() |     |   AndDateOrder.. |     |   Id()           |
+  | + findPast()     |     | + find-          |     | + findByOrderId()|
+  | + sumRevenue-    |     |   AllById-       |     +------------------+
+  |   ByDate()       |     |   ForUpdate()    |
+  | + findConfirmed- |     | + countCourts-   |
+  |   ReadyTo...()   |     |   WithAvailable- |
+  +------------------+     |   Slots()        |
+                           +------------------+
+
+
+  +============================================================================================+
+  |                                        SERVICES                                            |
+  +============================================================================================+
+
+  +--------------------------+     +--------------------------+
+  |      CourtService        |     |     BookingService       |
+  +--------------------------+     +--------------------------+
+  | - courtRepository        |     | - bookingRepository      |
+  | - sportRepository        |     | - courtRepository        |
+  | - venueRepository        |     | - timeSlotRepository     |
+  | - timeSlotRepository     |     | - userRepository         |
+  | - bookingExpiryService   |     | - paymentService         |
+  | - slotHorizonDays        |     | - bookingExpiryService   |
+  +--------------------------+     | - paymentTimeoutMinutes  |
+  | + getActiveCourts()      |     | - cancelCutoffHours      |
+  | + searchCourts()         |     +--------------------------+
+  | + getCourtById()         |     | + getBookingById()       |
+  | + getAvailability()      |     | + getUserBookings()      |
+  | + getAvailableCourts()   |     | + getUpcomingBookings()  |
+  | + addCourt()             |     | + getPastBookings()      |
+  | + updateCourt()          |     | + createBooking()        |
+  | + toggleAvailability()   |     | + payBooking()           |
+  | + deleteCourt()          |     | + cancelBooking()        |
+  | + generateSlots()        |     | + rescheduleBooking()    |
+  +--------------------------+     | + adminConfirmBooking()  |
+                                   | + getTimeline()          |
+  +--------------------------+     +--------------------------+
+  |     AdminService         |
+  +--------------------------+     +--------------------------+
+  | - bookingRepository      |     |   PaymentService         |
+  | - courtRepository        |     +--------------------------+
+  | - timeSlotRepository     |     | - paymentRepository      |
+  +--------------------------+     | - bookingRepository      |
+  | + getDashboardStats()    |     | - midtransService        |
+  +--------------------------+     | - timeSlotRepository     |
+                                   +--------------------------+
+  +--------------------------+     | + completePayment()      |
+  |  BookingExpiryService    |     | + refundPayment()        |
+  +--------------------------+     | + createPaymentFor-      |
+  | - bookingRepository      |     |   Booking()              |
+  | - timeSlotRepository     |     | + handleNotification()   |
+  +--------------------------+     +--------------------------+
+  | + expirePendingPayments()|
+  +--------------------------+     +--------------------------+
+                                   |   MidtransService        |
+  +--------------------------+     +--------------------------+
+  | BookingLifecycleService  |     |  (none)                  |
+  +--------------------------+     +--------------------------+
+  | - bookingRepository      |     | + createSnap-            |
+  | - timeSlotRepository     |     |   Transaction()          |
+  +--------------------------+     +--------------------------+
+  | + advanceLifecycle()     |
+  +--------------------------+     +--------------------------+
+                                   |     EmailService          |
+  +--------------------------+     +--------------------------+
+  |     OtpService           |     | - sendGridApiKey         |
+  +--------------------------+     | - mailFrom               |
+  | - OTP_LENGTH (6)        |     +--------------------------+
+  | - OTP_EXPIRY (5 min)    |     | + sendOtpEmail()         |
+  | - RATE_LIMIT (60s)      |     +--------------------------+
+  | - otpStore: Concurrent- |
+  |     HashMap             |     +--------------------------+
+  | - rateLimitStore        |     |     SportService          |
+  +--------------------------+     +--------------------------+
+  | + generateOtp()          |     | - sportRepository        |
+  | + verifyOtp()            |     +--------------------------+
+  +--------------------------+     | + getAllSports()         |
+                                   | + getSportById()         |
+                                   +--------------------------+
+                                                                                              
+  +============================================================================================+
+  |                            SCHEDULERS (@Component)                                          |
+  +============================================================================================+
+
+  +------------------------------------+     +------------------------------------+
+  |    BookingLifecycleScheduler       |     |   SlotMaintenanceScheduler         |
+  +------------------------------------+     +------------------------------------+
+  | - bookingExpiryService             |     | - courtRepository                  |
+  | - bookingLifecycleService          |     | - courtService                     |
+  +------------------------------------+     | - slotHorizonDays                  |
+  | @Scheduled processExpiredPayments()|     +------------------------------------+
+  | @Scheduled updateBookingLifecycle()|     | @Scheduled extendSlotHorizon()     |
+  +------------------------------------+     +------------------------------------+
+
+
+  +============================================================================================+
+  |                                       SECURITY                                             |
+  +============================================================================================+
+
+  +------------------------------------+     +------------------------------------+
+  |       SecurityConfig               |     |    JwtAuthenticationFilter        |
+  +------------------------------------+     +------------------------------------+
+  | - jwtFilter: JwtAuthFilter        |     | extends OncePerRequestFilter       |
+  +------------------------------------+     +------------------------------------+
+  | @Bean filterChain()                |     | - tokenProvider: JwtTokenProvider  |
+  | @Bean passwordEncoder()            |     | - userDetailsService               |
+  | @Bean authManager()                |     +------------------------------------+
+  +------------------------------------+     | + doFilterInternal()               |
+                                             +------------------------------------+
+  +------------------------------------+
+  |    JwtTokenProvider                |     +------------------------------------+
+  +------------------------------------+     | CustomUserDetailsService           |
+  | - key: SecretKey                   |     +------------------------------------+
+  | - expirationMs: long               |     | implements UserDetailsService      |
+  +------------------------------------+     +------------------------------------+
+  | + generateToken(email, role)       |     | - userRepository                   |
+  | + getEmailFromToken()              |     +------------------------------------+
+  | + validateToken()                  |     | + loadUserByUsername()             |
+  +------------------------------------+     +------------------------------------+
+
+
+  +============================================================================================+
+  |                                      EXCEPTIONS                                            |
+  +============================================================================================+
+
+  +------------------------------------+     +------------------------------------+
+  |     GlobalExceptionHandler         |     |  (all extend RuntimeException)     |
+  +------------------------------------+     +------------------------------------+
+  | @RestControllerAdvice              |     | - ResourceNotFoundException        |
+  +------------------------------------+     | - UnauthorizedException            |
+  | @ExceptionHandler methods for:     |     | - SlotNotAvailableException        |
+  | - ResourceNotFoundException        |     | - BookingException                 |
+  | - UnauthorizedException            |     +------------------------------------+
+  | - SlotNotAvailableException        |
+  | - BookingException                 |     +====================================================================+
+  | - AuthenticationException          |     |                    UTILITY                                           |
+  | - AccessDeniedException            |     +====================================================================+
+  | - HttpMessageNotReadableException  |     +------------------------------------+
+  | - OptimisticLockException          |     |     SignatureUtil (final)          |
+  | - RuntimeException                 |     +------------------------------------+
+  +------------------------------------+     | (private constructor)              |
+                                             | + generate(orderId, statusCode,    |
+                                             |     grossAmount, serverKey): String|
+                                             +------------------------------------+
+
+
+  +============================================================================================+
+  |                                          DTOs                                               |
+  +============================================================================================+
+
+  +------------------+    +------------------+    +------------------+    +------------------+
+  |   AdminStatsDTO  |    |   BookingDTO     |    |    CourtDTO      |    |   PaymentDTO     |
+  +------------------+    +------------------+    +------------------+    +------------------+
+  | - todaysRevenue  |    | - id, userId,     |    | - id, name,      |    | - id, bookingId  |
+  | - revenueChange  |    |   userName        |    |   description    |    | - amount         |
+  | - activeBookings |    | - courtId         |    | - surfaceType    |    | - status         |
+  | - capacityPercent|    | - courtName       |    | - indoor         |    | - method         |
+  | - openSlots      |    | - courtImageUrl   |    | - pricePerHour   |    | - paidAt         |
+  | - nextAvailTime  |    | - venueName       |    | - capacity       |    +------------------+
+  +------------------+    | - date, startTime |    | - rating         |    | + fromEntity()   |
+                          | - endTime         |    | - reviewCount    |    +------------------+
+  +------------------+    | - totalPrice      |    | - status         |
+  |   SportDTO       |    | - status          |    | - imageUrl       |    +------------------+
+  +------------------+    | - createdAt       |    | - badgeLabel     |    |   TimeSlotDTO    |
+  | - id, name       |    | - paymentExpiresAt|    | - paymentLinkUrl |    +------------------+
+  | - slug, icon     |    +------------------+    | - sportName      |    | - id             |
+  | - locationCount  |    | + fromEntity()    |    | - venueName      |    | - startTime      |
+  | - imageUrl       |    +------------------+    | - venueZone      |    | - endTime        |
+  +------------------+                           | - openTime       |    | - status         |
+  | + fromEntity()   |    +------------------+    | - closeTime      |    +------------------+
+  +------------------+    |   VenueDTO       |    +------------------+    | + fromEntity()   |
+                          +------------------+    | + fromEntity()    |    +------------------+
+  +------------------+    | - id, name       |    +------------------+
+  |   UserDTO        |    | - address        |                         +------------------+
+  +------------------+    | - zone           |    +------------------+  | CourtRequest     |
+  | - id, name       |    | - latitude       |    | BookingRequest   |  +------------------+
+  | - email, role    |    | - longitude      |    +------------------+  | - name           |
+  | - membershipTier |    | - courts:        |    | - courtId        |  | - description    |
+  +------------------+    |   List<CourtDTO> |    | - slotIds        |  | - surfaceType    |
+  | + fromEntity()   |    +------------------+    | - date           |  | - indoor         |
+  +------------------+    | + fromEntity()    |    +------------------+  | - pricePerHour   |
+                          +------------------+                           | - capacity       |
+                                                                         | - status         |
+                                                                         | - sportId        |
+  +--------------------+    +--------------------+                        | - venueId        |
+  | BookingUpdateReqt  |    |                    |                        | - imageUrl       |
+  +--------------------+    `+------------------+                         | - paymentLinkUrl |
+  | - action           |                                                  | - openTime       |
+  | - courtId          |                                                  | - closeTime      |
+  | - slotIds          |                                                  +------------------+
+  | - date             |
+  +--------------------+
+
+
+  +============================================================================================+
+  |                                      CONTROLLERS                                           |
+  +============================================================================================+
+
+  +------------------------------------+
+  |      PageController (@Controller)  |
+  +------------------------------------+
+  | - sportService                     |
+  | - courtService                     |
+  +------------------------------------+
+  | @GetMapping "/"                    |
+  | @GetMapping "/home"                |
+  | @GetMapping "/booking"             |
+  | @GetMapping "/my-bookings"         |
+  | @GetMapping "/manage-admin"        |
+  | @GetMapping "/login"               |
+  | @GetMapping "/register"            |
+  | @GetMapping "/privacy"             |
+  | @GetMapping "/terms"               |
+  | @GetMapping "/map"                 |
+  +------------------------------------+
+
+  +------------------------------------+     +------------------------------------+
+  |   AuthController (@RestController) |     |   BookingController                |
+  |   @RequestMapping("/api/auth")     |     |   @RequestMapping("/api/bookings") |
+  +------------------------------------+     +------------------------------------+
+  | - authManager                      |     | - bookingService                   |
+  | - tokenProvider                    |     | - userRepository                    |
+  | - userRepository                   |     +------------------------------------+
+  | - passwordEncoder                  |     | @GetMapping "/me"                  |
+  | - otpService                       |     | @GetMapping "/{id}"                |
+  | - emailService                     |     | @PostMapping                       |
+  | - pendingRegistrations             |     | @PatchMapping "/{id}"              |
+  +------------------------------------+     | @PostMapping "/{id}/pay"           |
+  | @PostMapping "/login"              |     +------------------------------------+
+  | @GetMapping "/me"                  |
+  | @PatchMapping "/profile"           |     +------------------------------------+
+  | @PatchMapping "/password"          |     |   PaymentController                |
+  | @PostMapping "/register/send-otp"  |     |   @RequestMapping("/payment")      |
+  | @PostMapping "/register/verify-otp"|     +------------------------------------+
+  | @PostMapping "/register" (410)     |     | - paymentService                   |
+  +------------------------------------+     | - midtransConfig                   |
+                                             | - bookingRepository                |
+  +------------------------------------+     | - userRepository                   |
+  |   AdminController (@RestController)|     +------------------------------------+
+  |   @RequestMapping("/api/admin")    |     | @PostMapping "/charge/{id}"        |
+  +------------------------------------+     | @GetMapping "/client-key"          |
+  | - adminService                     |     | @GetMapping "/snap-config"         |
+  | - courtService                     |     +------------------------------------+
+  | - bookingService                   |
+  | - timeSlotRepository               |     +------------------------------------+
+  +------------------------------------+     | PaymentNotificationController      |
+  | @GetMapping "/stats/dashboard"     |     | @RequestMapping("/payment")        |
+  | @GetMapping "/bookings/all"        |     +------------------------------------+
+  | @GetMapping "/bookings/timeline"   |     | - paymentService                   |
+  | @GetMapping "/courts"              |     | - midtransConfig                   |
+  | @PostMapping "/courts"             |     +------------------------------------+
+  | @PutMapping "/courts/{id}"         |     | @PostMapping "/notification"       |
+  | @PatchMapping "/courts/{id}/avail."|     +------------------------------------+
+  | @DeleteMapping "/courts/{id}"      |
+  | @PostMapping "/courts/{id}/slots"  |     +------------------------------------+
+  | @PostMapping "/bookings/{id}/conf" |     |   SportController                  |
+  +------------------------------------+     |   @RequestMapping("/api/sports")   |
+                                             +------------------------------------+
+  +------------------------------------+     | - sportService                     |
+  |   CourtController                  |     +------------------------------------+
+  |   @RequestMapping("/api/courts")   |     | @GetMapping                        |
+  +------------------------------------+     | @GetMapping "/{id}"                |
+  | - courtService                     |     +------------------------------------+
+  +------------------------------------+
+  | @GetMapping                        |     +------------------------------------+
+  | @GetMapping "/count"               |     |   VenueController                  |
+  | @GetMapping "/{id}"                |     |   @RequestMapping("/api/venues")   |
+  | @GetMapping "/{id}/availability"   |     +------------------------------------+
+  +------------------------------------+     | - venueRepository                  |
+                                             +------------------------------------+
+  +------------------------------------+     | @GetMapping                        |
+  |      RentApplication (main)        |     +------------------------------------+
+  +------------------------------------+
+  | @SpringBootApplication             |
+  | @EnableScheduling                  |
+  +------------------------------------+
+  | + main(String[])                   |
+  +------------------------------------+
+
+  +============================================================================================+
+  |                                  CONFIGURATIONS                                            |
+  +============================================================================================+
+
+  +------------------------------------+     +------------------------------------+
+  |      MidtransConfig                |     |    DataSeeder                       |
+  +------------------------------------+     +------------------------------------+
+  | @Configuration                     |     | @Component implements              |
+  +------------------------------------+     |   CommandLineRunner                |
+  | - serverKey: String                |     +------------------------------------+
+  | - clientKey: String                |     | - user, sport, venue, court,       |
+  | - isProduction: boolean            |     |   timeSlot, booking, payment       |
+  +------------------------------------+     |   repositories, passwordEncoder,   |
+  | @PostConstruct init()              |     |   courtService                     |
+  | + getServerKey()                   |     | - seedEnabled: boolean             |
+  | + getClientKey()                   |     +------------------------------------+
+  | + isProduction()                   |     | @Transactional run()               |
+  +------------------------------------+     +------------------------------------+
+
+
+  +============================================================================================+
+  |                                       RELATIONSHIPS                                        |
+  +============================================================================================+
+
+  [PAGE CONTROLLER] ──> [SportService] ──> [SportRepository] ──> [Sport (Entity)]
+                    ──> [CourtService] ──> [CourtRepository] ──> [Court (Entity)]
+                                          ─> [TimeSlotRepository]
+                                          ─> [BookingExpiryService]
+
+  [AUTH CONTROLLER] ──> [OtpService] (in-memory OTP store)
+                   ──> [EmailService] ──> [SendGrid REST API]
+                   ──> [JwtTokenProvider]
+                   ──> [UserRepository] ──> [User (Entity)]
+
+  [BOOKING CONTROLLER] ──> [BookingService] ──> [BookingRepository] ──> [Booking (Entity)]
+                       ──> [PaymentService]  ──> [MidtransService] ──> [Midtrans Snap API]
+
+  [PAYMENT CONTROLLER] ──> [PaymentService]  ──> [MidtransService]
+                       ──> [MidtransConfig]
+
+  [NOTIFICATION CONTROLLER] ──> [PaymentService] ──> [SignatureUtil]
+
+  [ADMIN CONTROLLER] ──> [AdminService]
+                    ──> [CourtService]
+                    ──> [BookingService]
+
+  [SCHEDULER] ──> [BookingExpiryService] ──> [BookingRepository]
+             ──> [BookingLifecycleService]   [TimeSlotRepository]
+             ──> [SlotMaintenanceScheduler] ──> [CourtService]
+
+  [SECURITY] SecurityConfig
+     ├── @Bean filterChain(): HttpSecurity
+     │    ├── .permitAll(): "/", "/home", "/login", "/register", "/booking",
+     │    │                  "/my-bookings", "/manage-admin", "/css/**", "/js/**",
+     │    │                  "/images/**", "/videos/**", "/api/auth/login",
+     │    │                  "/api/auth/register/send-otp",
+     │    │                  "/api/auth/register/verify-otp",
+     │    │                  "/api/sports/**", "/api/courts/**",
+     │    │                  "/payment/notification",
+     │    │                  "/payment/client-key", "/payment/snap-config"
+     │    ├── .authenticated(): "/api/bookings/**", "/payment/charge/**", ".anyRequest()"
+     │    └── .hasRole("ADMIN"): "/api/admin/**"
+     ├── JwtAuthenticationFilter (before UsernamePasswordAuthenticationFilter)
+     │    ├── JwtTokenProvider
+     │    └── CustomUserDetailsService ──> UserRepository
+     ├── @Bean PasswordEncoder (BCrypt)
+     └── @Bean AuthenticationManager
+
+
+  +============================================================================================+
+  |                               MAIN DEPENDENCY FLOW                                         |
+  +============================================================================================+
+
+    Browser (HTML/JS)        Spring Boot Backend              External Services
+  +-------------------+    +---------------------+        +------------------+
+  |                   |    |                     |        |                  |
+  |  register.html   |--->| AuthController      |------->| SendGrid API     |
+  |  login.html      |    |   └→ OtpService     |        | (port 443/HTTPS) |
+  |  booking.html    |    |   └→ EmailService   |        +------------------+
+  |  my-bookings.html|    |                     |
+  |  manage-admin.html|   | BookingController   |        +------------------+
+  |                   |    |   └→ BookingService |------->| Midtrans Snap    |
+  |  Snap popup      |<---|   └→ PaymentService |        | (port 443/HTTPS) |
+  |                   |    |       └→ Midtrans   |        +------------------+
+  +-------------------+    |                     |
+                           |   [PostgreSQL]      |        +------------------+
+                           |   └→ JPA/Hibernate |------->| Railway PG       |
+                           |                     |        +------------------+
+                           +---------------------+
+
