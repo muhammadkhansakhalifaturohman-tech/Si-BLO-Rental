@@ -112,8 +112,8 @@ After:
 ### File: `src/main/resources/application-local.properties` *(verify)*
 Midtrans sandbox keys are already present:
 ```
-midtrans.server-key=
-midtrans.client-key=
+midtrans.server-key=Mid-server-ZzlL4OT7sydjpD6wbHCeMaGb
+midtrans.client-key=Mid-client-ty6J5VOpNdJT2Kdw
 ```
 
 ---
