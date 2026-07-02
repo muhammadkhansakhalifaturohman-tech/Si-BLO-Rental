@@ -26,27 +26,31 @@
         </form>
 
        <form id="otpForm" onsubmit="handleVerifyOtp(event)" style="display:none;">
-            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-4); text-align: center;">
-                Kode OTP telah dikirim ke<br>
-                <strong id="otpEmailLabel" style="color: var(--color-text-primary);"></strong>
-            </p>
-            <div class="form-group">
-                <label>Kode OTP</label>
-                <input type="text" name="otp" placeholder="Masukkan 6 digit kode OTP"
-                    required maxlength="6" pattern="[0-9]{6}"
-                    style="letter-spacing: 8px; font-size: 24px; text-align: center; font-weight: 700;">
-            </div>
-            <button type="submit" class="btn-primary" id="verifyBtn">Verifikasi OTP</button>
-            <button type="button" class="btn-secondary" onclick="resendOtp()"
-                id="resendBtn" style="width: 100%; margin-top: var(--space-3);">
-                Kirim Ulang OTP
-            </button>
-            <button type="button" onclick="backToRegister()"
-                style="width: 100%; margin-top: var(--space-2); background: none; border: none;
-                color: var(--color-text-secondary); cursor: pointer; font-size: 14px;">
-                ← Kembali ubah data
-            </button>
-        </form>
+    <p style="color: var(--color-text-secondary); margin-bottom: var(--space-4); text-align: center;">
+        Kode OTP telah dikirim ke<br>
+        <strong id="otpEmailLabel" style="color: var(--color-text-primary);"></strong>
+    </p>
+
+    <div class="form-group">
+        <label>Kode OTP</label>
+        <input type="text" name="otp" placeholder="***"
+            required maxlength="6" pattern="[0-9]{6}"
+            style="letter-spacing: 8px; font-size: 24px; text-align: center; font-weight: 700;">
+    </div>
+
+    <button type="submit" class="btn-primary" id="verifyBtn">Verifikasi OTP</button>
+
+    <button type="button" class="btn-secondary" onclick="resendOtp()"
+        id="resendBtn" style="width: 100%; margin-top: var(--space-3);">
+        Kirim Ulang OTP
+    </button>
+
+    <button type="button" onclick="backToRegister()"
+        style="width: 100%; margin-top: var(--space-2); background: none; border: none;
+        color: var(--color-text-secondary); cursor: pointer; font-size: 14px;">
+        ← Kembali ubah data
+    </button>
+</form>
 
         <p class="register-link" style="margin-top: var(--space-4);">
             Already have an account? <a href="/login">Sign In</a>
