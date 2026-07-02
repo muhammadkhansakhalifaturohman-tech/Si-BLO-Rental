@@ -65,11 +65,11 @@ public class DataSeeder implements CommandLineRunner {
             .membershipTier("PREMIUM MEMBER").build();
         userRepository.save(member);
 
-        Sport basketball = sportRepository.save(Sport.builder().name("Basketball").slug("basketball").icon("🏀").locationCount(12).build());
-        Sport futsal = sportRepository.save(Sport.builder().name("Futsal").slug("futsal").icon("⚽").locationCount(8).build());
-        Sport padel = sportRepository.save(Sport.builder().name("Padel").slug("padel").icon("🎾").locationCount(15).build());
-        Sport badminton = sportRepository.save(Sport.builder().name("Badminton").slug("badminton").icon("🏸").locationCount(6).build());
-        Sport tennis = sportRepository.save(Sport.builder().name("Tennis").slug("tennis").icon("🎾").locationCount(4).build());
+        Sport basketball = sportRepository.save(Sport.builder().name("Basketball").slug("basketball").icon("🏀").build());
+        Sport futsal = sportRepository.save(Sport.builder().name("Futsal").slug("futsal").icon("⚽").build());
+        Sport padel = sportRepository.save(Sport.builder().name("Padel").slug("padel").icon("🎾").build());
+        Sport badminton = sportRepository.save(Sport.builder().name("Badminton").slug("badminton").icon("🏸").build());
+        Sport tennis = sportRepository.save(Sport.builder().name("Tennis").slug("tennis").icon("🎾").build());
 
         Venue downtown = venueRepository.save(Venue.builder().name("Downtown Arena").address("123 Main St").zone("Central").latitude(-6.2088).longitude(106.8456).build());
         Venue glassHub = venueRepository.save(Venue.builder().name("Glass Hub").address("456 Park Ave").zone("Westside").latitude(-6.2250).longitude(106.8000).build());
