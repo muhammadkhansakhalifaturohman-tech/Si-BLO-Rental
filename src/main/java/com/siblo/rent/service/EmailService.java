@@ -1,53 +1,61 @@
 package com.siblo.rent.service;
 
-import com.sendgrid.*;
-import com.sendgrid.helpers.mail.Mail;
-import com.sendgrid.helpers.mail.objects.Content;
-import com.sendgrid.helpers.mail.objects.Email;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
+/**
+ * Kirim email OTP pakai Brevo REST API (bukan SMTP).
+ * Tidak butuh spring-boot-starter-mail sama sekali.
+ */
 @Service
 public class EmailService {
 
-    private final String sendGridApiKey;
-    private final String mailFrom;
+    @Value("${brevo.api.key}")
+    private String apiKey;
 
-    public EmailService(@Value("${SENDGRID_API_KEY:}") String sendGridApiKey,
-                        @Value("${MAIL_FROM:muhammadkhansakhalifaturohman@gmail.com}") String mailFrom) {
-        this.sendGridApiKey = sendGridApiKey;
-        this.mailFrom = mailFrom;
-    }
+    @Value("${brevo.mail.from}")
+    private String fromEmail;
+
+    @Value("${brevo.mail.from-name}")
+    private String fromName;
+
+    private final HttpClient httpClient = HttpClient.newHttpClient();
 
     public void sendOtpEmail(String toEmail, String otpCode) {
-        Email from = new Email(mailFrom);
-        String subject = "Kode OTP Registrasi SI-BLO";
-        Email to = new Email(toEmail);
-        Content content = new Content("text/plain",
-            "Halo!\n\n" +
-            "Kode OTP kamu untuk registrasi SI-BLO adalah:\n\n" +
-            "[ " + otpCode + " ]\n\n" +
-            "Kode ini valid selama 5 menit.\n" +
-            "Jangan bagikan kode ini ke siapapun.\n\n" +
-            "Salam,\nTim SI-BLO"
-        );
-        Mail mail = new Mail(from, subject, to, content);
-
-        SendGrid sg = new SendGrid(sendGridApiKey);
-        Request request = new Request();
         try {
-            request.setMethod(Method.POST);
-            request.setEndpoint("mail/send");
-            request.setBody(mail.build());
-            Response response = sg.api(request);
-            if (response.getStatusCode() >= 400) {
-                throw new RuntimeException("SendGrid API error: " + response.getStatusCode() +
-                    " " + response.getBody());
+            String body = """
+                {
+                    "sender": {
+                        "email": "%s",
+                        "name": "%s"
+                    },
+                    "to": [{ "email": "%s" }],
+                    "subject": "Kode OTP Registrasi SI-BLO",
+                    "textContent": "Halo!\\n\\nKode OTP kamu untuk registrasi SI-BLO adalah:\\n\\n[ %s ]\\n\\nKode ini valid selama 5 menit.\\nJangan bagikan kode ini ke siapapun.\\n\\nSalam,\\nTim SI-BLO"
+                }
+                """.formatted(fromEmail, fromName, toEmail, otpCode);
+
+            HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.brevo.com/v3/smtp/email"))
+                .header("Content-Type", "application/json")
+                .header("api-key", apiKey)
+                .POST(HttpRequest.BodyPublishers.ofString(body))
+                .build();
+
+            HttpResponse<String> response = httpClient.send(
+                request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() != 201) {
+                throw new RuntimeException("Brevo API error: " + response.statusCode() + " " + response.body());
             }
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to send email via SendGrid: " + e.getMessage(), e);
+
+        } catch (Exception e) {
+            throw new RuntimeException("Gagal kirim OTP email: " + e.getMessage(), e);
         }
     }
 }
