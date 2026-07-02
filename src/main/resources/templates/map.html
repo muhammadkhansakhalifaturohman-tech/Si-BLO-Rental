@@ -5,60 +5,67 @@
     <div th:replace="~{fragments/sidebar :: sidebar('home')}"></div>
     <div th:replace="~{fragments/topbar :: topbar}"></div>
 
-    <main class="main-content">
-        <h1 style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.32px; margin-bottom: var(--space-4);">Explore Venues</h1>
-        <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-5);">Find courts near you with our interactive map.</p>
-        <div id="map" style="height: 600px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border-subtle);"></div>
-        <div id="venueInfo" style="margin-top: var(--space-4); padding: var(--space-4); background: var(--color-bg-elevated); border-radius: var(--radius-md); min-height: 60px; display: none;">
-            <h3 id="venueInfoName" style="font-size: 18px; font-weight: 700; margin-bottom: var(--space-2);"></h3>
-            <p id="venueInfoAddress" style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-2);"></p>
-            <div id="venueInfoCourts"></div>
+    <main class="main-content" style="display: flex; flex-direction: column; height: calc(100vh - 80px); padding: 24px;">
+        <h1 style="font-family: 'Anybody', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.32px; margin-bottom: 4px;">Explore Venues</h1>
+        <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 16px;">Find courts near you with our interactive map.</p>
+
+        <div id="mapContainer" style="flex: 1; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border-subtle);">
+            <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
         </div>
     </main>
 
     <div th:replace="~{fragments/bottomnav :: bottomnav('')}"></div>
 
+    <!-- Google Maps Extended Component Library -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.15/index.min.js"></script>
+    <gmpx-api-loader key="AIzaSyDA7kL1Vr6Fw3EyGj0zJ4DejLj3r0QLEEA" solution-channel="GMP_QB_locatorplus_v11_cABCDE"></gmpx-api-loader>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const map = L.map('map').setView([-6.2146, 106.8451], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Lapangan Tenis Lapang UIN Sunan Gunung Djati","address1":"3P99+263","address2":"Cipadung, Cibiru, Bandung City, West Java 40614, Indonesia","coords":{"lat":-6.93240281323592,"lng":107.71799112023771},"placeId":"ChIJZV2mUfbDaC4RFOx2HMATBjo"},
+          {"title":"Badminton GOR of UIN SGD Bandung","address1":"3P99+MCG","address2":"Jl. AH. Nasution, Cipadung, Kec. Cibiru, Kota Bandung, Jawa Barat 40614, Indonesia","coords":{"lat":-6.930826333528749,"lng":107.71854497790984},"placeId":"ChIJ7SN4sCnDaC4RzagRiJYeqAk"},
+          {"title":"Volleyball Court of UIN SGD Bandung","address1":"Jl. Manisi No.70","address2":"Cipadung, Kec. Cibiru, Kota Bandung, Jawa Barat 40615, Indonesia","coords":{"lat":-6.931441982918427,"lng":107.71871127790985},"placeId":"ChIJvRufrinDaC4RMDNq7nZwFTY"},
+          {"title":"Basketball Court of UIN SGD Bandung","address1":"3P99+9GF","address2":"Cipadung, Cibiru, Bandung City, West Java 40614, Indonesia","coords":{"lat":-6.931555899828872,"lng":107.71877907790987},"placeId":"ChIJN1FIqynDaC4RvvFT5b77WHs"},
+          {"title":"PADEL 36 CIBIRU","address1":"3P8F+PJG","address2":"Jl. Raya Cibiru, Cibiru Wetan, Kec. Cileunyi, Kota Bandung, Cibiru Wetan, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40625, Indonesia","coords":{"lat":-6.933146081880529,"lng":107.72406786441805},"placeId":"ChIJRzRe5EnDaC4RsAl61MylUFs"},
+          {"title":"Lapangan Bola UIN Sunan Gunung Djati Bandung","address1":"Kampus II UIN Jalan Cimencrang Panyileukan","address2":"Cimenerang, Kec. Gedebage, Kota Bandung, Jawa Barat 40292, Indonesia","coords":{"lat":-6.9408977502081175,"lng":107.70493617790987},"placeId":"ChIJFbTs71LDaC4RKQDGeJNwn8A"},
+          {"title":"Lapangan Basket UIN Sunan Gunung Djati Bandung","address1":"3P53+9R2","address2":"Cimenerang, Gedebage, Bandung City, West Java, Indonesia","coords":{"lat":-6.941601916245003,"lng":107.70450970674592},"placeId":"ChIJE5fxTTDDaC4RS1YYTjZvgoo"},
+          {"title":"Volleyball Court of UIN SGD Bandung","address1":"3P53+8V5","address2":"Cimenerang, Gedebage, Bandung City, West Java, Indonesia","coords":{"lat":-6.941660068313824,"lng":107.70478933743436},"placeId":"ChIJw9JlO2bDaC4RHvlDqv4TXJk"}
+        ],
+        "mapOptions": {"center":{"lat":-6.932,"lng":107.715},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":15,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "AIzaSyDA7kL1Vr6Fw3EyGj0zJ4DejLj3r0QLEEA",
+        "capabilities": {"input":true,"autocomplete":true,"directions":true,"distanceMatrix":true,"details":true,"actions":false}
+      };
 
-        fetch('/api/venues')
-            .then(r => r.json())
-            .then(venues => {
-                venues.forEach(v => {
-                    if (!v.latitude || !v.longitude) return;
-                    const marker = L.marker([v.latitude, v.longitude]).addTo(map);
-                    const courtsList = (v.courts || []).map(c =>
-                        '<div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 0;">' +
-                        '<span>' + c.name + '</span>' +
-                        '<a href="/booking?courtId=' + c.id + '" style="color: var(--color-accent-primary); font-size: 12px; text-decoration: none;">Book</a>' +
-                        '</div>'
-                    ).join('');
-
-                    marker.bindPopup(
-                        '<div style="font-family: sans-serif; min-width: 200px;">' +
-                        '<h3 style="margin: 0 0 4px; font-size: 16px;">' + v.name + '</h3>' +
-                        '<p style="margin: 0 0 8px; font-size: 12px; color: #666;">' + (v.address || '') + '</p>' +
-                        (courtsList ? '<div style="border-top: 1px solid #eee; padding-top: 4px;">' + courtsList + '</div>' : '') +
-                        '</div>'
-                    );
-
-                    marker.on('click', function() {
-                        const info = document.getElementById('venueInfo');
-                        info.style.display = 'block';
-                        document.getElementById('venueInfoName').textContent = v.name;
-                        document.getElementById('venueInfoAddress').textContent = v.address + (v.zone ? ' - ' + v.zone : '');
-                        document.getElementById('venueInfoCourts').innerHTML = courtsList ?
-                            '<div style="margin-top: var(--space-2);"><strong>Courts:</strong></div>' + courtsList :
-                            '<p style="font-size: 13px; color: var(--color-text-secondary);">No courts at this venue.</p>';
-                        map.setView([v.latitude, v.longitude], 15);
-                    });
-                });
-            });
-    });
+      document.addEventListener('DOMContentLoaded', async () => {
+        await customElements.whenDefined('gmpx-store-locator');
+        const locator = document.querySelector('gmpx-store-locator');
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      });
     </script>
+
+    <style>
+      #mapContainer {
+        --gmpx-color-surface: #fff;
+        --gmpx-color-on-surface: #212121;
+        --gmpx-color-on-surface-variant: #757575;
+        --gmpx-color-primary: #6c5ce7;
+        --gmpx-color-outline: #e0e0e0;
+        --gmpx-fixed-panel-width-row-layout: 28.5em;
+        --gmpx-fixed-panel-height-column-layout: 65%;
+        --gmpx-font-family-base: "Anybody", "Roboto", sans-serif;
+        --gmpx-font-family-headings: "Anybody", "Roboto", sans-serif;
+        --gmpx-font-size-base: 0.875rem;
+        --gmpx-hours-color-open: #188038;
+        --gmpx-hours-color-closed: #d50000;
+        --gmpx-rating-color: #ffb300;
+        --gmpx-rating-color-empty: #e0e0e0;
+      }
+      #mapContainer gmpx-store-locator {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    </style>
 </body>
 </html>
