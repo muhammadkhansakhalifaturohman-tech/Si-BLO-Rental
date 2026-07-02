@@ -127,6 +127,12 @@
                     <label>Payment Link URL (optional)</label>
                     <input type="text" name="paymentLinkUrl" placeholder="https://app.sandbox.midtrans.com/payment-links/...">
                 </div>
+                <div class="form-group" style="margin-top: var(--space-4);">
+                    <label>Kategori Olahraga</label>
+                    <select name="sportId" id="addCourtSportId" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-primary); color: var(--color-text-primary); font-size: 14px;">
+                        <option value="">Pilih kategori...</option>
+                    </select>
+                </div>
                 <div style="display: flex; gap: var(--space-4); margin-top: var(--space-5);">
                     <button type="submit" class="btn-primary" style="padding: 12px 32px;">Save Court</button>
                     <button type="button" class="btn-secondary" style="padding: 12px 32px;" onclick="hideAddCourt()">Cancel</button>
@@ -160,6 +166,12 @@
                 <div class="form-group">
                     <label>Payment Link URL (optional)</label>
                     <input type="text" name="paymentLinkUrl" id="editPaymentLinkUrl" placeholder="https://app.sandbox.midtrans.com/payment-links/...">
+                </div>
+                <div class="form-group" style="margin-top: var(--space-4);">
+                    <label>Kategori Olahraga</label>
+                    <select name="sportId" id="editCourtSportId" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-primary); color: var(--color-text-primary); font-size: 14px;">
+                        <option value="">Pilih kategori...</option>
+                    </select>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
                     <div class="form-group">
@@ -242,7 +254,7 @@
                                     <span class="toggle-slider"></span>
                                 </label>
                             </div>
-                            <button style="background: none; border: 1px solid var(--color-border-default); color: var(--color-text-tertiary); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 6px;" onclick="showEditCourt(${c.id}, '${c.name.replace(/'/g, "\\'")}', '${(c.description || '').replace(/'/g, "\\'")}', '${c.surfaceType.replace(/'/g, "\\'")}', ${c.pricePerHour}, ${c.capacity}, '${(c.imageUrl || '').replace(/'/g, "\\'")}', '${(c.paymentLinkUrl || '').replace(/'/g, "\\'")}')">
+                            <button style="background: none; border: 1px solid var(--color-border-default); color: var(--color-text-tertiary); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 6px;" onclick="showEditCourt(${c.id}, '${c.name.replace(/'/g, "\\'")}', '${(c.description || '').replace(/'/g, "\\'")}', '${c.surfaceType.replace(/'/g, "\\'")}', ${c.pricePerHour}, ${c.capacity}, '${(c.imageUrl || '').replace(/'/g, "\\'")}', '${(c.paymentLinkUrl || '').replace(/'/g, "\\'")}', ${c.sportId})">
                                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
                                 Edit
                             </button>
@@ -293,6 +305,18 @@
     }
 
     function showAddCourt() {
+        const select = document.getElementById('addCourtSportId');
+        select.innerHTML = '<option value="">Pilih kategori...</option>';
+        fetch('/api/sports')
+            .then(r => r.json())
+            .then(sports => {
+                sports.forEach(s => {
+                    const opt = document.createElement('option');
+                    opt.value = s.id;
+                    opt.textContent = s.name;
+                    select.appendChild(opt);
+                });
+            });
         document.getElementById('addCourtModal').style.display = 'flex';
     }
 
@@ -312,7 +336,7 @@
             capacity: parseInt(form.capacity.value),
             paymentLinkUrl: form.paymentLinkUrl.value || null,
             status: 'ACTIVE',
-            sportId: 1
+            sportId: parseInt(form.sportId.value)
         };
 
         fetch('/api/admin/courts', {
@@ -329,7 +353,7 @@
         .catch(() => alert('Failed to add court.'));
     }
 
-    function showEditCourt(id, name, description, surfaceType, pricePerHour, capacity, imageUrl, paymentLinkUrl) {
+    function showEditCourt(id, name, description, surfaceType, pricePerHour, capacity, imageUrl, paymentLinkUrl, sportId) {
         document.getElementById('editCourtId').value = id;
         document.getElementById('editName').value = name;
         document.getElementById('editDescription').value = description;
@@ -338,6 +362,19 @@
         document.getElementById('editCapacity').value = capacity;
         document.getElementById('editImageUrl').value = imageUrl;
         document.getElementById('editPaymentLinkUrl').value = paymentLinkUrl || '';
+        const select = document.getElementById('editCourtSportId');
+        select.innerHTML = '<option value="">Pilih kategori...</option>';
+        fetch('/api/sports')
+            .then(r => r.json())
+            .then(sports => {
+                sports.forEach(s => {
+                    const opt = document.createElement('option');
+                    opt.value = s.id;
+                    opt.textContent = s.name;
+                    if (s.id === sportId) opt.selected = true;
+                    select.appendChild(opt);
+                });
+            });
         document.getElementById('editCourtModal').style.display = 'flex';
     }
 
@@ -358,7 +395,7 @@
             capacity: parseInt(form.capacity.value),
             paymentLinkUrl: form.paymentLinkUrl.value || null,
             status: 'ACTIVE',
-            sportId: 1,
+            sportId: parseInt(form.sportId.value),
             imageUrl: form.imageUrl.value || null
         };
 

@@ -8,7 +8,7 @@ public class CourtDTO {
     private Boolean indoor; private Integer pricePerHour; private Integer capacity;
     private Double rating; private Integer reviewCount; private String status;
     private String imageUrl; private String badgeLabel; private String paymentLinkUrl;
-    private String sportName; private String venueName; private String venueZone;
+    private Long sportId; private String sportName; private String venueName; private String venueZone;
     private LocalTime openTime; private LocalTime closeTime;
 
     public CourtDTO() {}
@@ -23,6 +23,7 @@ public class CourtDTO {
         dto.setStatus(court.getStatus() != null ? court.getStatus().name() : null);
         dto.setImageUrl(court.getImageUrl()); dto.setBadgeLabel(court.getBadgeLabel());
         dto.setPaymentLinkUrl(court.getPaymentLinkUrl());
+        dto.setSportId(court.getSport() != null ? court.getSport().getId() : null);
         dto.setSportName(court.getSport() != null ? court.getSport().getName() : null);
         dto.setVenueName(court.getVenue() != null ? court.getVenue().getName() : null);
         dto.setVenueZone(court.getVenue() != null ? court.getVenue().getZone() : null);
@@ -57,6 +58,9 @@ public class CourtDTO {
     public void setBadgeLabel(String badgeLabel) { this.badgeLabel = badgeLabel; }
     public String getPaymentLinkUrl() { return paymentLinkUrl; }
     public void setPaymentLinkUrl(String paymentLinkUrl) { this.paymentLinkUrl = paymentLinkUrl; }
+    public Long getSportId() { return sportId; }
+    public void setSportId(Long sportId) { this.sportId = sportId; }
+
     public String getSportName() { return sportName; }
     public void setSportName(String sportName) { this.sportName = sportName; }
     public String getVenueName() { return venueName; }
